@@ -1,1 +1,17 @@
 // _mixins.scss
+@use "./_variables" as *;
+
+@mixin box-lg {
+  border: 1px solid $grey-200;
+  border-radius: $space-lg;
+  padding: $space-xl;
+  background-color: $white-color;
+}
+
+@mixin box-normal {
+  border: 1px solid $grey-200;
+  border-radius: $space-sm;
+  padding: $space-normal $space-lg;
+  background-color: $grey-50;
+}
+

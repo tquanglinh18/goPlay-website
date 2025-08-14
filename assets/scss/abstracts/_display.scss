@@ -45,6 +45,13 @@
   flex-direction: column;
 }
 
+@mixin flex-column-center {
+  @include flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin flex-wrap {
   flex-wrap: wrap;
 }
@@ -107,21 +114,17 @@
   align-items: stretch;
 }
 
-@mixin respond($breakpoint) {
-  @if $breakpoint == sm {
-    @media (max-width: 576px) { @content; }
-  } @else if $breakpoint == md {
-    @media (max-width: 768px) { @content; }
-  } @else if $breakpoint == lg {
-    @media (max-width: 992px) { @content; }
-  } @else if $breakpoint == xl {
-    @media (max-width: 1200px) { @content; }
-  }
-}
-
-@mixin layout($direction: row, $justify: center, $align: center) {
+@mixin flex-layout(
+  $direction: row,
+  $wrap: nowrap,
+  $justify: center,
+  $align: center,
+  $gap: 0
+) {
   display: flex;
   flex-direction: $direction;
+  flex-wrap: $wrap;
   justify-content: $justify;
   align-items: $align;
+  gap: $gap;
 }

@@ -1,19 +1,225 @@
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+.cts-sso-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #1a1d1f;
+  color: #ffffff;
+  text-align: center;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+  border: none;
 }
-@font-face {
+.cts-sso-btn[disabled], .cts-sso-btn.disabled {
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1215686275);
+  box-shadow: 0px 0px 0px 1px rgba(103, 110, 118, 0.1607843137);
+  box-shadow: 0px 2px 5px 0px rgba(103, 110, 118, 0.0784313725);
+  color: #fafafa;
+  cursor: not-allowed;
+  background-color: rgba(26, 29, 31, 0.3);
+}
+
+.btn-social-login {
+  width: fit-content;
+  flex-grow: 1;
+  text-align: center;
+  transition: background-color 0.3s;
+  font-size: 0.875rem;
+  border: 1px solid #e5e7ea;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #ffffff;
+}
+
+a {
+  color: #1a1d1f;
+  text-decoration: none;
   font-family: "Inter-Bold";
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+  font-weight: bold;
 }
-body {
-  font-family: "Inter";
+
+.ssoPages {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../images/bg_sso_page.webp") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+.ssoPages.ssoFullPage .ssoPage-form {
+  max-width: 620px;
+}
+
+.ssoPage-content {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: start;
+  gap: 0;
+  gap: 1rem;
+}
+.ssoPage-content .ssoPage-logo {
+  margin: 4% 12px;
+}
+.ssoPage-content .ssoPage-logo img {
+  max-width: 200px;
+  height: auto;
+}
+.ssoPage-content .lstQuickLoginMethod {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ssoPage-content .ssoPage--header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.ssoPage-content .ssoPage--body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.ssoPage-content .ssoPage--footer {
+  width: 100%;
+}
+.ssoPage-content .ssoPage--footer .text-warning {
+  border-top: 1px solid #e5e7ea;
+  padding-top: 24px;
+}
+.ssoPage-content .ssoPage--footer .text-warning p {
+  font-size: 14px;
+}
+.ssoPage-content .ssoPage--footer .text-warning p span {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+.ssoPage-content .ssoPage-form {
+  width: 100%;
+  max-width: 480px;
+  border: 1px solid #e5e7ea;
+  border-radius: 24px;
+  padding: 32px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.ssoPage-content .ssoPage-form .box-title {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  padding: 8px 0;
+}
+.ssoPage-content .login-option {
+  width: 100%;
+  border: 1px solid #e5e7ea;
+  border-radius: 12px;
+  padding: 16px 24px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ssoPage-content .login-option .login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.ssoPage-content .login-option .login-form .cts-form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ssoPage-content .login-option .login-form .cts-form-group label {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1a1d1f;
+}
+.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper {
+  width: 100%;
+  position: relative;
+}
+.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper .fixed-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper .fixed-icon.clear-btn {
+  display: none;
+}
+.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper .fixed-icon .fa-eye-slash {
+  display: none;
+}
+.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper input {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e5e7ea;
+  padding: 12px 32px 12px 8px;
+  box-shadow: 0px 0px 0px 1px #cdd1dc;
+  color: #1a1d1f;
+  font-size: 16px;
+}
+.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper input:active, .ssoPage-content .login-option .login-form .cts-form-group .input-wrapper input:focus {
+  outline: none;
+}
+.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper input::placeholder {
+  color: #9ea5ad;
+}
+.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper input.isError {
+  border-color: #F34141;
+  box-shadow: none;
+}
+.ssoPage-content .login-option .login-form .cts-form-group .error-message {
+  margin-top: 0.25rem;
+  color: #F34141;
+  font-size: 14px;
+}
+.ssoPage-content .login-option .login-form .allow-privacy {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ssoPage-content .login-option .login-form .forgot-password {
+  width: 100%;
+  text-align: right;
+}
+.ssoPage-content .login-option .login-form .forgot-password a {
   font-weight: normal;
-  font-style: normal;
+}
+.ssoPage-content .login-option.dont-have-account, .ssoPage-content .login-option.have-account {
+  flex-direction: row;
+  gap: 0.25rem;
 }

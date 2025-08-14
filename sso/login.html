@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>goPlay Website</title>
+    <link rel="stylesheet" href="../assets/css/styles-site.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section class="ssoPages">
+        <div class="ssoPage-content">
+            <div class="ssoPage-logo">
+                <img src="../assets/images/logo_goplay.png" alt="goPlay Logo" />
+            </div>
+            <div class="ssoPage-form">
+                <div class="ssoPage--header">
+                    <h3 class="box-title">Đăng nhập</h3>
+                </div>
+                <div class="ssoPage--body">
+                    <div class="login-option">
+                        <form action="#" method="POST" class="login-form">
+                            <div class="cts-form-group">
+                                <label for="username">Tên đăng nhập</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="username" name="username" required
+                                        placeholder="Nhập tên đăng nhập/Số điện thoại" />
+                                    <span class="fixed-icon clear-btn">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </span>
+                                </div>
+                                <span class="error-message" id="usernameError"><i
+                                        class="fa-solid fa-triangle-exclamation"></i>Tên đăng nhập không hợp lệ</span>
+                            </div>
+                            <div class="cts-form-group">
+                                <label for="password">Mật khẩu</label>
+                                <div class="input-wrapper">
+                                    <input class="isError" type="password" id="password" name="password" required
+                                        placeholder="Nhập mật khẩu" />
+                                    <span class="fixed-icon" id="togglePass">
+                                        <i class="fa-regular fa-eye"></i>
+                                        <i class="fa-regular fa-eye-slash"></i>
+                                    </span>
+                                </div>
+                                <span class="error-message" id="passwordError"><i
+                                        class="fa-solid fa-triangle-exclamation"></i>Mật khẩu không hợp lệ</span>
+                            </div>
+                            <div class="forgot-password">
+                                <a href="">Quên mật khẩu</a>
+                            </div>
+                            <button type="submit" class="cts-sso-btn">Đăng nhập</button>
+                        </form>
+                    </div>
+
+                    <div class="login-option ">
+                        <p>Hoặc đăng nhập nhanh bằng</p>
+                        <div class="lstQuickLoginMethod">
+                            <a href="" class="btn-social-login">
+                                <img src="../assets/images/ic_facebook.png" alt="">
+                            </a>
+                            <a href="" class="btn-social-login">
+                                <img src="../assets/images/ic_google.png" alt="">
+                            </a>
+                            <a href="" class="btn-social-login">
+                                <img src="../assets/images/ic_apple.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="login-option dont-have-account">
+                        <p>Chưa có tài khoản goPlay? </p>
+                        <a href="#"> Tạo tài khoản</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

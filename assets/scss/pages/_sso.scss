@@ -1,0 +1,162 @@
+@use "../global" as *;
+
+a {
+  color: #1a1d1f;
+  text-decoration: none;
+  @include txt-font-bold;
+}
+
+.ssoPages {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../images/bg_sso_page.webp") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $vars-space-normal;
+  &.ssoFullPage {
+    .ssoPage-form {
+      max-width: 620px;
+    }
+  }
+}
+
+.ssoPage-content {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  @include display-flex-layout(row, wrap, space-around, start);
+  gap: 1rem;
+
+  .ssoPage-logo {
+    margin: 4% $vars-space-sm;
+    img {
+      max-width: 200px;
+      height: auto;
+    }
+  }
+
+  .lstQuickLoginMethod {
+    width: 100%;
+    @include display-flex-layout(row, wrap, center, center, 0.5rem);
+  }
+
+  .ssoPage {
+    &--header {
+      width: 100%;
+            @include display-flex-layout(column, nowrap, center, center, 1rem);
+      text-align: center;
+    }
+    &--body {
+      width: 100%;
+      @include display-flex-layout(column, nowrap, center, center, 1.5rem);
+    }
+    &--footer {
+      width: 100%;
+      .text-warning {
+        border-top: 1px solid $vars-grey-200;
+        padding-top: $vars-space-lg;
+        p {
+          font-size: 14px;
+          span {
+            @include txt-font-bold;
+          }
+        }
+      }
+    }
+  }
+
+  .ssoPage-form {
+    width: 100%;
+    max-width: 480px;
+    @include mixins-box-lg;
+    @include display-flex-column;
+    gap: $vars-space-lg;
+    .box-title {
+      width: 100%;
+      text-align: center;
+      font-size: $vars-space-xl;
+      padding: $vars-space-xs 0;
+    }
+  }
+
+  .login-option {
+    width: 100%;
+    @include mixins-box-normal;
+    @include display-flex-layout(column, wrap, center, center, 0.5rem);
+    .login-form {
+      width: 100%;
+      @include display-flex-column-center;
+      gap: $vars-space-sm;
+      .cts-form-group {
+        width: 100%;
+        @include display-flex-column;
+        label {
+          @include txt-font-bold;
+          margin-bottom: $vars-space-xs;
+          color: $vars-grey-1000;
+        }
+        .input-wrapper {
+          width: 100%;
+          position: relative;
+          .fixed-icon {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: $vars-space-sm;
+            transform: translateY(-50%);
+            cursor: pointer;
+            &.clear-btn {
+              display: none;
+            }
+            .fa-eye-slash {
+              display: none;
+            }
+          }
+          input {
+            width: 100%;
+            border-radius: $vars-space-xs;
+            border: 1px solid $vars-grey-200;
+            padding: $vars-space-sm $vars-space-xl $vars-space-sm $vars-space-xs;
+            box-shadow: 0px 0px 0px 1px #cdd1dc;
+            color: $vars-grey-1000;
+            font-size: $vars-text-normal;
+            &:active,
+            &:focus {
+              outline: none;
+            }
+            &::placeholder {
+              color: $vars-grey-400;
+            }
+            &.isError {
+              border-color: $vars-error-600;
+              box-shadow: none;
+            }
+          }
+        }
+        .error-message {
+          margin-top: 0.25rem;
+          color: $vars-error-600;
+          font-size: 14px;
+        }
+      }
+      .allow-privacy {
+        font-size: 14px;
+        margin-bottom: $vars-space-xs;
+        @include display-flex-layout(row, nowrap, center, center, 0.5rem);
+      }
+      .forgot-password {
+        width: 100%;
+        text-align: right;
+        a {
+          font-weight: normal;
+        }
+      }
+    }
+    &.dont-have-account,
+    &.have-account {
+      flex-direction: row;
+      gap: 0.25rem;
+    }
+  }
+}

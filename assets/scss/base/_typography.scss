@@ -1,1 +1,8 @@
 // _typography.scss
+
+
+
+@mixin font-bold {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
