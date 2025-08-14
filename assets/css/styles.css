@@ -223,3 +223,44 @@ a {
   flex-direction: row;
   gap: 0.25rem;
 }
+
+.otp-code-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.otp-code-container .otp-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.otp-code-container .otp-wrapper input {
+  max-width: 48px;
+  aspect-ratio: 1/1;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #1a1d1f;
+  font-size: 24px;
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+.otp-code-container .otp-wrapper input:focus, .otp-code-container .otp-wrapper input:active {
+  outline: none;
+}
+.otp-code-container .otp-wrapper input.no-caret {
+  caret-color: transparent;
+}
+.otp-code-container.isError input {
+  color: #F34141;
+  border-bottom: 2px solid #F34141;
+}

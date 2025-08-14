@@ -25,16 +25,16 @@
                     <div class="login-option">
                         <form action="#" method="POST" class="login-form">
                             <div class="cts-form-group">
-                                <label for="otp-code">Nhập mã OTP</label>
-                                <div class="input-wrapper">
-                                    <input type="text" id="otp-code" name="otp-code" required
-                                        placeholder="Nhập mã OTP" />
-                                    <span class="fixed-icon clear-btn">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </span>
+                                <label>Nhập mã OTP</label>
+                                <div id="otp-input-container" class="otp-code-container">
+                                    <div class="otp-wrapper">
+                                        <input type="text" name="otp-code" maxlength="1" />
+                                        <input type="text" name="otp-code" maxlength="1" readonly />
+                                        <input type="text" name="otp-code" maxlength="1" readonly />
+                                        <input type="text" name="otp-code" maxlength="1" readonly />
+                                    </div>
+                                    <div class="otp-error-message" style="color:red;margin-top:4px;"></div>
                                 </div>
-                                <span class="error-message" id="phoneNumberError"><i
-                                        class="fa-solid fa-triangle-exclamation"></i> Số điện thoại không hợp lệ</span>
                             </div>
                         </form>
                         <div class="progress">

@@ -44,7 +44,7 @@ a {
   .ssoPage {
     &--header {
       width: 100%;
-            @include display-flex-layout(column, nowrap, center, center, 1rem);
+      @include display-flex-layout(column, nowrap, center, center, 1rem);
       text-align: center;
     }
     &--body {
@@ -157,6 +157,39 @@ a {
     &.have-account {
       flex-direction: row;
       gap: 0.25rem;
+    }
+  }
+}
+
+.otp-code-container {
+  width: 100%;
+  @include display-flex-layout(column, nowrap, center, center, 0.5rem);
+  margin-bottom: 0.75rem;
+  .otp-wrapper {
+    width: 100%;
+    @include display-flex-layout(row, nowrap, center, center, 0.5rem);
+    input {
+      max-width: 48px;
+      aspect-ratio: 1/1;
+      text-align: center;
+      border: none;
+      background-color: transparent;
+      border-bottom: 2px solid $vars-grey-1000;
+      font-size: $vars-text-lg;
+      @include txt-font-bold;
+      &:focus,
+      &:active {
+        outline: none;
+      }
+      &.no-caret {
+        caret-color: transparent;
+      }
+    }
+  }
+  &.isError {
+    input {
+      color: $vars-error-600;
+      border-bottom: 2px solid $vars-error-600;
     }
   }
 }
