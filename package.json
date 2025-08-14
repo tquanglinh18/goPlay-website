@@ -1,0 +1,14 @@
+{
+  "name": "goplay",
+  "version": "0.0.1",
+  "description": "goPlay Website",
+  "license": "MIT",
+  "main": "index.html",
+  "scripts": {
+    "start": "sass --watch ./assets/scss/main.scss ./assets/css/styles.css --no-source-map"
+  },
+  "dependencies": {
+    "sass": "^1.83.0",
+    "yarn": "^1.22.21"
+  }
+}
