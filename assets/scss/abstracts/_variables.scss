@@ -4,13 +4,21 @@ $white-color: #ffffff;
 $black-color: #000000;
 $green-primary: #4f6a46;
 
+$black-opacity-60: #00000099;
+
 $grey-1000: #1a1d1f;
+$grey-600: #596066;
 $grey-400: #9ea5ad;
 $grey-200: #e5e7ea;
 $grey-50: #fafafa;
 
+//Blue
+$blue-700: rgba(34, 154, 214, 1);
+
 //Error-red
-$error-600: #F34141;
+$error-600: #f34141;
+$error-700: #cd3636;
+$error-700-opacity-75: rgba(205, 54, 54, 0.75);
 
 //Spacing
 $space-xs: 8px;

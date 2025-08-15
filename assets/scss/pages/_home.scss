@@ -1,0 +1,106 @@
+@use "../global" as *;
+
+.game-card {
+  width: 100%;
+  max-width: 333px;
+
+  .game-card-inner {
+    position: relative;
+    border-radius: $vars-space-normal;
+    margin-bottom: $vars-space-sm;
+    &:hover {
+      .game-card-back {
+        display: flex;
+      }
+    }
+  }
+  .game-card-front {
+    position: relative;
+    .game-thumb {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 333/412;
+        border-radius: $vars-space-normal;
+        display: block;
+      }
+    }
+    .game-tags {
+      position: absolute;
+      top: 0;
+      right: 0;
+      .tag {
+        width: fit-content;
+        padding: $vars-space-xs $vars-space-normal;
+        border-radius: $vars-space-xs $vars-space-normal;
+        color: $vars-white-color;
+        float: right;
+        text-transform: uppercase;
+        font-size: 14px;
+        @include txt-font-bold;
+        &--new {
+          background-color: $vars-error-700;
+        }
+
+        &--upcoming {
+          background-color: $vars-grey-1000;
+        }
+      }
+    }
+  }
+
+  .game-card-back {
+    width: 100%;
+    height: 100%;
+    background-color: $vars-black-opacity-60;
+    padding: 1rem;
+    @include display-flex-layout(column, nowrap, center, center, 0.5rem);
+    border-radius: $vars-space-normal;
+    position: absolute;
+    inset: 0;
+    display: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .game-card-info {
+    .game-name {
+      @include txt-font-bold;
+      font-size: 18px;
+      color: $vars-grey-1000;
+      margin-bottom: $vars-space-xs;
+    }
+    .game-type {
+      font-size: 14px;
+      color: $vars-grey-600;
+    }
+  }
+}
+
+.cts-section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: $vars-space-normal;
+  &--header {
+    width: 100%;
+    @include display-flex-layout(row, nowrap, space-between, center, 0.5rem);
+    margin-bottom: $vars-space-lg;
+    .section-title {
+      @include txt-font-bold;
+    }
+    .section-actions {
+    }
+  }
+  &--body {
+    .lst-game-container {
+      @include display-grid-cols(4, 1rem);
+    }
+  }
+  &--footer {
+  }
+}
+
+.cts-section-fullpage {
+}

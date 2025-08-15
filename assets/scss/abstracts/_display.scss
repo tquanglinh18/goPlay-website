@@ -64,9 +64,10 @@
   display: grid;
 }
 
-@mixin grid-cols($count) {
+@mixin grid-cols($count, $gap) {
   display: grid;
   grid-template-columns: repeat($count, 1fr);
+  gap: $gap;
 }
 
 @mixin grid-auto($min, $max) {

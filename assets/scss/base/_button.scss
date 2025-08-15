@@ -10,7 +10,8 @@
   transition: background-color 0.3s;
   font-size: 1rem;
   border: none;
-  &[disabled], &.disabled {
+  &[disabled],
+  &.disabled {
     box-shadow: 0px 1px 1px 0px #0000001f;
     box-shadow: 0px 0px 0px 1px #676e7629;
     box-shadow: 0px 2px 5px 0px #676e7614;
@@ -30,4 +31,50 @@
   border-radius: $vars-space-xs;
   padding: $vars-space-xs;
   background-color: $vars-white-color;
+}
+
+.card-game-btn {
+  width: 100%;
+  max-width: 245px;
+  padding: $vars-space-normal;
+  border-radius: $vars-space-xs;
+  background-color: $vars-grey-50;
+  color: $vars-grey-1000;
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  @include display-flex-center;
+  gap: 0.5rem;
+  @include txt-font-semibold;
+  font-size: 18px;
+  &--red {
+    background-color: $vars-error-700;
+    color: $vars-white-color;
+    &:hover {
+      background-color: $vars-error-700-opacity-75 !important;
+    }
+  }
+
+  &:hover {
+    background-color: $vars-grey-1000;
+    color: $vars-white-color;
+  }
+}
+
+.btn-loadmore {
+  width: fit-content;
+  min-width: 105px;
+  padding: $vars-space-sm $vars-space-normal;
+  border-radius: $vars-space-xs;
+  @include txt-font-semibold;
+  border: 2px solid $vars-grey-200;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $vars-grey-1000;
+    background-color: $vars-grey-1000;
+    color: $vars-white-color;
+  }
 }

@@ -62,6 +62,10 @@ a {
             @include txt-font-bold;
           }
         }
+        a {
+          color: $vars-blue-700;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -84,73 +88,76 @@ a {
     width: 100%;
     @include mixins-box-normal;
     @include display-flex-layout(column, wrap, center, center, 0.5rem);
+    &.isFitContent {
+      width: fit-content;
+    }
     .login-form {
       width: 100%;
       @include display-flex-column-center;
       gap: $vars-space-sm;
-      .cts-form-group {
-        width: 100%;
-        @include display-flex-column;
-        label {
-          @include txt-font-bold;
-          margin-bottom: $vars-space-xs;
-          color: $vars-grey-1000;
-        }
-        .input-wrapper {
-          width: 100%;
-          position: relative;
-          .fixed-icon {
-            display: block;
-            position: absolute;
-            top: 50%;
-            right: $vars-space-sm;
-            transform: translateY(-50%);
-            cursor: pointer;
-            &.clear-btn {
-              display: none;
-            }
-            .fa-eye-slash {
-              display: none;
-            }
-          }
-          input {
-            width: 100%;
-            border-radius: $vars-space-xs;
-            border: 1px solid $vars-grey-200;
-            padding: $vars-space-sm $vars-space-xl $vars-space-sm $vars-space-xs;
-            box-shadow: 0px 0px 0px 1px #cdd1dc;
-            color: $vars-grey-1000;
-            font-size: $vars-text-normal;
-            &:active,
-            &:focus {
-              outline: none;
-            }
-            &::placeholder {
-              color: $vars-grey-400;
-            }
-            &.isError {
-              border-color: $vars-error-600;
-              box-shadow: none;
-            }
-          }
-        }
-        .error-message {
-          margin-top: 0.25rem;
-          color: $vars-error-600;
-          font-size: 14px;
-        }
-      }
-      .allow-privacy {
-        font-size: 14px;
+    }
+    .cts-form-group {
+      width: 100%;
+      @include display-flex-column;
+      label {
+        @include txt-font-bold;
         margin-bottom: $vars-space-xs;
-        @include display-flex-layout(row, nowrap, center, center, 0.5rem);
+        color: $vars-grey-1000;
       }
-      .forgot-password {
+      .input-wrapper {
         width: 100%;
-        text-align: right;
-        a {
-          font-weight: normal;
+        position: relative;
+        .fixed-icon {
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: $vars-space-sm;
+          transform: translateY(-50%);
+          cursor: pointer;
+          &.clear-btn {
+            display: none;
+          }
+          .fa-eye-slash {
+            display: none;
+          }
         }
+        input {
+          width: 100%;
+          border-radius: $vars-space-xs;
+          border: 1px solid $vars-grey-200;
+          padding: $vars-space-sm $vars-space-xl $vars-space-sm $vars-space-xs;
+          box-shadow: 0px 0px 0px 1px #cdd1dc;
+          color: $vars-grey-1000;
+          font-size: $vars-text-normal;
+          &:active,
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: $vars-grey-400;
+          }
+          &.isError {
+            border-color: $vars-error-600;
+            box-shadow: none;
+          }
+        }
+      }
+      .error-message {
+        margin-top: 0.25rem;
+        color: $vars-error-600;
+        font-size: 14px;
+      }
+    }
+    .allow-privacy {
+      font-size: 14px;
+      margin-bottom: $vars-space-xs;
+      @include display-flex-layout(row, nowrap, center, center, 0.5rem);
+    }
+    .forgot-password {
+      width: 100%;
+      text-align: right;
+      a {
+        font-weight: normal;
       }
     }
     &.dont-have-account,
@@ -158,6 +165,32 @@ a {
       flex-direction: row;
       gap: 0.25rem;
     }
+  }
+
+  .qr-code-sms {
+    width: 100%;
+    @include display-flex-layout(column, nowrap, center, center, 0.75rem);
+    .qr-code-img {
+      width: 100%;
+      max-width: 186px;
+      border: 1px solid $vars-grey-1000;
+      border-radius: $vars-space-sm;
+      padding: $vars-space-xs;
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+      }
+    }
+  }
+  .resend-otp {
+    a {
+      color: $vars-blue-700;
+      text-decoration: underline;
+    }
+  }
+  .timer-expired {
+    color: $vars-error-600;
   }
 }
 

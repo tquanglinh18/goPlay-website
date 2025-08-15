@@ -14,7 +14,7 @@
 
 <body>
 
-    <section class="ssoPages">
+        <section class="ssoPages">
         <div class="ssoPage-content">
             <div class="ssoPage-logo">
                 <img src="../assets/images/logo_goplay.png" alt="goPlay Logo" />
@@ -77,6 +77,92 @@
                     <div class="login-option have-account">
                         <p>Đã có tài khoản? </p>
                         <a href="#"> Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ssoPages ssoFullPage">
+        <div class="ssoPage-content">
+            <div class="ssoPage-form">
+                <div class="ssoPage--header">
+                    <h3 class="box-title">Yêu cầu xác thực số điện thoại</h3>
+                    <p>Xác thực số điện thoại để tăng tính bảo mật cho tài khoản và là yêu cầu bắt buộc khi tham gia trò
+                        chơi.</p>
+                </div>
+                <div class="ssoPage--body">
+                    <div class="login-option">
+                        <form action="#" method="POST" class="login-form">
+                            <div class="cts-form-group">
+                                <label for="phone-number">Nhập số điện thoại đang dùng tại đây</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="phone-number" name="phone-number" required
+                                        placeholder="Nhập số điện thoại" />
+                                    <span class="fixed-icon clear-btn">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </span>
+                                </div>
+                                <span class="error-message" id="phoneNumberError"><i
+                                        class="fa-solid fa-triangle-exclamation"></i> Số điện thoại không hợp lệ</span>
+                            </div>
+                            <button type="submit" class="cts-sso-btn" disabled>Gửi OTP</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="ssoPage--footer">
+                    <div class="text-warning">
+                        <p>*Vui lòng dùng số điện thoại đang sử dụng thuộc mạng <span>Viettel, Vina hoặc Mobi.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="ssoPages ssoFullPage">
+        <div class="ssoPage-content">
+            <div class="ssoPage-form">
+                <div class="ssoPage--header">
+                    <h3 class="box-title">Yêu cầu xác thực số điện thoại</h3>
+                    <p>Mã OTP được gửi về SMS số điện thoại <span class="text-bold">098990009</span></p>
+                </div>
+                <div class="ssoPage--body">
+                    <div class="login-option">
+                        <form action="#" method="POST" class="login-form">
+                            <div class="cts-form-group">
+                                <label>Nhập mã OTP</label>
+                                <div id="otp-input-container" class="otp-code-container">
+                                    <div class="otp-wrapper">
+                                        <input type="text" name="otp-code" maxlength="1" />
+                                        <input type="text" name="otp-code" maxlength="1" readonly />
+                                        <input type="text" name="otp-code" maxlength="1" readonly />
+                                        <input type="text" name="otp-code" maxlength="1" readonly />
+                                        <input type="text" name="otp-code" maxlength="1" readonly />
+                                        <input type="text" name="otp-code" maxlength="1" readonly />
+                                    </div>
+                                    <div class="otp-error-message text-lighterror"></div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="progress">
+                            <i class="fa-solid fa-spinner fa-spin"></i> Đang xác thực...
+                        </div>
+                        <div class="resend-otp">
+                            <p><a href="#">Gửi lại</a></p>
+                        </div>
+                        <div class="timer-expired">
+                            <p id="otpTimer">01:00</p>
+                        </div>
+                        <div class="otp-note">
+                            <p>OTP chỉ có giá trị trong vòng <span class="text-bold text-lighterror">5 phút</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ssoPage--footer">
+                    <div class="text-warning">
+                        <p>*Nếu bạn không nhận được tin nhắn OTP vui lòng liên hệ <span class="text-bold">1900 636 876</span> để được tư
+                            vấn (1500 đồng/ phút).</p>
                     </div>
                 </div>
             </div>

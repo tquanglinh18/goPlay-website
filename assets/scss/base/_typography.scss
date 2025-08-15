@@ -1,8 +1,24 @@
 // _typography.scss
-
-
-
+@use "../abstracts/variables" as *;
 @mixin font-bold {
   font-family: "Inter-Bold";
   font-weight: bold;
 }
+
+@mixin font-semibold {
+  font-family: "Inter-SemiBold";
+  font-weight: semi-bold;
+}
+
+.text-lightblue {
+  color: $blue-700;
+}
+
+.text-lighterror {
+  color: $error-600;
+}
+
+.text-bold {
+  @include font-bold;
+}
+

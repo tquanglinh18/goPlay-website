@@ -1,3 +1,16 @@
+.text-lightblue {
+  color: rgb(34, 154, 214);
+}
+
+.text-lighterror {
+  color: #f34141;
+}
+
+.text-bold {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+
 .cts-sso-btn {
   width: 100%;
   padding: 16px;
@@ -30,6 +43,157 @@
   background-color: #ffffff;
 }
 
+.card-game-btn {
+  width: 100%;
+  max-width: 245px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  color: #1a1d1f;
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Inter-SemiBold";
+  font-weight: semi-bold;
+  font-size: 18px;
+}
+.card-game-btn--red {
+  background-color: #cd3636;
+  color: #ffffff;
+}
+.card-game-btn--red:hover {
+  background-color: rgba(205, 54, 54, 0.75) !important;
+}
+.card-game-btn:hover {
+  background-color: #1a1d1f;
+  color: #ffffff;
+}
+
+.btn-loadmore {
+  width: fit-content;
+  min-width: 105px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: "Inter-SemiBold";
+  font-weight: semi-bold;
+  border: 2px solid #e5e7ea;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.btn-loadmore:hover {
+  border: 2px solid #1a1d1f;
+  background-color: #1a1d1f;
+  color: #ffffff;
+}
+
+.game-card {
+  width: 100%;
+  max-width: 333px;
+}
+.game-card .game-card-inner {
+  position: relative;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+.game-card .game-card-inner:hover .game-card-back {
+  display: flex;
+}
+.game-card .game-card-front {
+  position: relative;
+}
+.game-card .game-card-front .game-thumb {
+  width: 100%;
+}
+.game-card .game-card-front .game-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 333/412;
+  border-radius: 16px;
+  display: block;
+}
+.game-card .game-card-front .game-tags {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.game-card .game-card-front .game-tags .tag {
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 8px 16px;
+  color: #ffffff;
+  float: right;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+.game-card .game-card-front .game-tags .tag--new {
+  background-color: #cd3636;
+}
+.game-card .game-card-front .game-tags .tag--upcoming {
+  background-color: #1a1d1f;
+}
+.game-card .game-card-back {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 16px;
+  position: absolute;
+  inset: 0;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+.game-card .game-card-info .game-name {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+  font-size: 18px;
+  color: #1a1d1f;
+  margin-bottom: 8px;
+}
+.game-card .game-card-info .game-type {
+  font-size: 14px;
+  color: #596066;
+}
+
+.cts-section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.cts-section--header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 24px;
+}
+.cts-section--header .section-title {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+.cts-section--body .lst-game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
 a {
   color: #1a1d1f;
   text-decoration: none;
@@ -111,6 +275,10 @@ a {
   font-family: "Inter-Bold";
   font-weight: bold;
 }
+.ssoPage-content .ssoPage--footer .text-warning a {
+  color: rgb(34, 154, 214);
+  text-decoration: underline;
+}
 .ssoPage-content .ssoPage-form {
   width: 100%;
   max-width: 480px;
@@ -141,6 +309,9 @@ a {
   align-items: center;
   gap: 0.5rem;
 }
+.ssoPage-content .login-option.isFitContent {
+  width: fit-content;
+}
 .ssoPage-content .login-option .login-form {
   width: 100%;
   display: flex;
@@ -149,22 +320,22 @@ a {
   align-items: center;
   gap: 12px;
 }
-.ssoPage-content .login-option .login-form .cts-form-group {
+.ssoPage-content .login-option .cts-form-group {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.ssoPage-content .login-option .login-form .cts-form-group label {
+.ssoPage-content .login-option .cts-form-group label {
   font-family: "Inter-Bold";
   font-weight: bold;
   margin-bottom: 8px;
   color: #1a1d1f;
 }
-.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper {
+.ssoPage-content .login-option .cts-form-group .input-wrapper {
   width: 100%;
   position: relative;
 }
-.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper .fixed-icon {
+.ssoPage-content .login-option .cts-form-group .input-wrapper .fixed-icon {
   display: block;
   position: absolute;
   top: 50%;
@@ -172,13 +343,13 @@ a {
   transform: translateY(-50%);
   cursor: pointer;
 }
-.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper .fixed-icon.clear-btn {
+.ssoPage-content .login-option .cts-form-group .input-wrapper .fixed-icon.clear-btn {
   display: none;
 }
-.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper .fixed-icon .fa-eye-slash {
+.ssoPage-content .login-option .cts-form-group .input-wrapper .fixed-icon .fa-eye-slash {
   display: none;
 }
-.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper input {
+.ssoPage-content .login-option .cts-form-group .input-wrapper input {
   width: 100%;
   border-radius: 8px;
   border: 1px solid #e5e7ea;
@@ -187,22 +358,22 @@ a {
   color: #1a1d1f;
   font-size: 16px;
 }
-.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper input:active, .ssoPage-content .login-option .login-form .cts-form-group .input-wrapper input:focus {
+.ssoPage-content .login-option .cts-form-group .input-wrapper input:active, .ssoPage-content .login-option .cts-form-group .input-wrapper input:focus {
   outline: none;
 }
-.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper input::placeholder {
+.ssoPage-content .login-option .cts-form-group .input-wrapper input::placeholder {
   color: #9ea5ad;
 }
-.ssoPage-content .login-option .login-form .cts-form-group .input-wrapper input.isError {
-  border-color: #F34141;
+.ssoPage-content .login-option .cts-form-group .input-wrapper input.isError {
+  border-color: #f34141;
   box-shadow: none;
 }
-.ssoPage-content .login-option .login-form .cts-form-group .error-message {
+.ssoPage-content .login-option .cts-form-group .error-message {
   margin-top: 0.25rem;
-  color: #F34141;
+  color: #f34141;
   font-size: 14px;
 }
-.ssoPage-content .login-option .login-form .allow-privacy {
+.ssoPage-content .login-option .allow-privacy {
   font-size: 14px;
   margin-bottom: 8px;
   display: flex;
@@ -212,16 +383,44 @@ a {
   align-items: center;
   gap: 0.5rem;
 }
-.ssoPage-content .login-option .login-form .forgot-password {
+.ssoPage-content .login-option .forgot-password {
   width: 100%;
   text-align: right;
 }
-.ssoPage-content .login-option .login-form .forgot-password a {
+.ssoPage-content .login-option .forgot-password a {
   font-weight: normal;
 }
 .ssoPage-content .login-option.dont-have-account, .ssoPage-content .login-option.have-account {
   flex-direction: row;
   gap: 0.25rem;
+}
+.ssoPage-content .qr-code-sms {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+.ssoPage-content .qr-code-sms .qr-code-img {
+  width: 100%;
+  max-width: 186px;
+  border: 1px solid #1a1d1f;
+  border-radius: 12px;
+  padding: 8px;
+}
+.ssoPage-content .qr-code-sms .qr-code-img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+.ssoPage-content .resend-otp a {
+  color: rgb(34, 154, 214);
+  text-decoration: underline;
+}
+.ssoPage-content .timer-expired {
+  color: #f34141;
 }
 
 .otp-code-container {
@@ -261,6 +460,6 @@ a {
   caret-color: transparent;
 }
 .otp-code-container.isError input {
-  color: #F34141;
-  border-bottom: 2px solid #F34141;
+  color: #f34141;
+  border-bottom: 2px solid #f34141;
 }

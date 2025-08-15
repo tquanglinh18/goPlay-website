@@ -76,8 +76,7 @@ $(function () {
         console.log("OTP nhập:", otp);
 
         setTimeout(() => {
-            // Ví dụ check
-            if (otp !== "1234") {
+            if (otp !== "123456") {
                 setError("OTP không hợp lệ!");
             } else {
                 clearError();
@@ -86,7 +85,7 @@ $(function () {
         }, 1000)
     });
 
-    $('input[type="text"]').each(function () {
+    $('input:not([type="password"])').each(function () {
         const $input = $(this);
         const $clearBtn = $input.siblings('.clear-btn');
 
