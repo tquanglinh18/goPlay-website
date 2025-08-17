@@ -3,11 +3,11 @@
 .game-card {
   width: 100%;
   max-width: 333px;
-
   .game-card-inner {
     position: relative;
     border-radius: $vars-space-normal;
     margin-bottom: $vars-space-sm;
+
     &:hover {
       .game-card-back {
         display: flex;
@@ -40,6 +40,9 @@
         text-transform: uppercase;
         font-size: 14px;
         @include txt-font-bold;
+        @include res-responsive(md) {
+          font-size: 10px;
+        }
         &--new {
           background-color: $vars-error-700;
         }
@@ -70,6 +73,10 @@
       font-size: 18px;
       color: $vars-grey-1000;
       margin-bottom: $vars-space-xs;
+      @include res-responsive(md) {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
     }
     .game-type {
       font-size: 14px;
@@ -96,11 +103,102 @@
   &--body {
     .lst-game-container {
       @include display-grid-cols(4, 1rem);
+      @include res-responsive(md) {
+        @include display-grid-cols(2, 1rem);
+      }
+    }
+    .lst-news-container {
+      @include display-grid-cols(5, $vars-space-normal);
+      @include res-responsive(md) {
+        @include display-grid-cols(2, $vars-space-normal);
+        .news-featured {
+          grid-column: span 2 !important;
+          grid-row: span 1 !important;
+          aspect-ratio: 568/229;
+        }
+        .news-related {
+          grid-column: span 1 !important;
+          grid-row: span 1 !important;
+          grid-row: auto;
+        }
+      }
+
+      .news-featured {
+        grid-column: span 3;
+        grid-row: span 2;
+      }
+
+      .news-related {
+        grid-column: span 2;
+        aspect-ratio: 568/229;
+        &.news-card {
+          .news-card-inner {
+            .news-card-image {
+              img {
+                max-width: 70px;
+                aspect-ratio: 70/94;
+              }
+            }
+            .news-card-info {
+              .news-title {
+                font-size: $vars-space-normal;
+              }
+              .news-posted,
+              .news-desc {
+                display: none;
+              }
+            }
+          }
+        }
+      }
     }
   }
   &--footer {
   }
 }
 
-.cts-section-fullpage {
+.news-card {
+  width: 100%;
+  border-radius: $vars-space-normal;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: $vars-black-opacity-60;
+  @include display-flex-layout(row, nowrap, center, end, 1rem);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .news-card-inner {
+    width: 100%;
+    @include display-flex-layout(row, nowrap, center, end, 0);
+    .news-card-image {
+      img {
+        width: 100%;
+        max-width: 136px;
+        aspect-ratio: 136/182;
+        border-radius: 0 $vars-space-normal;
+        object-fit: cover;
+        display: block;
+      }
+    }
+    .news-card-info {
+      flex: 1;
+      color: $vars-white-color;
+      @include display-flex-layout(column, nowrap, center, start, 0.375rem);
+      padding: $vars-space-lg $vars-space-normal;
+      .news-title {
+        font-size: 18px;
+        @include txt-max-line(2);
+        @include txt-font-bold;
+      }
+      .news-posted {
+      }
+      .news-desc {
+        @include txt-max-line(2);
+      }
+    }
+  }
 }

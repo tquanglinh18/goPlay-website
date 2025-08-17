@@ -10,6 +10,13 @@
   font-weight: semi-bold;
 }
 
+@mixin max-line($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .text-lightblue {
   color: $blue-700;
 }

@@ -33,7 +33,7 @@
   background-color: $vars-white-color;
 }
 
-.card-game-btn {
+.goPlay-btn {
   width: 100%;
   max-width: 245px;
   padding: $vars-space-normal;
@@ -49,11 +49,20 @@
   gap: 0.5rem;
   @include txt-font-semibold;
   font-size: 18px;
+  @include res-responsive(md) {
+    font-size: 14px;
+  }
   &--red {
     background-color: $vars-error-700;
     color: $vars-white-color;
     &:hover {
       background-color: $vars-error-700-opacity-75 !important;
+    }
+    img {
+      width: 18px;
+      @include res-responsive(md) {
+        width: 14px;
+      }
     }
   }
 
@@ -66,7 +75,7 @@
 .btn-loadmore {
   width: fit-content;
   min-width: 105px;
-  padding: $vars-space-sm $vars-space-normal;
+  padding: $vars-space-xs $vars-space-normal;
   border-radius: $vars-space-xs;
   @include txt-font-semibold;
   border: 2px solid $vars-grey-200;

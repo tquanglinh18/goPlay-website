@@ -1,7 +1,7 @@
 @forward './abstracts/_variables' as vars-*;
 @forward './abstracts/_mixins' as mixins-*;
 @forward './abstracts/_display' as display-*;
-@forward './abstracts/_response' as response-*;
+@forward './abstracts/_responsive' as res-*;
 @forward './abstracts/_fonts' as fonts-*;
 
 @forward './base/_typography' as txt-*;

@@ -6,7 +6,7 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1400px;
 
-@mixin respond($breakpoint) {
+@mixin responsive($breakpoint) {
   @if $breakpoint == sm {
     @media (max-width: $breakpoint-sm) { @content; }
   } @else if $breakpoint == md {
