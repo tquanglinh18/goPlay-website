@@ -1,1 +1,69 @@
 // _footer.scss
+@use "../global" as *;
+
+.goPlay-footer {
+  width: 100%;
+  background-color: $vars-grey-1000;
+  padding: 4%;
+  font-size: 14px;
+  @include res-responsive(sm) {
+    padding: 12% 8%;
+  }
+  .footer-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    @include display-grid-cols(4, 6%);
+    @include res-responsive(xl) {
+      @include display-grid-cols(3, 6%);
+    }
+    @include res-responsive(sm) {
+      @include display-grid-cols(2, 6%);
+    }
+  }
+  .footer-col {
+    color: $vars-grey-400;
+    h4 {
+      color: $vars-white-color;
+      @include txt-font-bold;
+      margin-bottom: $vars-space-normal;
+    }
+    ul {
+      list-style: none;
+      font-weight: 500;
+      li {
+        margin-bottom: $vars-space-normal;
+        @include res-responsive(sm) {
+          margin-bottom: $vars-space-sm;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          color: $vars-grey-300;
+          transition: color 0.3s ease-in-out;
+          &:hover {
+            color: $vars-white-color;
+          }
+        }
+      }
+    }
+
+    &.company-info {
+      word-spacing: 1px;
+      @include res-responsive(sm) {
+        grid-column: span 2 !important;
+      }
+      @include display-flex-layout(
+        column,
+        nowrap,
+        center,
+        start,
+        $vars-space-normal
+      );
+      img {
+        height: $vars-space-xl;
+      }
+    }
+  }
+}

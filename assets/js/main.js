@@ -122,4 +122,8 @@ $(function () {
             $eyeSlash.hide();
         }
     });
+
+    $("#btnToggleMenuMobile").click(() => {
+        $(".goPlay-header-mobile").toggle();
+    })
 });

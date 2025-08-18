@@ -7,7 +7,7 @@
 
 @mixin font-semibold {
   font-family: "Inter-SemiBold";
-  font-weight: semi-bold;
+  font-weight: 600;
 }
 
 @mixin max-line($lines) {

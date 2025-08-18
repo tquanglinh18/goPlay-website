@@ -1,1 +1,117 @@
 // _header.scss
+@use "../global" as *;
+
+.goPlay-header {
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  .goPlay-header-mobile {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 99;
+    display: none;
+
+    .goPlay-header-mobile-container {
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: $vars-white-color;
+      padding: $vars-space-lg;
+    }
+
+    .goPlay-menu {
+      ul {
+        list-style: none;
+        @include display-flex-layout(
+          column,
+          nowrap,
+          end,
+          end,
+          $vars-space-normal
+        );
+      }
+    }
+  }
+  .header-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    max-width: 1920px;
+    @include display-flex-layout(
+      row,
+      nowrap,
+      space-between,
+      center,
+      $vars-space-normal
+    );
+    padding: 0 $vars-space-normal;
+    @include res-responsive(md) {
+      padding: $vars-space-normal;
+      position: relative;
+    }
+  }
+
+  .goPlay-links {
+    height: 100%;
+    @include res-responsive(md) {
+      flex: 1;
+    }
+    @include display-flex-layout(
+      row,
+      nowrap,
+      space-between,
+      center,
+      $vars-space-normal
+    );
+    .goPlay-logo {
+      margin-right: $vars-space-lg;
+    }
+    .goPlay-menu {
+      display: block;
+      @include res-responsive(md) {
+        display: none;
+      }
+      ul {
+        list-style: none;
+        @include display-flex-layout(
+          row,
+          nowrap,
+          space-between,
+          center,
+          $vars-space-normal
+        );
+        li {
+          padding: $vars-space-lg 0;
+          border-bottom: 3px solid transparent;
+          min-width: 82px;
+          text-align: center;
+          &:hover {
+            border-bottom: 3px solid $vars-error-600;
+          }
+          &:hover {
+            @include txt-font-bold;
+          }
+        }
+      }
+    }
+  }
+
+  .goPlay-auth {
+    @include display-flex-layout(
+      row,
+      nowrap,
+      center,
+      center,
+      $vars-space-normal
+    );
+  }
+  .cts-menu-sm {
+    font-size: $vars-space-xl;
+    display: none;
+    @include res-responsive(md) {
+      display: block;
+    }
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+}

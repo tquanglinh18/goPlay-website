@@ -21,6 +21,7 @@
   transition: background-color 0.3s;
   font-size: 1rem;
   border: none;
+  cursor: pointer;
 }
 .cts-sso-btn[disabled], .cts-sso-btn.disabled {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1215686275);
@@ -43,7 +44,7 @@
   background-color: #ffffff;
 }
 
-.goPlay-btn {
+.goPlay-btn, .btn-auth {
   width: 100%;
   max-width: 245px;
   padding: 16px;
@@ -60,11 +61,10 @@
   align-items: center;
   gap: 0.5rem;
   font-family: "Inter-SemiBold";
-  font-weight: semi-bold;
-  font-size: 18px;
+  font-weight: 600;
 }
 @media (max-width: 768px) {
-  .goPlay-btn {
+  .goPlay-btn, .btn-auth {
     font-size: 14px;
   }
 }
@@ -83,9 +83,19 @@
     width: 14px;
   }
 }
-.goPlay-btn:hover {
+.goPlay-btn:hover, .btn-auth:hover {
   background-color: #1a1d1f;
   color: #ffffff;
+}
+
+.btn-auth {
+  padding: 8px 16px;
+  background-color: #1a1d1f;
+  color: #ffffff;
+}
+.btn-auth:hover {
+  background-color: #e5e7ea;
+  color: #1a1d1f;
 }
 
 .btn-loadmore {
@@ -94,15 +104,33 @@
   padding: 8px 16px;
   border-radius: 8px;
   font-family: "Inter-SemiBold";
-  font-weight: semi-bold;
+  font-weight: 600;
   border: 2px solid #e5e7ea;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .btn-loadmore {
+    font-size: 12px;
+  }
 }
 .btn-loadmore:hover {
   border: 2px solid #1a1d1f;
   background-color: #1a1d1f;
   color: #ffffff;
+}
+
+.btn-comming-soon {
+  border: 1px solid #676E76;
+  border-radius: 16px;
+  padding: 8px 24px;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.btn-comming-soon:hover {
+  background-color: #fafafa;
+  color: #1a1d1f;
 }
 
 .game-card {
@@ -168,7 +196,7 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
   border-radius: 16px;
   position: absolute;
   inset: 0;
@@ -195,9 +223,21 @@
 
 .cts-section {
   width: 100%;
+  padding: 16px;
+  margin-bottom: 4%;
+}
+@media (max-width: 768px) {
+  .cts-section {
+    margin-bottom: 8%;
+  }
+}
+.cts-section:last-child {
+  margin-bottom: 0;
+}
+.cts-section .cts-container {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 16px;
 }
 .cts-section--header {
   width: 100%;
@@ -206,7 +246,7 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
   margin-bottom: 24px;
 }
 .cts-section--header .section-title {
@@ -247,6 +287,19 @@
     grid-row: auto;
   }
 }
+@media (max-width: 576px) {
+  .cts-section--body .lst-news-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  .cts-section--body .lst-news-container .news-featured,
+  .cts-section--body .lst-news-container .news-related {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    aspect-ratio: 16/9;
+  }
+}
 .cts-section--body .lst-news-container .news-featured {
   grid-column: span 3;
   grid-row: span 2;
@@ -266,6 +319,46 @@
 .cts-section--body .lst-news-container .news-related.news-card .news-card-inner .news-card-info .news-desc {
   display: none;
 }
+.cts-section.goPlay-infor {
+  background: url("../../assets/images/bg_goPlay_infor.png") center/cover no-repeat;
+  padding: 6% 1rem;
+  margin-bottom: 0;
+}
+.cts-section.goPlay-infor .cts-container {
+  max-width: 1000px;
+}
+.cts-section.goPlay-infor .cts-section--header {
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+.cts-section.goPlay-infor .cts-section--header .section-title {
+  font-size: 4rem;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .cts-section.goPlay-infor .cts-section--header .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .cts-section.goPlay-infor .cts-section--header .section-title {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+}
+.cts-section.goPlay-infor .cts-section--header .section-desc {
+  font-size: 1.125rem;
+}
+@media (max-width: 768px) {
+  .cts-section.goPlay-infor .cts-section--header .section-desc {
+    font-size: 16px;
+  }
+}
+
 .news-card {
   width: 100%;
   border-radius: 16px;
@@ -279,12 +372,12 @@
   justify-content: center;
   align-items: end;
   gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 .news-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .news-card .news-card-inner {
   width: 100%;
@@ -303,6 +396,11 @@
   object-fit: cover;
   display: block;
 }
+@media (max-width: 768px) {
+  .news-card .news-card-inner .news-card-image img {
+    border-radius: 16px;
+  }
+}
 .news-card .news-card-inner .news-card-info {
   flex: 1;
   color: #ffffff;
@@ -313,9 +411,9 @@
   align-items: start;
   gap: 0.375rem;
   padding: 24px 16px;
+  font-size: 18px;
 }
 .news-card .news-card-inner .news-card-info .news-title {
-  font-size: 18px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -323,11 +421,149 @@
   font-family: "Inter-Bold";
   font-weight: bold;
 }
+@media (max-width: 768px) {
+  .news-card .news-card-inner .news-card-info .news-title {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .news-card .news-card-inner .news-card-info .news-posted {
+    font-size: 14px;
+  }
+}
 .news-card .news-card-inner .news-card-info .news-desc {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .news-card .news-card-inner .news-card-info .news-desc {
+    font-size: 14px;
+  }
+}
+
+.box-with-shadow {
+  position: relative;
+  width: 110px;
+  transform: translateY(-50%);
+}
+.box-with-shadow img {
+  width: fit-content;
+  object-fit: contain;
+}
+.box-with-shadow::before {
+  position: absolute;
+  right: 50%;
+  bottom: -15%;
+  transform: translateX(50%);
+  content: "";
+  width: 82%;
+  height: 15px;
+  background-color: red;
+  aspect-ratio: 3/1;
+  border-radius: 50%;
+  background-color: #000000;
+  opacity: 40%;
+  backdrop-filter: blur(4px);
+}
+
+.services-goPlay {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  max-width: 384px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #505158 0%, #151515 100%);
+  border-radius: 16px;
+  padding: 0 24px 16%;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+@media (max-width: 768px) {
+  .services-goPlay {
+    padding: 0 16px 16%;
+  }
+}
+@media (max-width: 576px) {
+  .services-goPlay {
+    padding: 0 24px 16%;
+  }
+}
+.services-goPlay--header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.services-goPlay--body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.services-goPlay--body h3 {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.services-goPlay--body p {
+  color: #9ea5ad;
+  min-height: 4rem;
+}
+.services-goPlay--footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.services-goPlay.isCenter .services-goPlay--header .box-with-shadow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 10% 2rem 0;
+  transform: translateY(0);
+  width: 100%;
+  background: url("../../assets/images/ic_crown_decor.png") center/contain no-repeat;
+}
+.services-goPlay.isCenter .services-goPlay--header .box-with-shadow img {
+  width: fit-content;
+  transform: translateY(-75%);
+  object-fit: contain;
+}
+.services-goPlay.isCenter .services-goPlay--header .box-with-shadow::before {
+  display: none;
+}
+
+.lst-services-goPlay {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: end;
+  padding-top: 10%;
+}
+@media (max-width: 768px) {
+  .lst-services-goPlay {
+    padding-top: 20%;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 a {
@@ -598,4 +834,199 @@ a {
 .otp-code-container.isError input {
   color: #f34141;
   border-bottom: 2px solid #f34141;
+}
+
+.goPlay-footer {
+  width: 100%;
+  background-color: #1a1d1f;
+  padding: 4%;
+  font-size: 14px;
+}
+@media (max-width: 576px) {
+  .goPlay-footer {
+    padding: 12% 8%;
+  }
+}
+.goPlay-footer .footer-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6%;
+}
+@media (max-width: 1200px) {
+  .goPlay-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6%;
+  }
+}
+@media (max-width: 576px) {
+  .goPlay-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6%;
+  }
+}
+.goPlay-footer .footer-col {
+  color: #9ea5ad;
+}
+.goPlay-footer .footer-col h4 {
+  color: #ffffff;
+  font-family: "Inter-Bold";
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.goPlay-footer .footer-col ul {
+  list-style: none;
+  font-weight: 500;
+}
+.goPlay-footer .footer-col ul li {
+  margin-bottom: 16px;
+}
+@media (max-width: 576px) {
+  .goPlay-footer .footer-col ul li {
+    margin-bottom: 12px;
+  }
+}
+.goPlay-footer .footer-col ul li:last-child {
+  margin-bottom: 0;
+}
+.goPlay-footer .footer-col ul li a {
+  color: #CED2D6;
+  transition: color 0.3s ease-in-out;
+}
+.goPlay-footer .footer-col ul li a:hover {
+  color: #ffffff;
+}
+.goPlay-footer .footer-col.company-info {
+  word-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: start;
+  gap: 16px;
+}
+@media (max-width: 576px) {
+  .goPlay-footer .footer-col.company-info {
+    grid-column: span 2 !important;
+  }
+}
+.goPlay-footer .footer-col.company-info img {
+  height: 32px;
+}
+
+.goPlay-header {
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.goPlay-header .goPlay-header-mobile {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 99;
+  display: none;
+}
+.goPlay-header .goPlay-header-mobile .goPlay-header-mobile-container {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  padding: 24px;
+}
+.goPlay-header .goPlay-header-mobile .goPlay-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: end;
+  align-items: end;
+  gap: 16px;
+}
+.goPlay-header .header-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px;
+}
+@media (max-width: 768px) {
+  .goPlay-header .header-container {
+    padding: 16px;
+    position: relative;
+  }
+}
+.goPlay-header .goPlay-links {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .goPlay-header .goPlay-links {
+    flex: 1;
+  }
+}
+.goPlay-header .goPlay-links .goPlay-logo {
+  margin-right: 24px;
+}
+.goPlay-header .goPlay-links .goPlay-menu {
+  display: block;
+}
+@media (max-width: 768px) {
+  .goPlay-header .goPlay-links .goPlay-menu {
+    display: none;
+  }
+}
+.goPlay-header .goPlay-links .goPlay-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.goPlay-header .goPlay-links .goPlay-menu ul li {
+  padding: 24px 0;
+  border-bottom: 3px solid transparent;
+  min-width: 82px;
+  text-align: center;
+}
+.goPlay-header .goPlay-links .goPlay-menu ul li:hover {
+  border-bottom: 3px solid #f34141;
+}
+.goPlay-header .goPlay-links .goPlay-menu ul li:hover {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+.goPlay-header .goPlay-auth {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.goPlay-header .cts-menu-sm {
+  font-size: 32px;
+  display: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .goPlay-header .cts-menu-sm {
+    display: block;
+  }
 }

@@ -10,6 +10,7 @@
   transition: background-color 0.3s;
   font-size: 1rem;
   border: none;
+  cursor: pointer;
   &[disabled],
   &.disabled {
     box-shadow: 0px 1px 1px 0px #0000001f;
@@ -48,7 +49,6 @@
   @include display-flex-center;
   gap: 0.5rem;
   @include txt-font-semibold;
-  font-size: 18px;
   @include res-responsive(md) {
     font-size: 14px;
   }
@@ -72,6 +72,17 @@
   }
 }
 
+.btn-auth {
+  @extend .goPlay-btn;
+  padding: $vars-space-xs $vars-space-normal;
+  background-color: $vars-grey-1000;
+  color: $vars-white-color;
+  &:hover {
+    background-color: $vars-grey-200;
+    color: $vars-grey-1000;
+  }
+}
+
 .btn-loadmore {
   width: fit-content;
   min-width: 105px;
@@ -81,9 +92,25 @@
   border: 2px solid $vars-grey-200;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  font-size: $vars-space-normal;
+  @include res-responsive(md) {
+    font-size: $vars-space-sm;
+  }
   &:hover {
     border: 2px solid $vars-grey-1000;
     background-color: $vars-grey-1000;
     color: $vars-white-color;
+  }
+}
+
+.btn-comming-soon {
+  border: 1px solid $vars-grey-500;
+  border-radius: $vars-space-normal;
+  padding: $vars-space-xs $vars-space-lg;
+  color: $vars-white-color;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: $vars-grey-50;
+    color: $vars-grey-1000;
   }
 }

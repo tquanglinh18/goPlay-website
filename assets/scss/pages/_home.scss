@@ -59,7 +59,13 @@
     height: 100%;
     background-color: $vars-black-opacity-60;
     padding: 1rem;
-    @include display-flex-layout(column, nowrap, center, center, 0.5rem);
+    @include display-flex-layout(
+      column,
+      nowrap,
+      center,
+      center,
+      $vars-space-xs
+    );
     border-radius: $vars-space-normal;
     position: absolute;
     inset: 0;
@@ -87,12 +93,28 @@
 
 .cts-section {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
   padding: $vars-space-normal;
+  margin-bottom: 4%;
+  @include res-responsive(md) {
+    margin-bottom: 8%;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .cts-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
   &--header {
     width: 100%;
-    @include display-flex-layout(row, nowrap, space-between, center, 0.5rem);
+    @include display-flex-layout(
+      row,
+      nowrap,
+      space-between,
+      center,
+      $vars-space-xs
+    );
     margin-bottom: $vars-space-lg;
     .section-title {
       @include txt-font-bold;
@@ -120,6 +142,15 @@
           grid-column: span 1 !important;
           grid-row: span 1 !important;
           grid-row: auto;
+        }
+      }
+      @include res-responsive(sm) {
+        @include display-grid-cols(1, $vars-space-normal);
+        .news-featured,
+        .news-related {
+          grid-column: span 1 !important;
+          grid-row: span 1 !important;
+          aspect-ratio: 16/9;
         }
       }
 
@@ -155,6 +186,41 @@
   }
   &--footer {
   }
+  &.goPlay-infor {
+    background: url("../../assets/images/bg_goPlay_infor.png") center / cover
+      no-repeat;
+    padding: 6% 1rem;
+    margin-bottom: 0;
+    .cts-container {
+      max-width: 1000px;
+    }
+    .cts-section--header {
+      flex-direction: column;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+      .section-title {
+        font-size: 4rem;
+        margin-bottom: $vars-space-lg;
+        @include res-responsive(md) {
+          font-size: 2.5rem;
+          margin-bottom: $vars-space-normal;
+        }
+
+        @include res-responsive(sm) {
+          font-size: $vars-space-xl;
+          margin-bottom: $vars-space-xs;
+        }
+      }
+      .section-desc {
+        font-size: 1.125rem;
+        @include res-responsive(md) {
+          font-size: $vars-space-normal;
+        }
+      }
+    }
+  }
 }
 
 .news-card {
@@ -165,11 +231,11 @@
   background-position: center;
   background-color: $vars-black-opacity-60;
   @include display-flex-layout(row, nowrap, center, end, 1rem);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   .news-card-inner {
     width: 100%;
@@ -180,6 +246,9 @@
         max-width: 136px;
         aspect-ratio: 136/182;
         border-radius: 0 $vars-space-normal;
+        @include res-responsive(md) {
+          border-radius: $vars-space-normal;
+        }
         object-fit: cover;
         display: block;
       }
@@ -189,16 +258,126 @@
       color: $vars-white-color;
       @include display-flex-layout(column, nowrap, center, start, 0.375rem);
       padding: $vars-space-lg $vars-space-normal;
+      font-size: 18px;
       .news-title {
-        font-size: 18px;
         @include txt-max-line(2);
         @include txt-font-bold;
+        @include res-responsive(md) {
+          font-size: $vars-space-normal;
+        }
       }
       .news-posted {
+        @include res-responsive(md) {
+          font-size: 14px;
+        }
       }
       .news-desc {
         @include txt-max-line(2);
+        @include res-responsive(md) {
+          font-size: 14px;
+        }
       }
     }
+  }
+}
+
+.box-with-shadow {
+  position: relative;
+  width: 110px;
+  transform: translateY(-50%);
+  img {
+    width: fit-content;
+    object-fit: contain;
+  }
+  &::before {
+    position: absolute;
+    right: 50%;
+    bottom: -15%;
+    transform: translateX(50%);
+    content: "";
+    width: 82%;
+    height: 15px;
+    background-color: red;
+    aspect-ratio: 3/1;
+    border-radius: 50%;
+    background-color: $vars-black-color;
+    opacity: 40%;
+    backdrop-filter: blur(4px);
+  }
+}
+
+.services-goPlay {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  max-width: 384px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #505158 0%, #151515 100%);
+  border-radius: $vars-space-normal;
+  padding: 0 $vars-space-lg 16%;
+  @include res-responsive(md) {
+    padding: 0 $vars-space-normal 16%;
+  }
+  @include res-responsive(sm) {
+    padding: 0 $vars-space-lg 16%;
+  }
+  color: $vars-white-color;
+  text-align: center;
+  @include display-flex-layout(column, nowrap, center, center, $vars-space-sm);
+  &--header {
+    @include display-flex-layout(row, nowrap, center, center, $vars-space-xs);
+  }
+  &--body {
+    @include display-flex-layout(
+      column,
+      nowrap,
+      center,
+      center,
+      $vars-space-xs
+    );
+    h3 {
+      @include txt-font-bold;
+      font-size: $vars-space-lg;
+      margin-bottom: $vars-space-xs;
+    }
+    p {
+      color: $vars-grey-400;
+      min-height: 4rem;
+    }
+  }
+  &--footer {
+    @include display-flex-layout(row, nowrap, center, center, $vars-space-xs);
+  }
+
+  &.isCenter {
+    .services-goPlay--header {
+      .box-with-shadow {
+        @include display-flex-layout(row, nowrap, center, center, 0);
+        padding: 10% 2rem 0;
+        transform: translateY(0);
+        width: 100%;
+        background: url("../../assets/images/ic_crown_decor.png") center /
+          contain no-repeat;
+        img {
+          width: fit-content;
+          transform: translateY(-75%);
+          object-fit: contain;
+        }
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.lst-services-goPlay {
+  width: 100%;
+  @include display-grid-cols(3, $vars-space-normal);
+  align-items: end;
+  padding-top: 10%;
+  @include res-responsive(md) {
+    padding-top: 20%;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
