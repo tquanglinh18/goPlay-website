@@ -8,6 +8,15 @@
 }
 
 @font-face {
+  font-family: "Inter-Medium";
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"),
+    url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Inter-SemiBold";
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"),
     url("../fonts/Inter-SemiBold.woff") format("woff");
@@ -35,4 +44,24 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f34141;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cd3636;
 }

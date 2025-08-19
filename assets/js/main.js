@@ -126,4 +126,81 @@ $(function () {
     $("#btnToggleMenuMobile").click(() => {
         $(".goPlay-header-mobile").toggle();
     })
+
+    $(document).on('click', function (e) {
+        const $target = $(e.target);
+        if (!$target.closest('.goPlay-header').length) {
+            $(".goPlay-header-mobile").hide();
+        }
+    });
+
+    class OwlAsNavFor {
+        constructor(mainSelector, thumbSelector, mainOptions = {}, thumbOptions = {}) {
+            this.$main = $(mainSelector);
+            this.$thumb = $(thumbSelector);
+
+            this.mainOptions = Object.assign({
+                items: 1,
+                nav: false,
+                dots: false,
+                loop: false
+            }, mainOptions);
+
+            this.thumbOptions = Object.assign({
+                items: 4,
+                margin: 10,
+                dots: false,
+                nav: false,
+                center: false,
+                loop: false
+            }, thumbOptions);
+
+            this.init();
+        }
+
+        init() {
+            const _this = this;
+
+            // Init main
+            this.$main.owlCarousel(this.mainOptions)
+                .on("changed.owl.carousel", function (e) {
+                    let index = e.item.index;
+                    _this.syncThumb(index);
+                });
+
+            // Init thumb
+            this.$thumb.owlCarousel(this.thumbOptions)
+                .on("click", ".owl-item", function () {
+                    let index = $(this).index();
+                    _this.$main.trigger("to.owl.carousel", [index, 300, true]);
+                });
+
+            // Set trạng thái ban đầu
+            this.$thumb.find(".owl-item").eq(0).addClass("current");
+        }
+
+        syncThumb(index) {
+            this.$thumb.trigger("to.owl.carousel", [index, 300, true]);
+            this.$thumb.find(".owl-item").removeClass("current").eq(index).addClass("current");
+        }
+    }
+
+    new OwlAsNavFor("#mainSlider", "#thumbSlider",
+        {
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: false,
+        },
+        {
+            items: 2,
+            responsive: {
+                768: {
+                    items: 4
+                }
+            },
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: false,
+        }
+    );
 });

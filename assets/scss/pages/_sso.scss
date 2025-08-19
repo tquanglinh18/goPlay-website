@@ -1,11 +1,5 @@
 @use "../global" as *;
 
-a {
-  color: #1a1d1f;
-  text-decoration: none;
-  @include txt-font-bold;
-}
-
 .ssoPages {
   width: 100%;
   min-height: 100vh;
@@ -18,6 +12,12 @@ a {
     .ssoPage-form {
       max-width: 620px;
     }
+  }
+
+  a {
+    color: #1a1d1f;
+    text-decoration: none;
+    @include txt-font-bold;
   }
 }
 

@@ -9,6 +9,10 @@
   font-family: "Inter-SemiBold";
   font-weight: 600;
 }
+@mixin font-medium {
+  font-family: "Inter-Medium";
+  font-weight: 500;
+}
 
 @mixin max-line($lines) {
   display: -webkit-box;
