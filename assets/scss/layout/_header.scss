@@ -57,6 +57,7 @@ header {
   .header-container {
     width: 100%;
     max-width: 1920px;
+    position: relative;
     @include display-flex-layout(
       row,
       nowrap,
@@ -67,7 +68,6 @@ header {
     padding: 0 $vars-space-normal;
     @include res-responsive(md) {
       padding: $vars-space-normal;
-      position: relative;
     }
   }
   .userInfo {
@@ -83,12 +83,40 @@ header {
         object-fit: cover;
       }
     }
+    &--show {
+      cursor: pointer;
+    }
   }
 
   .userInforDetail {
     position: absolute;
-    @include display-flex-layout(row, nowrap, center, center, $vars-space-sm);
-    top: 150%;
+    top: 100%;
+    right: $vars-space-normal;
+    background-color: $vars-white-color;
+    padding: $vars-space-lg;
+    border-radius: $vars-space-sm;
+    border: 1px solid $vars-grey-200;
+    min-width: 360px;
+    display: none;
+    &--wrapper {
+      width: 100%;
+      @include display-flex-layout(
+        column,
+        nowrap,
+        start,
+        start,
+        $vars-space-sm
+      );
+    }
+    .account-wrapper {
+      @include display-flex-layout(
+        row,
+        nowrap,
+        start,
+        center,
+        $vars-space-normal
+      );
+    }
     .account-avt {
       width: 40px;
       height: 40px;
@@ -107,6 +135,44 @@ header {
         start,
         $vars-space-xs
       );
+      h5 {
+        @include txt-font-bold;
+        font-size: $vars-space-md;
+      }
+      p {
+        @include txt-font-medium;
+      }
+    }
+    .go-coin {
+      width: 100%;
+      @include display-flex-layout(
+        row,
+        nowrap,
+        space-between,
+        center,
+        $vars-space-xs
+      );
+      border-radius: $vars-space-normal;
+      background-color: $vars-error-100;
+      padding: $vars-space-md $vars-space-normal;
+    }
+
+    .total-coin {
+      flex: 1;
+      @include display-flex-layout(row, nowrap, end, center, $vars-space-xs);
+    }
+    .account-action {
+      ul {
+        list-style: none;
+        li {
+          padding: $vars-space-md $vars-space-normal;
+
+          a {
+            color: $vars-grey-1000;
+            @include txt-font-bold;
+          }
+        }
+      }
     }
   }
   .goPlay-links {
@@ -162,7 +228,6 @@ header {
   }
 
   .goPlay-auth {
-    position: relative;
     @include display-flex-layout(
       row,
       nowrap,

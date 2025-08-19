@@ -6,6 +6,7 @@
   background-color: $vars-grey-1000;
   padding: 4%;
   font-size: 14px;
+  position: relative;
   @include res-responsive(sm) {
     padding: 12% 8%;
   }
@@ -13,6 +14,7 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    position: relative;
     @include display-grid-cols(4, 6%);
     @include res-responsive(xl) {
       @include display-grid-cols(3, 6%);
@@ -63,6 +65,33 @@
       );
       img {
         height: $vars-space-xl;
+      }
+    }
+  }
+  .scroll-to-top {
+    width: fit-content;
+    background-color: $vars-white-color;
+    padding: $vars-space-sm $vars-space-md;
+    border-radius: $vars-space-sm;
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    cursor: pointer;
+    @include res-responsive(xl) {
+      top: 0%;
+      right: 0%;
+      padding: $vars-space-sm;
+    }
+    @include res-responsive(md) {
+      top: unset;
+      bottom: 0%;
+      right: 0%;
+      padding: $vars-space-sm;
+      @include res-responsive(sm) {
+        top: 0%;
+        bottom: unset;
+        right: 0%;
+        padding: $vars-space-sm;
       }
     }
   }

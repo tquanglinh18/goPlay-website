@@ -127,10 +127,21 @@ $(function () {
         $(".goPlay-header-mobile").toggle();
     })
 
+    $(".userInfo--show").click(() => {
+        $(".userInforDetail").toggle();
+    });
+
+    $(".scroll-to-top").click(() => {
+        $("html, body").animate({ scrollTop: 0 }, 500);
+    });
+
     $(document).on('click', function (e) {
         const $target = $(e.target);
         if (!$target.closest('.goPlay-header').length) {
             $(".goPlay-header-mobile").hide();
+        }
+        if (!$target.closest('.userInforDetail').length && !$target.closest('.userInfo--show').length) {
+            $(".userInforDetail").hide();
         }
     });
 
