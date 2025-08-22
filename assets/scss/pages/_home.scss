@@ -120,8 +120,6 @@
     .section-title {
       @include txt-font-bold;
     }
-    .section-actions {
-    }
   }
   &--body {
     .lst-game-container {
@@ -187,8 +185,6 @@
         }
       }
     }
-  }
-  &--footer {
   }
   &.goPlay-infor {
     background: url("../../assets/images/bg_goPlay_infor.png") center / cover

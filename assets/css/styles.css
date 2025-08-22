@@ -806,275 +806,6 @@
   }
 }
 
-.ssoPages {
-  width: 100%;
-  min-height: 100vh;
-  background: url("../images/bg_sso_page.webp") no-repeat center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px;
-}
-.ssoPages.ssoFullPage .ssoPage-form {
-  max-width: 620px;
-}
-.ssoPages a {
-  color: #1a1d1f;
-  text-decoration: none;
-  font-family: "Inter-Bold";
-  font-weight: bold;
-}
-
-.ssoPage-content {
-  width: 100%;
-  max-width: 768px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: start;
-  gap: 0;
-  gap: 1rem;
-}
-.ssoPage-content .ssoPage-logo {
-  margin: 4% 12px;
-}
-.ssoPage-content .ssoPage-logo img {
-  max-width: 200px;
-  height: auto;
-}
-.ssoPage-content .lstQuickLoginMethod {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-.ssoPage-content .ssoPage--header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-}
-.ssoPage-content .ssoPage--body {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-}
-.ssoPage-content .ssoPage--footer {
-  width: 100%;
-}
-.ssoPage-content .ssoPage--footer .text-warning {
-  border-top: 1px solid #e5e7ea;
-  padding-top: 24px;
-}
-.ssoPage-content .ssoPage--footer .text-warning p {
-  font-size: 14px;
-}
-.ssoPage-content .ssoPage--footer .text-warning p span {
-  font-family: "Inter-Bold";
-  font-weight: bold;
-}
-.ssoPage-content .ssoPage--footer .text-warning a {
-  color: rgb(34, 154, 214);
-  text-decoration: underline;
-}
-.ssoPage-content .ssoPage-form {
-  width: 100%;
-  max-width: 480px;
-  border: 1px solid #e5e7ea;
-  border-radius: 24px;
-  padding: 32px;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.ssoPage-content .ssoPage-form .box-title {
-  width: 100%;
-  text-align: center;
-  font-size: 32px;
-  padding: 8px 0;
-}
-.ssoPage-content .login-option {
-  width: 100%;
-  border: 1px solid #e5e7ea;
-  border-radius: 12px;
-  padding: 16px 24px;
-  background-color: #fafafa;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-.ssoPage-content .login-option.isFitContent {
-  width: fit-content;
-}
-.ssoPage-content .login-option .login-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-.ssoPage-content .login-option .cts-form-group {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.ssoPage-content .login-option .cts-form-group label {
-  font-family: "Inter-Bold";
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #1a1d1f;
-}
-.ssoPage-content .login-option .cts-form-group .input-wrapper {
-  width: 100%;
-  position: relative;
-}
-.ssoPage-content .login-option .cts-form-group .input-wrapper .fixed-icon {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-.ssoPage-content .login-option .cts-form-group .input-wrapper .fixed-icon.clear-btn {
-  display: none;
-}
-.ssoPage-content .login-option .cts-form-group .input-wrapper .fixed-icon .fa-eye-slash {
-  display: none;
-}
-.ssoPage-content .login-option .cts-form-group .input-wrapper input {
-  width: 100%;
-  border-radius: 8px;
-  border: 1px solid #e5e7ea;
-  padding: 12px 32px 12px 8px;
-  box-shadow: 0px 0px 0px 1px #cdd1dc;
-  color: #1a1d1f;
-  font-size: 16px;
-}
-.ssoPage-content .login-option .cts-form-group .input-wrapper input:active, .ssoPage-content .login-option .cts-form-group .input-wrapper input:focus {
-  outline: none;
-}
-.ssoPage-content .login-option .cts-form-group .input-wrapper input::placeholder {
-  color: #9ea5ad;
-}
-.ssoPage-content .login-option .cts-form-group .input-wrapper input.isError {
-  border-color: #f34141;
-  box-shadow: none;
-}
-.ssoPage-content .login-option .cts-form-group .error-message {
-  margin-top: 0.25rem;
-  color: #f34141;
-  font-size: 14px;
-}
-.ssoPage-content .login-option .allow-privacy {
-  font-size: 14px;
-  margin-bottom: 8px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-.ssoPage-content .login-option .forgot-password {
-  width: 100%;
-  text-align: right;
-}
-.ssoPage-content .login-option .forgot-password a {
-  font-weight: normal;
-}
-.ssoPage-content .login-option.dont-have-account, .ssoPage-content .login-option.have-account {
-  flex-direction: row;
-  gap: 0.25rem;
-}
-.ssoPage-content .qr-code-sms {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-}
-.ssoPage-content .qr-code-sms .qr-code-img {
-  width: 100%;
-  max-width: 186px;
-  border: 1px solid #1a1d1f;
-  border-radius: 12px;
-  padding: 8px;
-}
-.ssoPage-content .qr-code-sms .qr-code-img img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: contain;
-}
-.ssoPage-content .resend-otp a {
-  color: rgb(34, 154, 214);
-  text-decoration: underline;
-}
-.ssoPage-content .timer-expired {
-  color: #f34141;
-}
-
-.otp-code-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-}
-.otp-code-container .otp-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-.otp-code-container .otp-wrapper input {
-  max-width: 48px;
-  aspect-ratio: 1/1;
-  text-align: center;
-  border: none;
-  background-color: transparent;
-  border-bottom: 2px solid #1a1d1f;
-  font-size: 24px;
-  font-family: "Inter-Bold";
-  font-weight: bold;
-}
-.otp-code-container .otp-wrapper input:focus, .otp-code-container .otp-wrapper input:active {
-  outline: none;
-}
-.otp-code-container .otp-wrapper input.no-caret {
-  caret-color: transparent;
-}
-.otp-code-container.isError input {
-  color: #f34141;
-  border-bottom: 2px solid #f34141;
-}
-
 .goPlay-footer {
   width: 100%;
   background-color: #1a1d1f;
@@ -1212,10 +943,36 @@ header {
   z-index: 99;
   display: none;
 }
+@media (min-width: 768px) {
+  .goPlay-header .goPlay-header-mobile {
+    display: none !important;
+  }
+}
 .goPlay-header .goPlay-header-mobile .goPlay-header-mobile-container {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
   padding: 24px;
+}
+.goPlay-header .goPlay-header-mobile .goPlay-header-mobile-container .goPlay-auth {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.goPlay-header .goPlay-header-mobile .goPlay-header-mobile-container .userInfo {
+  display: none;
+}
+.goPlay-header .goPlay-header-mobile .goPlay-header-mobile-container .userInforDetail {
+  display: block !important;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 16px;
+  position: relative;
+  right: 0;
+  margin-bottom: 1rem;
+  min-width: unset;
 }
 .goPlay-header .goPlay-header-mobile .goPlay-menu ul {
   list-style: none;
@@ -1358,11 +1115,15 @@ header {
   align-items: center;
   gap: 8px;
 }
+.goPlay-header .userInforDetail .total-coin span {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
 .goPlay-header .userInforDetail .account-action ul {
   list-style: none;
 }
 .goPlay-header .userInforDetail .account-action ul li {
-  padding: 20px 16px;
+  padding: 12px 16px;
 }
 .goPlay-header .userInforDetail .account-action ul li a {
   color: #1a1d1f;
@@ -1431,6 +1192,11 @@ header {
   justify-content: center;
   align-items: center;
   gap: 16px;
+}
+@media (max-width: 768px) {
+  .goPlay-header .goPlay-auth {
+    display: none;
+  }
 }
 .goPlay-header .cts-menu-sm {
   font-size: 32px;
