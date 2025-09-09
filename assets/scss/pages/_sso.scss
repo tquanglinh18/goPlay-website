@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: $vars-space-normal;
+  padding: $vars-spacing-normal;
   &.ssoFullPage {
     .ssoPage-form {
       max-width: 620px;
@@ -29,7 +29,7 @@
   gap: 1rem;
 
   .ssoPage-logo {
-    margin: 4% $vars-space-sm;
+    margin: 4% $vars-spacing-sm;
     img {
       max-width: 200px;
       height: auto;
@@ -55,7 +55,7 @@
       width: 100%;
       .text-warning {
         border-top: 1px solid $vars-grey-200;
-        padding-top: $vars-space-lg;
+        padding-top: $vars-spacing-lg;
         p {
           font-size: 14px;
           span {
@@ -75,12 +75,12 @@
     max-width: 480px;
     @include mixins-box-lg;
     @include display-flex-column;
-    gap: $vars-space-lg;
+    gap: $vars-spacing-lg;
     .box-title {
       width: 100%;
       text-align: center;
-      font-size: $vars-space-xl;
-      padding: $vars-space-xs 0;
+      font-size: $vars-spacing-xl;
+      padding: $vars-spacing-xs 0;
     }
   }
 
@@ -94,14 +94,14 @@
     .login-form {
       width: 100%;
       @include display-flex-column-center;
-      gap: $vars-space-sm;
+      gap: $vars-spacing-sm;
     }
     .cts-form-group {
       width: 100%;
       @include display-flex-column;
       label {
         @include txt-font-bold;
-        margin-bottom: $vars-space-xs;
+        margin-bottom: $vars-spacing-xs;
         color: $vars-grey-1000;
       }
       .input-wrapper {
@@ -111,7 +111,7 @@
           display: block;
           position: absolute;
           top: 50%;
-          right: $vars-space-sm;
+          right: $vars-spacing-sm;
           transform: translateY(-50%);
           cursor: pointer;
           &.clear-btn {
@@ -123,12 +123,13 @@
         }
         input {
           width: 100%;
-          border-radius: $vars-space-xs;
+          border-radius: $vars-spacing-xs;
           border: 1px solid $vars-grey-200;
-          padding: $vars-space-sm $vars-space-xl $vars-space-sm $vars-space-xs;
+          padding: $vars-spacing-sm $vars-spacing-xl $vars-spacing-sm
+            $vars-spacing-xs;
           box-shadow: 0px 0px 0px 1px #cdd1dc;
           color: $vars-grey-1000;
-          font-size: $vars-text-normal;
+          font-size: $txt-text-normal;
           &:active,
           &:focus {
             outline: none;
@@ -150,7 +151,7 @@
     }
     .allow-privacy {
       font-size: 14px;
-      margin-bottom: $vars-space-xs;
+      margin-bottom: $vars-spacing-xs;
       @include display-flex-layout(row, nowrap, center, center, 0.5rem);
     }
     .forgot-password {
@@ -174,8 +175,8 @@
       width: 100%;
       max-width: 186px;
       border: 1px solid $vars-grey-1000;
-      border-radius: $vars-space-sm;
-      padding: $vars-space-xs;
+      border-radius: $vars-spacing-sm;
+      padding: $vars-spacing-xs;
       img {
         width: 100%;
         aspect-ratio: 1/1;
@@ -208,7 +209,7 @@
       border: none;
       background-color: transparent;
       border-bottom: 2px solid $vars-grey-1000;
-      font-size: $vars-text-lg;
+      font-size: $txt-text-lg;
       @include txt-font-bold;
       &:focus,
       &:active {
@@ -224,5 +225,269 @@
       color: $vars-error-600;
       border-bottom: 2px solid $vars-error-600;
     }
+  }
+}
+
+.goPlay-tabs {
+  margin: 2% 0;
+  .goPlay-tabs-wrapper {
+    width: 100%;
+    @include display-flex-layout(
+      row,
+      nowrap,
+      start,
+      start,
+      $vars-spacing-normal
+    );
+    @include res-responsive(lg) {
+      @include display-flex-column;
+    }
+  }
+
+  .goPlay-nav {
+    width: 15vw;
+    min-width: 240px;
+    margin: 8vh 0;
+    @include res-responsive(lg) {
+      width: 100%;
+      @include display-flex-layout(row, nowrap, start, center, 0);
+      margin: $vars-spacing-xl 0 $vars-spacing-normal;
+    }
+    .goPlay-nav-link {
+      width: 100%;
+      padding: $vars-spacing-sm $vars-spacing-sm $vars-spacing-sm 20%;
+      border-radius: 0 $vars-spacing-lg $vars-spacing-lg 0;
+      transition: all 0.3s ease;
+      color: $vars-grey-1000;
+      @include txt-font-semibold;
+      @include res-responsive(lg) {
+        border-radius: 0;
+        padding: $vars-spacing-sm;
+        text-align: center;
+      }
+      text-align: start;
+      &.active {
+        background-color: $vars-error-200;
+      }
+    }
+  }
+
+  .goPlay-tabContent {
+    width: 80vw;
+    max-width: 640px;
+    @include res-responsive(lg) {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}
+
+.goPlay-info {
+  width: 100%;
+  margin-bottom: 4%;
+  @include display-flex-layout(
+    column,
+    nowrap,
+    center,
+    center,
+    $vars-spacing-xs
+  );
+  @include res-responsive(md) {
+    margin-bottom: 8%;
+  }
+  button,
+  a {
+    border: none;
+    background-color: transparent;
+    color: $vars-blue-700;
+  }
+  &.game-played {
+    .goPlay-info-content {
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      @include display-grid-cols(4, $vars-spacing-sm);
+    }
+  }
+  &-header {
+    width: 100%;
+    h3 {
+      font-size: 18px;
+      @include txt-font-bold;
+      margin-bottom: 0;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+    span {
+      color: $vars-error-600;
+      font-size: 14px;
+    }
+  }
+  &-content {
+    width: 100%;
+    padding: $vars-spacing-normal $vars-spacing-lg;
+    @include mixins-box-normal;
+
+    .info-item {
+      width: 100%;
+      border-bottom: 1px solid $vars-grey-200;
+      padding: $vars-spacing-sm 0;
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      &:first-child {
+        padding-top: 0;
+      }
+      .input-group {
+        @include display-flex-layout(
+          row,
+          nowrap,
+          space-between,
+          center,
+          $vars-spacing-normal
+        );
+      }
+      p,
+      label {
+        margin-bottom: 0;
+        span {
+          color: $vars-error-600;
+          font-size: 14px;
+        }
+      }
+      input {
+        border: none;
+        text-align: end;
+        background-color: transparent;
+        min-height: 32px;
+      }
+      select {
+        width: fit-content;
+        border: 1px solid $vars-grey-600;
+        border-radius: $vars-spacing-xs;
+        background-color: transparent;
+        min-width: 96px;
+        padding: 4px 24px 4px 8px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        @include txt-font-medium;
+      }
+      .select-wrapper {
+        position: relative;
+        &::after {
+          content: "ᐳ";
+          font-size: 10px;
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          font-weight: 600;
+          transform: translateY(-50%);
+          pointer-events: none;
+        }
+      }
+
+      .sel-avatar {
+        width: 64px;
+        height: 64px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 50%;
+          padding: $vars-spacing-xs;
+        }
+        .img-setAvt {
+          position: absolute;
+          inset: 0;
+          background-color: $vars-black-opacity-30;
+          padding: $vars-spacing-xs;
+          cursor: pointer;
+          @include display-flex-layout(
+            row,
+            nowrap,
+            center,
+            center,
+            $vars-spacing-normal
+          );
+          &:hover {
+            i {
+              font-size: $txt-text-xl;
+              transform: translateY(0%);
+            }
+          }
+          i {
+            color: white;
+            font-size: $txt-text-normal;
+            transition: all 0.3s ease;
+            transform: translateY(100%);
+          }
+        }
+      }
+    }
+
+    .game-played-card {
+      width: fit-content;
+      min-width: 134px;
+      @include mixins-box-normal;
+      padding: $vars-spacing-normal;
+      @include display-flex-layout(
+        column,
+        nowrap,
+        center,
+        center,
+        $vars-spacing-sm
+      );
+      img {
+        width: 100%;
+        max-width: 90px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-footer {
+    width: 100%;
+    @include display-flex-layout(
+      row,
+      nowrap,
+      end,
+      center,
+      $vars-spacing-normal
+    );
+  }
+}
+
+.box-container {
+  padding: 8px 0;
+  @include display-flex-layout(row, nowrap, center, center, $vars-spacing-xl);
+  @include res-responsive(md) {
+    flex-direction: column-reverse;
+  }
+  .box-text {
+    flex: 1;
+  }
+  .box-img {
+    width: 150px;
+    img {
+      width: 100%;
+      object-fit: contain;
+      aspect-ratio: 1/1;
+    }
+  }
+  .box-actions {
+    padding: $vars-spacing-normal 0 0;
+    border-top: 1px solid rgba(217, 221, 234, 1);
   }
 }

@@ -28,15 +28,15 @@
     h4 {
       color: $vars-white-color;
       @include txt-font-bold;
-      margin-bottom: $vars-space-normal;
+      margin-bottom: $vars-spacing-normal;
     }
     ul {
       list-style: none;
       font-weight: 500;
       li {
-        margin-bottom: $vars-space-normal;
+        margin-bottom: $vars-spacing-normal;
         @include res-responsive(sm) {
-          margin-bottom: $vars-space-sm;
+          margin-bottom: $vars-spacing-sm;
         }
         &:last-child {
           margin-bottom: 0;
@@ -61,18 +61,18 @@
         nowrap,
         center,
         start,
-        $vars-space-normal
+        $vars-spacing-normal
       );
       img {
-        height: $vars-space-xl;
+        height: $vars-spacing-xl;
       }
     }
   }
   .scroll-to-top {
     width: fit-content;
     background-color: $vars-white-color;
-    padding: $vars-space-sm $vars-space-md;
-    border-radius: $vars-space-sm;
+    padding: $vars-spacing-sm $vars-spacing-md;
+    border-radius: $vars-spacing-sm;
     position: absolute;
     top: 4%;
     right: 4%;
@@ -80,18 +80,18 @@
     @include res-responsive(xl) {
       top: 0%;
       right: 0%;
-      padding: $vars-space-sm;
+      padding: $vars-spacing-sm;
     }
     @include res-responsive(md) {
       top: unset;
       bottom: 0%;
       right: 0%;
-      padding: $vars-space-sm;
+      padding: $vars-spacing-sm;
       @include res-responsive(sm) {
         top: 0%;
         bottom: unset;
         right: 0%;
-        padding: $vars-space-sm;
+        padding: $vars-spacing-sm;
       }
     }
   }

@@ -2,8 +2,8 @@
 
 .cts-sso-btn {
   width: 100%;
-  padding: $vars-space-normal;
-  border-radius: $vars-space-xs;
+  padding: $vars-spacing-normal;
+  border-radius: $vars-spacing-xs;
   background-color: $vars-grey-1000;
   color: $vars-white-color;
   text-align: center;
@@ -29,16 +29,16 @@
   transition: background-color 0.3s;
   font-size: 0.875rem;
   border: 1px solid $vars-grey-200;
-  border-radius: $vars-space-xs;
-  padding: $vars-space-xs;
+  border-radius: $vars-spacing-xs;
+  padding: $vars-spacing-xs;
   background-color: $vars-white-color;
 }
 
 .goPlay-btn {
   width: 100%;
   max-width: 245px;
-  padding: $vars-space-normal;
-  border-radius: $vars-space-xs;
+  padding: $vars-spacing-normal;
+  border-radius: $vars-spacing-xs;
   background-color: $vars-grey-50;
   color: $vars-grey-1000;
   text-align: center;
@@ -66,6 +66,54 @@
     }
   }
 
+  &--black {
+    background-color: $vars-grey-1000;
+    color: $vars-white-color;
+  }
+
+  &:hover {
+    background-color: $vars-grey-1000;
+    color: $vars-white-color;
+  }
+}
+
+.gpBtnSm {
+  width: fit-content;
+  min-width: 96px;
+  padding: $vars-spacing-xs $vars-spacing-normal;
+  border-radius: $vars-spacing-xs;
+  background-color: $vars-grey-50;
+  color: $vars-grey-1000;
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  @include display-flex-center;
+  gap: 0.5rem;
+  @include txt-font-semibold;
+  @include res-responsive(md) {
+    font-size: 14px;
+  }
+  &--red {
+    background-color: $vars-error-700;
+    color: $vars-white-color;
+    &:hover {
+      background-color: $vars-error-700-opacity-75 !important;
+    }
+    img {
+      width: 18px;
+      @include res-responsive(md) {
+        width: 14px;
+      }
+    }
+  }
+
+  &--black {
+    background-color: $vars-grey-1000;
+    color: $vars-white-color;
+  }
+
   &:hover {
     background-color: $vars-grey-1000;
     color: $vars-white-color;
@@ -74,7 +122,7 @@
 
 .btn-auth {
   @extend .goPlay-btn;
-  padding: $vars-space-xs $vars-space-normal;
+  padding: $vars-spacing-xs $vars-spacing-normal;
   background-color: $vars-grey-1000;
   color: $vars-white-color;
   &:hover {
@@ -86,15 +134,15 @@
 .btn-loadmore {
   width: fit-content;
   min-width: 105px;
-  padding: $vars-space-xs $vars-space-normal;
-  border-radius: $vars-space-xs;
+  padding: $vars-spacing-xs $vars-spacing-normal;
+  border-radius: $vars-spacing-xs;
   @include txt-font-semibold;
   border: 2px solid $vars-grey-200;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  font-size: $vars-space-normal;
+  font-size: $vars-spacing-normal;
   @include res-responsive(md) {
-    font-size: $vars-space-sm;
+    font-size: $vars-spacing-sm;
   }
   &:hover {
     border: 2px solid $vars-grey-1000;
@@ -105,8 +153,8 @@
 
 .btn-comming-soon {
   border: 1px solid $vars-grey-500;
-  border-radius: $vars-space-normal;
-  padding: $vars-space-xs $vars-space-lg;
+  border-radius: $vars-spacing-normal;
+  padding: $vars-spacing-xs $vars-spacing-lg;
   color: $vars-white-color;
   transition: all 0.3s ease-in-out;
   &:hover {

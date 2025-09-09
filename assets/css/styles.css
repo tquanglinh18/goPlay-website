@@ -1,3 +1,10 @@
+@charset "UTF-8";
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .text-lightblue {
   color: rgb(34, 154, 214);
 }
@@ -9,6 +16,11 @@
 .text-bold {
   font-family: "Inter-Bold";
   font-weight: bold;
+}
+
+.error-message {
+  font-size: 14px;
+  color: #f34141;
 }
 
 .cts-sso-btn {
@@ -83,7 +95,59 @@
     width: 14px;
   }
 }
+.goPlay-btn--black {
+  background-color: #1a1d1f;
+  color: #ffffff;
+}
 .goPlay-btn:hover, .btn-auth:hover {
+  background-color: #1a1d1f;
+  color: #ffffff;
+}
+
+.gpBtnSm {
+  width: fit-content;
+  min-width: 96px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  color: #1a1d1f;
+  text-align: center;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Inter-SemiBold";
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .gpBtnSm {
+    font-size: 14px;
+  }
+}
+.gpBtnSm--red {
+  background-color: #cd3636;
+  color: #ffffff;
+}
+.gpBtnSm--red:hover {
+  background-color: rgba(205, 54, 54, 0.75) !important;
+}
+.gpBtnSm--red img {
+  width: 18px;
+}
+@media (max-width: 768px) {
+  .gpBtnSm--red img {
+    width: 14px;
+  }
+}
+.gpBtnSm--black {
+  background-color: #1a1d1f;
+  color: #ffffff;
+}
+.gpBtnSm:hover {
   background-color: #1a1d1f;
   color: #ffffff;
 }
@@ -253,6 +317,9 @@
 .cts-section--header .section-title {
   font-family: "Inter-Bold";
   font-weight: bold;
+}
+.cts-section--body {
+  width: 100%;
 }
 .cts-section--body .lst-game-container {
   display: grid;
@@ -806,6 +873,558 @@
   }
 }
 
+.ssoPages {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../images/bg_sso_page.webp") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+.ssoPages.ssoFullPage .ssoPage-form {
+  max-width: 620px;
+}
+.ssoPages a {
+  color: #1a1d1f;
+  text-decoration: none;
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+
+.ssoPage-content {
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: start;
+  gap: 0;
+  gap: 1rem;
+}
+.ssoPage-content .ssoPage-logo {
+  margin: 4% 12px;
+}
+.ssoPage-content .ssoPage-logo img {
+  max-width: 200px;
+  height: auto;
+}
+.ssoPage-content .lstQuickLoginMethod {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ssoPage-content .ssoPage--header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.ssoPage-content .ssoPage--body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.ssoPage-content .ssoPage--footer {
+  width: 100%;
+}
+.ssoPage-content .ssoPage--footer .text-warning {
+  border-top: 1px solid #e5e7ea;
+  padding-top: 24px;
+}
+.ssoPage-content .ssoPage--footer .text-warning p {
+  font-size: 14px;
+}
+.ssoPage-content .ssoPage--footer .text-warning p span {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+.ssoPage-content .ssoPage--footer .text-warning a {
+  color: rgb(34, 154, 214);
+  text-decoration: underline;
+}
+.ssoPage-content .ssoPage-form {
+  width: 100%;
+  max-width: 480px;
+  border: 1px solid #e5e7ea;
+  border-radius: 24px;
+  padding: 32px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.ssoPage-content .ssoPage-form .box-title {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  padding: 8px 0;
+}
+.ssoPage-content .login-option {
+  width: 100%;
+  border: 1px solid #e5e7ea;
+  border-radius: 12px;
+  padding: 16px 24px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ssoPage-content .login-option.isFitContent {
+  width: fit-content;
+}
+.ssoPage-content .login-option .login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.ssoPage-content .login-option .cts-form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ssoPage-content .login-option .cts-form-group label {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1a1d1f;
+}
+.ssoPage-content .login-option .cts-form-group .input-wrapper {
+  width: 100%;
+  position: relative;
+}
+.ssoPage-content .login-option .cts-form-group .input-wrapper .fixed-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.ssoPage-content .login-option .cts-form-group .input-wrapper .fixed-icon.clear-btn {
+  display: none;
+}
+.ssoPage-content .login-option .cts-form-group .input-wrapper .fixed-icon .fa-eye-slash {
+  display: none;
+}
+.ssoPage-content .login-option .cts-form-group .input-wrapper input {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e5e7ea;
+  padding: 12px 32px 12px 8px;
+  box-shadow: 0px 0px 0px 1px #cdd1dc;
+  color: #1a1d1f;
+  font-size: 16px;
+}
+.ssoPage-content .login-option .cts-form-group .input-wrapper input:active, .ssoPage-content .login-option .cts-form-group .input-wrapper input:focus {
+  outline: none;
+}
+.ssoPage-content .login-option .cts-form-group .input-wrapper input::placeholder {
+  color: #9ea5ad;
+}
+.ssoPage-content .login-option .cts-form-group .input-wrapper input.isError {
+  border-color: #f34141;
+  box-shadow: none;
+}
+.ssoPage-content .login-option .cts-form-group .error-message {
+  margin-top: 0.25rem;
+  color: #f34141;
+  font-size: 14px;
+}
+.ssoPage-content .login-option .allow-privacy {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ssoPage-content .login-option .forgot-password {
+  width: 100%;
+  text-align: right;
+}
+.ssoPage-content .login-option .forgot-password a {
+  font-weight: normal;
+}
+.ssoPage-content .login-option.dont-have-account, .ssoPage-content .login-option.have-account {
+  flex-direction: row;
+  gap: 0.25rem;
+}
+.ssoPage-content .qr-code-sms {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+.ssoPage-content .qr-code-sms .qr-code-img {
+  width: 100%;
+  max-width: 186px;
+  border: 1px solid #1a1d1f;
+  border-radius: 12px;
+  padding: 8px;
+}
+.ssoPage-content .qr-code-sms .qr-code-img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+.ssoPage-content .resend-otp a {
+  color: rgb(34, 154, 214);
+  text-decoration: underline;
+}
+.ssoPage-content .timer-expired {
+  color: #f34141;
+}
+
+.otp-code-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.otp-code-container .otp-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.otp-code-container .otp-wrapper input {
+  max-width: 48px;
+  aspect-ratio: 1/1;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #1a1d1f;
+  font-size: 24px;
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+.otp-code-container .otp-wrapper input:focus, .otp-code-container .otp-wrapper input:active {
+  outline: none;
+}
+.otp-code-container .otp-wrapper input.no-caret {
+  caret-color: transparent;
+}
+.otp-code-container.isError input {
+  color: #f34141;
+  border-bottom: 2px solid #f34141;
+}
+
+.goPlay-tabs {
+  margin: 2% 0;
+}
+.goPlay-tabs .goPlay-tabs-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 16px;
+}
+@media (max-width: 992px) {
+  .goPlay-tabs .goPlay-tabs-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.goPlay-tabs .goPlay-nav {
+  width: 15vw;
+  min-width: 240px;
+  margin: 8vh 0;
+}
+@media (max-width: 992px) {
+  .goPlay-tabs .goPlay-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 0;
+    margin: 32px 0 16px;
+  }
+}
+.goPlay-tabs .goPlay-nav .goPlay-nav-link {
+  width: 100%;
+  padding: 12px 12px 12px 20%;
+  border-radius: 0 24px 24px 0;
+  transition: all 0.3s ease;
+  color: #1a1d1f;
+  font-family: "Inter-SemiBold";
+  font-weight: 600;
+  text-align: start;
+}
+@media (max-width: 992px) {
+  .goPlay-tabs .goPlay-nav .goPlay-nav-link {
+    border-radius: 0;
+    padding: 12px;
+    text-align: center;
+  }
+}
+.goPlay-tabs .goPlay-nav .goPlay-nav-link.active {
+  background-color: #FDE9E9;
+}
+.goPlay-tabs .goPlay-tabContent {
+  width: 80vw;
+  max-width: 640px;
+}
+@media (max-width: 992px) {
+  .goPlay-tabs .goPlay-tabContent {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.goPlay-info {
+  width: 100%;
+  margin-bottom: 4%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .goPlay-info {
+    margin-bottom: 8%;
+  }
+}
+.goPlay-info button,
+.goPlay-info a {
+  border: none;
+  background-color: transparent;
+  color: rgb(34, 154, 214);
+}
+.goPlay-info.game-played .goPlay-info-content {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.goPlay-info-header {
+  width: 100%;
+}
+.goPlay-info-header h3 {
+  font-size: 18px;
+  font-family: "Inter-Bold";
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.goPlay-info-header p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.goPlay-info-header span {
+  color: #f34141;
+  font-size: 14px;
+}
+.goPlay-info-content {
+  width: 100%;
+  padding: 16px 24px;
+  border: 1px solid #e5e7ea;
+  border-radius: 12px;
+  padding: 16px 24px;
+  background-color: #fafafa;
+}
+.goPlay-info-content .info-item {
+  width: 100%;
+  border-bottom: 1px solid #e5e7ea;
+  padding: 12px 0;
+}
+.goPlay-info-content .info-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.goPlay-info-content .info-item:first-child {
+  padding-top: 0;
+}
+.goPlay-info-content .info-item .input-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.goPlay-info-content .info-item p,
+.goPlay-info-content .info-item label {
+  margin-bottom: 0;
+}
+.goPlay-info-content .info-item p span,
+.goPlay-info-content .info-item label span {
+  color: #f34141;
+  font-size: 14px;
+}
+.goPlay-info-content .info-item input {
+  border: none;
+  text-align: end;
+  background-color: transparent;
+  min-height: 32px;
+}
+.goPlay-info-content .info-item select {
+  width: fit-content;
+  border: 1px solid #596066;
+  border-radius: 8px;
+  background-color: transparent;
+  min-width: 96px;
+  padding: 4px 24px 4px 8px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: "Inter-Medium";
+  font-weight: 500;
+}
+.goPlay-info-content .info-item .select-wrapper {
+  position: relative;
+}
+.goPlay-info-content .info-item .select-wrapper::after {
+  content: "ᐳ";
+  font-size: 10px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  font-weight: 600;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.goPlay-info-content .info-item .sel-avatar {
+  width: 64px;
+  height: 64px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.goPlay-info-content .info-item .sel-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  padding: 8px;
+}
+.goPlay-info-content .info-item .sel-avatar .img-setAvt {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.goPlay-info-content .info-item .sel-avatar .img-setAvt:hover i {
+  font-size: 32px;
+  transform: translateY(0%);
+}
+.goPlay-info-content .info-item .sel-avatar .img-setAvt i {
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  transform: translateY(100%);
+}
+.goPlay-info-content .game-played-card {
+  width: fit-content;
+  min-width: 134px;
+  border: 1px solid #e5e7ea;
+  border-radius: 12px;
+  padding: 16px 24px;
+  background-color: #fafafa;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.goPlay-info-content .game-played-card img {
+  width: 100%;
+  max-width: 90px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+.goPlay-info-content .game-played-card p {
+  margin-bottom: 0;
+}
+.goPlay-info-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: end;
+  align-items: center;
+  gap: 16px;
+}
+
+.box-container {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+@media (max-width: 768px) {
+  .box-container {
+    flex-direction: column-reverse;
+  }
+}
+.box-container .box-text {
+  flex: 1;
+}
+.box-container .box-img {
+  width: 150px;
+}
+.box-container .box-img img {
+  width: 100%;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+.box-container .box-actions {
+  padding: 16px 0 0;
+  border-top: 1px solid rgb(217, 221, 234);
+}
+
 .goPlay-footer {
   width: 100%;
   background-color: #1a1d1f;
@@ -1157,6 +1776,7 @@ header {
 }
 .goPlay-header .goPlay-links .goPlay-menu ul {
   list-style: none;
+  margin-bottom: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -1171,6 +1791,7 @@ header {
   text-align: center;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  margin-bottom: 0;
 }
 .goPlay-header .goPlay-links .goPlay-menu ul li:hover {
   border-bottom: 3px solid #f34141;

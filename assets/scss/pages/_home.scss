@@ -6,8 +6,8 @@
   margin: 0 auto;
   .game-card-inner {
     position: relative;
-    border-radius: $vars-space-normal;
-    margin-bottom: $vars-space-sm;
+    border-radius: $vars-spacing-normal;
+    margin-bottom: $vars-spacing-sm;
 
     &:hover {
       .game-card-back {
@@ -24,7 +24,7 @@
         height: 100%;
         object-fit: cover;
         aspect-ratio: 333/412;
-        border-radius: $vars-space-normal;
+        border-radius: $vars-spacing-normal;
         display: block;
       }
     }
@@ -34,8 +34,8 @@
       right: 0;
       .tag {
         width: fit-content;
-        padding: $vars-space-xs $vars-space-normal;
-        border-radius: $vars-space-xs $vars-space-normal;
+        padding: $vars-spacing-xs $vars-spacing-normal;
+        border-radius: $vars-spacing-xs $vars-spacing-normal;
         color: $vars-white-color;
         float: right;
         text-transform: uppercase;
@@ -65,9 +65,9 @@
       nowrap,
       center,
       center,
-      $vars-space-xs
+      $vars-spacing-xs
     );
-    border-radius: $vars-space-normal;
+    border-radius: $vars-spacing-normal;
     position: absolute;
     inset: 0;
     display: none;
@@ -79,7 +79,7 @@
       @include txt-font-bold;
       font-size: 18px;
       color: $vars-grey-1000;
-      margin-bottom: $vars-space-xs;
+      margin-bottom: $vars-spacing-xs;
       @include res-responsive(md) {
         font-size: 16px;
         margin-bottom: 0;
@@ -94,7 +94,7 @@
 
 .cts-section {
   width: 100%;
-  padding: $vars-space-normal;
+  padding: $vars-spacing-normal;
   margin-bottom: 4%;
   @include res-responsive(md) {
     margin-bottom: 8%;
@@ -114,14 +114,15 @@
       nowrap,
       space-between,
       center,
-      $vars-space-xs
+      $vars-spacing-xs
     );
-    margin-bottom: $vars-space-lg;
+    margin-bottom: $vars-spacing-lg;
     .section-title {
       @include txt-font-bold;
     }
   }
   &--body {
+    width: 100%;
     .lst-game-container {
       @include display-grid-cols(4, 1rem);
       @include res-responsive(md) {
@@ -132,9 +133,9 @@
       }
     }
     .lst-news-container {
-      @include display-grid-cols(5, $vars-space-normal);
+      @include display-grid-cols(5, $vars-spacing-normal);
       @include res-responsive(md) {
-        @include display-grid-cols(2, $vars-space-normal);
+        @include display-grid-cols(2, $vars-spacing-normal);
         .news-featured {
           grid-column: span 2 !important;
           grid-row: span 1 !important;
@@ -147,7 +148,7 @@
         }
       }
       @include res-responsive(sm) {
-        @include display-grid-cols(1, $vars-space-normal);
+        @include display-grid-cols(1, $vars-spacing-normal);
         .news-featured,
         .news-related {
           grid-column: span 1 !important;
@@ -174,7 +175,7 @@
             }
             .news-card-info {
               .news-title {
-                font-size: $vars-space-normal;
+                font-size: $vars-spacing-normal;
               }
               .news-posted,
               .news-desc {
@@ -202,14 +203,14 @@
       color: white;
       .section-title {
         font-size: 4rem;
-        margin-bottom: $vars-space-lg;
+        margin-bottom: $vars-spacing-lg;
         @include res-responsive(md) {
           font-size: 2.5rem;
-          margin-bottom: $vars-space-normal;
+          margin-bottom: $vars-spacing-normal;
         }
         @include res-responsive(sm) {
-          font-size: $vars-space-xl;
-          margin-bottom: $vars-space-xs;
+          font-size: $vars-spacing-xl;
+          margin-bottom: $vars-spacing-xs;
         }
       }
       .section-desc {
@@ -218,7 +219,7 @@
           font-size: 14px;
         }
         @include res-responsive(md) {
-          font-size: $vars-space-normal;
+          font-size: $vars-spacing-normal;
         }
       }
     }
@@ -227,7 +228,7 @@
 
 .news-card {
   width: 100%;
-  border-radius: $vars-space-normal;
+  border-radius: $vars-spacing-normal;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -247,9 +248,9 @@
         width: 100%;
         max-width: 136px;
         aspect-ratio: 136/182;
-        border-radius: 0 $vars-space-normal;
+        border-radius: 0 $vars-spacing-normal;
         @include res-responsive(md) {
-          border-radius: $vars-space-normal;
+          border-radius: $vars-spacing-normal;
         }
         object-fit: cover;
         display: block;
@@ -259,13 +260,13 @@
       flex: 1;
       color: $vars-white-color;
       @include display-flex-layout(column, nowrap, center, start, 0.375rem);
-      padding: $vars-space-lg $vars-space-normal;
+      padding: $vars-spacing-lg $vars-spacing-normal;
       font-size: 18px;
       .news-title {
         @include txt-max-line(2);
         @include txt-font-bold;
         @include res-responsive(md) {
-          font-size: $vars-space-normal;
+          font-size: $vars-spacing-normal;
         }
       }
       .news-posted {
@@ -315,19 +316,19 @@
   max-width: 384px;
   margin: 0 auto;
   background: linear-gradient(180deg, #505158 0%, #151515 100%);
-  border-radius: $vars-space-normal;
-  padding: 0 $vars-space-lg 16%;
+  border-radius: $vars-spacing-normal;
+  padding: 0 $vars-spacing-lg 16%;
   @include res-responsive(md) {
-    padding: 0 $vars-space-normal 16%;
+    padding: 0 $vars-spacing-normal 16%;
   }
   @include res-responsive(sm) {
-    padding: 0 $vars-space-lg 16%;
+    padding: 0 $vars-spacing-lg 16%;
   }
   color: $vars-white-color;
   text-align: center;
-  @include display-flex-layout(column, nowrap, center, center, $vars-space-sm);
+  @include display-flex-layout(column, nowrap, center, center, $vars-spacing-sm);
   &--header {
-    @include display-flex-layout(row, nowrap, center, center, $vars-space-xs);
+    @include display-flex-layout(row, nowrap, center, center, $vars-spacing-xs);
   }
   &--body {
     @include display-flex-layout(
@@ -335,12 +336,12 @@
       nowrap,
       center,
       center,
-      $vars-space-xs
+      $vars-spacing-xs
     );
     h3 {
       @include txt-font-bold;
-      font-size: $vars-space-lg;
-      margin-bottom: $vars-space-xs;
+      font-size: $vars-spacing-lg;
+      margin-bottom: $vars-spacing-xs;
     }
     p {
       color: $vars-grey-400;
@@ -348,7 +349,7 @@
     }
   }
   &--footer {
-    @include display-flex-layout(row, nowrap, center, center, $vars-space-xs);
+    @include display-flex-layout(row, nowrap, center, center, $vars-spacing-xs);
   }
 
   &.isCenter {
@@ -375,7 +376,7 @@
 
 .lst-services-goPlay {
   width: 100%;
-  @include display-grid-cols(3, $vars-space-normal);
+  @include display-grid-cols(3, $vars-spacing-normal);
   align-items: end;
   padding-top: 10%;
   @include res-responsive(md) {
@@ -406,7 +407,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    padding: 2% $vars-space-normal;
+    padding: 2% $vars-spacing-normal;
     @include res-responsive(md) {
       display: none;
     }
@@ -437,19 +438,19 @@
   .goPlay-game-item {
     @include res-responsive(lg) {
       width: fit-content;
-      padding: $vars-space-sm;
+      padding: $vars-spacing-sm;
     }
     @include display-flex-layout(
       row,
       nowrap,
       start,
       center,
-      $vars-space-normal
+      $vars-spacing-normal
     );
     background: #24292e80;
-    border-radius: $vars-space-normal;
+    border-radius: $vars-spacing-normal;
     border: 1px solid #383f45;
-    padding: $vars-space-normal;
+    padding: $vars-spacing-normal;
     transition: background 0.3s ease;
     cursor: pointer;
     position: relative;
@@ -482,7 +483,7 @@
       max-width: 0;
       background-color: transparent;
       z-index: -1;
-      border-radius: $vars-space-normal;
+      border-radius: $vars-spacing-normal;
       transition: all 0.05s ease;
     }
     .game-thumb {
@@ -495,7 +496,7 @@
         object-fit: contain;
         aspect-ratio: 1/1;
         display: block;
-        border-radius: $vars-space-xs;
+        border-radius: $vars-spacing-xs;
         object-fit: cover;
       }
     }
@@ -507,12 +508,12 @@
       height: 75%;
       max-width: 1440px;
       margin: 0 auto;
-      padding: $vars-space-normal;
+      padding: $vars-spacing-normal;
       color: $vars-white-color;
-      @include display-flex-layout(column, nowrap, end, start, $vars-space-xs);
+      @include display-flex-layout(column, nowrap, end, start, $vars-spacing-xs);
       @include res-responsive(md) {
         height: 100%;
-        padding: $vars-space-normal $vars-space-lg;
+        padding: $vars-spacing-normal $vars-spacing-lg;
       }
     }
     .slider-wrapper {
@@ -530,12 +531,12 @@
         nowrap,
         start,
         start,
-        $vars-space-lg
+        $vars-spacing-lg
       );
       @include res-responsive(lg) {
-        gap: $vars-space-sm;
+        gap: $vars-spacing-sm;
         .goPlay-btn {
-          padding: $vars-space-xs;
+          padding: $vars-spacing-xs;
         }
       }
       &--logo {
@@ -546,10 +547,10 @@
         }
       }
       &--title {
-        font-size: $vars-space-lg;
+        font-size: $vars-spacing-lg;
         @include txt-font-bold;
         @include res-responsive(md) {
-          font-size: $vars-space-normal;
+          font-size: $vars-spacing-normal;
         }
       }
       &--desc {
@@ -569,7 +570,7 @@
           nowrap,
           start,
           center,
-          $vars-space-normal
+          $vars-spacing-normal
         );
         @include res-responsive(md) {
           .goPlay-btn {
@@ -581,3 +582,4 @@
     }
   }
 }
+

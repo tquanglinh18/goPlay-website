@@ -3,15 +3,14 @@
 
 @mixin box-lg {
   border: 1px solid $grey-200;
-  border-radius: $space-lg;
-  padding: $space-xl;
+  border-radius: $spacing-lg;
+  padding: $spacing-xl;
   background-color: $white-color;
 }
 
 @mixin box-normal {
   border: 1px solid $grey-200;
-  border-radius: $space-sm;
-  padding: $space-normal $space-lg;
+  border-radius: $spacing-sm;
+  padding: $spacing-normal $spacing-lg;
   background-color: $grey-50;
 }
-

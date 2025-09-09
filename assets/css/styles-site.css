@@ -65,3 +65,14 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #cd3636;
 }
+
+
+input:hover, input:active, input:focus,
+select:hover,
+select:active,
+select:focus,
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+}

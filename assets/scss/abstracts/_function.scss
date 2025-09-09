@@ -1,0 +1,3 @@
+@function getPxFromRem($rem) {
+ @return $rem * 16px;
+}

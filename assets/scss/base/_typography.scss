@@ -1,5 +1,13 @@
 // _typography.scss
 @use "../abstracts/variables" as *;
+
+//TextSize
+$text-xs: 8px;
+$text-sm: 12px;
+$text-normal: 16px;
+$text-lg: 24px;
+$text-xl: 32px;
+
 @mixin font-bold {
   font-family: "Inter-Bold";
   font-weight: bold;
@@ -33,3 +41,7 @@
   @include font-bold;
 }
 
+.error-message {
+  font-size: 14px;
+  color: $error-600;
+}

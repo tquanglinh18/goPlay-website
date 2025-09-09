@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>goPlay Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles-site.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="goPlay-header">
+            <div class="header-container">
+                <div class="goPlay-links">
+                    <div class="goPlay-logo">
+                        <img src="../assets/images/logo_goplay_dark.png" alt="">
+                    </div>
+
+                    <div class="goPlay-menu">
+                        <ul>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Game</a></li>
+                            <li><a href="#">Sự kiện</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="goPlay-auth">
+                    <a href="" class="btn-auth">Đăng nhập</a>
+
+                    <div class="userInfo">
+                        <div class="userInfo--avatar">
+                            <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png" alt="User Avatar">
+                        </div>
+                        <div class="userInfo--name">Username</div>
+                        <div class="userInfo--show">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="userInforDetail">
+                        <div class="userInforDetail--wrapper">
+                            <div class="account-wrapper">
+                                <div class="account-avt">
+                                    <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png" alt="User Avatar">
+                                </div>
+                                <div class="account-info">
+                                    <h5>UserName</h5>
+                                    <p>ID: <span>
+                                            231231312312
+                                        </span></p>
+                                </div>
+                            </div>
+                            <div class="go-coin">
+                                <p>Số dư GO: </p>
+                                <div class="total-coin"><span>000 </span>
+                                    <img src="../assets/images/ic_coin.png" alt="">
+                                </div>
+                            </div>
+                            <div class="account-action">
+                                <ul>
+                                    <li><a href="#">Thông tin tài khoản</a></li>
+                                    <li><a href="#">Lịch sử giao dịch</a></li>
+                                    <li><a href="#">Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cts-menu-sm">
+                    <i class="fa-solid fa-bars" id="btnToggleMenuMobile"></i>
+                </div>
+            </div>
+            <div class="goPlay-header-mobile">
+                <div class="goPlay-header-mobile-container">
+                    <div class="goPlay-auth">
+                        <a href="" class="btn-auth">Đăng nhập</a>
+
+                        <div class="userInfo">
+                            <div class="userInfo--avatar">
+                                <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png" alt="User Avatar">
+                            </div>
+                            <div class="userInfo--name">Username</div>
+                            <div class="userInfo--show">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="userInforDetail">
+                            <div class="userInforDetail--wrapper">
+                                <div class="account-wrapper">
+                                    <div class="account-avt">
+                                        <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png"
+                                            alt="User Avatar">
+                                    </div>
+                                    <div class="account-info">
+                                        <h5>UserName</h5>
+                                        <p>ID: <span>
+                                                231231312312
+                                            </span></p>
+                                    </div>
+                                </div>
+                                <div class="go-coin">
+                                    <p>Số dư GO: </p>
+                                    <div class="total-coin"><span>000 </span>
+                                        <img src="../assets/images/ic_coin.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="account-action">
+                                    <ul>
+                                        <li><a href="#">Thông tin tài khoản</a></li>
+                                        <li><a href="#">Lịch sử giao dịch</a></li>
+                                        <li><a href="#">Đăng xuất</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goPlay-menu">
+                        <ul>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Game</a></li>
+                            <li><a href="#">Sự kiện</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+    </header>
+
+    <div class="goPlay-tabs">
+        <div class="goPlay-tabs-wrapper">
+            <div class="goPlay-nav nav-pills" id="account-tab" role="tablist" aria-orientation="vertical">
+                <button class="goPlay-nav-link nav-link" id="account-info-tab" data-bs-toggle="pill"
+                    data-bs-target="#account-info" type="button" role="tab" aria-controls="account-info"
+                    aria-selected="true">Thông tin tài khoản</button>
+                <button class="goPlay-nav-link nav-link active" id="account-security-tab" data-bs-toggle="pill"
+                    data-bs-target="#account-security" type="button" role="tab" aria-controls="account-security"
+                    aria-selected="false">Thông tin bảo
+                    mật</button>
+            </div>
+            <div class="goPlay-tabContent tab-content" id="account-tabContent">
+                <div class="tab-pane fade " id="account-info" role="tabpanel" aria-labelledby="account-info-tab">
+                    <section class="cts-section">
+                        <div class="cts-container">
+                            <div class="cts-section--header">
+                                <h2 class="section-title">Thông tin tài khoản</h2>
+                            </div>
+
+                            <div class="cts-section--body">
+                                <div class="goPlay-info">
+                                    <div class="goPlay-info-header">
+                                        <h3>Thông tin tài khoản</h3>
+                                    </div>
+                                    <div class="goPlay-info-content">
+                                        <div class="info-item flex-between">
+                                            <p>Ảnh đại diện </p>
+                                            <div class="sel-avatar">
+                                                <div class="img-avt">
+                                                    <img src="../assets/images/ic_apple.png" alt="">
+                                                </div>
+                                                <!-- <div class="img-setAvt">
+                                                    <i class="fa-regular fa-camera" style="color: white;"></i>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="goPlay-info">
+                                    <div class="goPlay-info-header">
+                                        <div class="flex-between">
+                                            <h3>Thông tin cá nhân</h3>
+                                            <button type="button">Cập nhật</button>
+                                        </div>
+                                    </div>
+                                    <div class="goPlay-info-content">
+                                        <div class="info-item">
+                                            <div class="input-group">
+                                                <label for="username">Họ và tên </label>
+                                                <input type="text" disabled value="-" name="username" id="username">
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="input-group">
+                                                <label for="dateOfBirth">Ngày sinh </label>
+                                                <input type="text" disabled value="-" name="dateOfBirth"
+                                                    id="dateOfBirth">
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="input-group">
+                                                <label for="dateOfBirth">Giới tính </label>
+                                                <input type="text" disabled value="-" name="sex" id="sex">
+                                            </div>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="input-group">
+                                                <label for="address">Địa chỉ </label>
+                                                <input type="text" disabled value="-" name="address" id="address">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="goPlay-info">
+                                    <div class="goPlay-info-header">
+                                        <div class="flex-between">
+                                            <h3>Thông tin cá nhân</h3>
+                                            <button type="button">Cập nhật</button>
+                                        </div>
+                                        <p>Vui lòng điền đầy đủ các thông tin có dấu <span>*</span> để hoàn tất cập
+                                            nhật.</p>
+                                    </div>
+                                    <div class="goPlay-info-content">
+                                        <div class="info-item">
+                                            <div class="input-group">
+                                                <label for="username">Họ và tên<span>*</span></label>
+                                                <input type="text" name="username" id="username"
+                                                    placeholder="Nhập họ và tên đầy đủ">
+                                            </div>
+                                            <i class="error-message">KHoong hoejp lej</i>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="input-group">
+                                                <label for="dateOfBirth">Ngày sinh<span>*</span></label>
+                                                <input type="date" name="dateOfBirth" id="dateOfBirth">
+                                            </div>
+                                            <i class="error-message">KHoong hoejp lej</i>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="input-group">
+                                                <label for="sex">Giới tính<span>*</span></label>
+                                                <div class="select-wrapper">
+                                                    <select name="sex" id="sex">
+                                                        <option value="0" disabled checked>Chọn</option>
+                                                        <option value="1">Nam</option>
+                                                        <option value="2">Nữ</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <i class="error-message">KHoong hoejp lej</i>
+                                        </div>
+                                        <div class="info-item">
+                                            <div class="input-group">
+                                                <label for="address">Địa chỉ<span>*</span></label>
+                                                <div class="select-wrapper">
+                                                    <select name="address" id="address">
+                                                        <option value=" 0" disabled checked>Chọn</option>
+                                                        <option value="1">Hà Nội</option>
+                                                        <option value="2">TP.HCM</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <i class="error-message">KHoong hoejp lej</i>
+                                        </div>
+                                    </div>
+                                    <div class="goPlay-info-footer">
+                                        <div class="gpBtnSm">Huỷ bỏ</div>
+                                        <div class="gpBtnSm gpBtnSm--black">Lưu</div>
+                                    </div>
+                                </div>
+
+                                <div class="goPlay-info game-played">
+                                    <div class="goPlay-info-header">
+                                        <h3>Game bạn đang chơi</h3>
+                                    </div>
+                                    <div class="goPlay-info-content">
+                                        <div class="game-played-card">
+                                            <div class="game-img">
+                                                <img src="../assets/images/ic_crown.png" alt="">
+                                            </div>
+                                            <p class="game-name">
+                                                Dreamy Cafe
+                                            </p>
+                                        </div>
+                                        <div class="game-played-card">
+                                            <div class="game-img">
+                                                <img src="../assets/images/ic_crown.png" alt="">
+                                            </div>
+                                            <p class="game-name">
+                                                Dreamy Cafe
+                                            </p>
+                                        </div>
+                                        <div class="game-played-card">
+                                            <div class="game-img">
+                                                <img src="../assets/images/ic_crown.png" alt="">
+                                            </div>
+                                            <p class="game-name">
+                                                Dreamy Cafe
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="tab-pane fade show active" id="account-security" role="tabpanel"
+                    aria-labelledby="account-security-tab">
+                    <section class="cts-section">
+                        <div class="cts-container">
+                            <div class="cts-section--header">
+                                <h2 class="section-title">Thông tin bảo mật</h2>
+                            </div>
+
+                            <div class="cts-section--body">
+                                <div class="goPlay-info">
+                                    <div class="goPlay-info-header">
+                                        <h3>Thông tin xác thực</h3>
+                                    </div>
+                                    <div class="goPlay-info-content">
+                                        <div class="info-item flex-between">
+                                            <p>Số điện thoại</p>
+                                            <p>098xxxxxxx789
+                                                <span><i class="fa-regular fa-pen-to-square"></i></span>
+                                            </p>
+                                        </div>
+                                        <div class="info-item flex-between">
+                                            <p>Email</p>
+                                            <button type="button">Thêm email</button>
+                                        </div>
+                                        <div class="info-item flex-between">
+                                            <p>CCCD</p>
+                                            <button type="button">Thêm CCCD</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="goPlay-info">
+                                    <div class="goPlay-info-header">
+                                        <div class="flex-between">
+                                            <h3>Đổi mật khẩu</h3>
+                                        </div>
+                                    </div>
+                                    <div class="goPlay-info-content">
+                                        <div class="box-container">
+                                            <div class="box-text">
+                                                <h3>Kiểm tra mật khẩu</h3>
+                                                <p>Thay đổi mật khẩu bất cứ khi nào nếu bạn nghi ngờ tài khoản có dấu
+                                                    hiệu
+                                                    xâm phạm.</p>
+                                                <div class="box-actions">
+                                                    <button type="button">Đổi mật khẩu</button>
+                                                </div>
+                                            </div>
+                                            <div class="box-img">
+                                                <img src="../assets/images/img_security_shield.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="goPlay-info">
+                                    <div class="goPlay-info-header">
+                                        <div class="flex-between">
+                                            <h3>Quản lý tài khoản liên kết</h3>
+                                        </div>
+                                    </div>
+                                    <div class="goPlay-info-content">
+                                        <div class="box-container">
+                                            <div class="box-text">
+                                                <h3>Tài khoản liên kết</h3>
+                                                <p>Tài khoản đã gỡ liên kết không thể liên kết được lại. Khách hàng chỉ
+                                                    đăng
+                                                    nhập được bằng tên đăng nhập và mật khẩu mới.</p>
+
+                                                <div class="box-actions">
+                                                    <button type="button">Đổi cách đăng nhập</button>
+                                                </div>
+                                            </div>
+                                            <div class="box-img">
+                                                <img src="../assets/images/img_assistant.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="goPlay-footer">
+            <div class="footer-container">
+                <div class="footer-col company-info">
+                    <a href="#">
+                        <img src="../assets/images/logo_goplay.png" alt="">
+                    </a>
+                    <p>Tầng 12, tòa nhà VTC Online, số 18 đường Tam Trinh, Phường Tương Mai, Thành phố Hà Nội, Việt
+                        Nam
+                    </p>
+                    <p>goPlay © 2025. All Rights Reserved.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Về chúng tôi</h4>
+                    <ul>
+                        <li><a href="#">Về goPlay</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Hợp tác</a></li>
+                        <li><a href="#">Điều khoản sử dụng tài khoản GoPlay</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Thông tin liên hệ</h4>
+                    <ul>
+                        <li><a href="#">Tổng đài: <b>1900 636 876 </b></a></li>
+                        <li><a href="#">Website hỗ trợ</a></li>
+                        <li><a href="#">Fanpage</a></li>
+                    </ul>
+                </div>
+                <div class="scroll-to-top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

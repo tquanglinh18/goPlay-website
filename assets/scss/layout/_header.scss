@@ -26,14 +26,14 @@ header {
     .goPlay-header-mobile-container {
       box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
       background-color: $vars-white-color;
-      padding: $vars-space-lg;
+      padding: $vars-spacing-lg;
       .goPlay-auth {
         @include display-flex-layout(
           column,
           nowrap,
           center,
           center,
-          $vars-space-normal
+          $vars-spacing-normal
         );
       }
       .userInfo {
@@ -43,7 +43,7 @@ header {
         display: block !important;
         width: 100%;
         max-width: 480px;
-        margin: 0 auto $vars-space-normal;
+        margin: 0 auto $vars-spacing-normal;
         position: relative;
         right: 0;
         margin-bottom: 1rem;
@@ -59,7 +59,7 @@ header {
           nowrap,
           end,
           end,
-          $vars-space-normal
+          $vars-spacing-normal
         );
         li {
           border-bottom: 3px solid transparent;
@@ -88,16 +88,16 @@ header {
       nowrap,
       space-between,
       center,
-      $vars-space-normal
+      $vars-spacing-normal
     );
-    padding: 0 $vars-space-normal;
+    padding: 0 $vars-spacing-normal;
     @include res-responsive(md) {
-      padding: $vars-space-normal;
+      padding: $vars-spacing-normal;
     }
   }
   .userInfo {
     width: fit-content;
-    @include display-flex-layout(row, nowrap, center, center, $vars-space-sm);
+    @include display-flex-layout(row, nowrap, center, center, $vars-spacing-sm);
     &--avatar {
       width: 40px;
       height: 40px;
@@ -116,10 +116,10 @@ header {
   .userInforDetail {
     position: absolute;
     top: 100%;
-    right: $vars-space-normal;
+    right: $vars-spacing-normal;
     background-color: $vars-white-color;
-    padding: $vars-space-lg;
-    border-radius: $vars-space-sm;
+    padding: $vars-spacing-lg;
+    border-radius: $vars-spacing-sm;
     border: 1px solid $vars-grey-200;
     min-width: 360px;
     display: none;
@@ -130,7 +130,7 @@ header {
         nowrap,
         start,
         start,
-        $vars-space-sm
+        $vars-spacing-sm
       );
     }
     .account-wrapper {
@@ -139,7 +139,7 @@ header {
         nowrap,
         start,
         center,
-        $vars-space-normal
+        $vars-spacing-normal
       );
     }
     .account-avt {
@@ -158,11 +158,11 @@ header {
         nowrap,
         start,
         start,
-        $vars-space-xs
+        $vars-spacing-xs
       );
       h5 {
         @include txt-font-bold;
-        font-size: $vars-space-md;
+        font-size: $vars-spacing-md;
       }
       p {
         @include txt-font-medium;
@@ -175,16 +175,16 @@ header {
         nowrap,
         space-between,
         center,
-        $vars-space-xs
+        $vars-spacing-xs
       );
-      border-radius: $vars-space-normal;
+      border-radius: $vars-spacing-normal;
       background-color: $vars-error-100;
-      padding: $vars-space-md $vars-space-normal;
+      padding: $vars-spacing-md $vars-spacing-normal;
     }
 
     .total-coin {
       flex: 1;
-      @include display-flex-layout(row, nowrap, end, center, $vars-space-xs);
+      @include display-flex-layout(row, nowrap, end, center, $vars-spacing-xs);
       span {
         @include txt-font-bold;
       }
@@ -193,7 +193,7 @@ header {
       ul {
         list-style: none;
         li {
-          padding: $vars-space-sm $vars-space-normal;
+          padding: $vars-spacing-sm $vars-spacing-normal;
 
           a {
             color: $vars-grey-1000;
@@ -213,10 +213,10 @@ header {
       nowrap,
       space-between,
       center,
-      $vars-space-normal
+      $vars-spacing-normal
     );
     .goPlay-logo {
-      margin-right: $vars-space-lg;
+      margin-right: $vars-spacing-lg;
     }
     .goPlay-menu {
       display: block;
@@ -225,20 +225,22 @@ header {
       }
       ul {
         list-style: none;
+        margin-bottom: 0;
         @include display-flex-layout(
           row,
           nowrap,
           space-between,
           center,
-          $vars-space-normal
+          $vars-spacing-normal
         );
         li {
-          padding: $vars-space-lg 0;
+          padding: $vars-spacing-lg 0;
           border-bottom: 3px solid transparent;
           min-width: 82px;
           text-align: center;
           transition: all 0.3s ease-in-out;
           cursor: pointer;
+           margin-bottom: 0;
           &:hover {
             border-bottom: 3px solid $vars-error-600;
             a {
@@ -261,14 +263,14 @@ header {
       nowrap,
       center,
       center,
-      $vars-space-normal
+      $vars-spacing-normal
     );
     @include res-responsive(md) {
       display: none;
     }
   }
   .cts-menu-sm {
-    font-size: $vars-space-xl;
+    font-size: $vars-spacing-xl;
     display: none;
     @include res-responsive(md) {
       display: block;
