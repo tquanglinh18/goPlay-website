@@ -22,6 +22,11 @@ $text-xl: 32px;
   font-weight: 500;
 }
 
+@mixin font-normal {
+  font-family: "Inter";
+  font-weight: 400;
+}
+
 @mixin max-line($lines) {
   display: -webkit-box;
   -webkit-line-clamp: $lines;

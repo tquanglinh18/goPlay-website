@@ -66,8 +66,9 @@ a {
   background: #cd3636;
 }
 
-
-input:hover, input:active, input:focus,
+input:hover,
+input:active,
+input:focus,
 select:hover,
 select:active,
 select:focus,
@@ -75,4 +76,15 @@ button:hover,
 button:active,
 button:focus {
   outline: none;
+}
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
 }
