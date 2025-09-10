@@ -37,6 +37,8 @@
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  color: #1a1d1f;
+  line-height: 1.5;
 }
 *,
 *::after,
@@ -87,4 +89,14 @@ h4,
 h5,
 h6 {
   margin-bottom: 0;
+}
+
+button {
+  border: inherit;
+  background-color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }

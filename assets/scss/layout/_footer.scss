@@ -17,10 +17,10 @@
     position: relative;
     @include display-grid-cols(4, 6%);
     @include res-responsive(xl) {
-      @include display-grid-cols(3, 6%);
+      @include display-grid-cols(3, $vars-spacing-lg);
     }
     @include res-responsive(sm) {
-      @include display-grid-cols(2, 6%);
+      @include display-grid-cols(1, $vars-spacing-lg);
     }
   }
   .footer-col {
@@ -54,7 +54,7 @@
     &.company-info {
       word-spacing: 1px;
       @include res-responsive(sm) {
-        grid-column: span 2 !important;
+        grid-column: 1 !important;
       }
       @include display-flex-layout(
         column,

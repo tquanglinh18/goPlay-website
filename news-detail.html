@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>goPlay Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/styles-site.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="goPlay-header">
+            <div class="header-container">
+                <div class="goPlay-links">
+                    <div class="goPlay-logo">
+                        <img src="./assets/images/logo_goplay_dark.png" alt="">
+                    </div>
+
+                    <div class="goPlay-menu">
+                        <ul>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Game</a></li>
+                            <li><a href="#">Sự kiện</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="goPlay-auth">
+                    <a href="" class="btn-auth">Đăng nhập</a>
+
+                    <div class="userInfo">
+                        <div class="userInfo--avatar">
+                            <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png" alt="User Avatar">
+                        </div>
+                        <div class="userInfo--name">Username</div>
+                        <div class="userInfo--show">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="userInforDetail">
+                        <div class="userInforDetail--wrapper">
+                            <div class="account-wrapper">
+                                <div class="account-avt">
+                                    <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png" alt="User Avatar">
+                                </div>
+                                <div class="account-info">
+                                    <h5>UserName</h5>
+                                    <p>ID: <span>
+                                            231231312312
+                                        </span></p>
+                                </div>
+                            </div>
+                            <div class="go-coin">
+                                <p>Số dư GO: </p>
+                                <div class="total-coin"><span>000 </span>
+                                    <img src="./assets/images/ic_coin.png" alt="">
+                                </div>
+                            </div>
+                            <div class="account-action">
+                                <ul>
+                                    <li><a href="#">Thông tin tài khoản</a></li>
+                                    <li><a href="#">Lịch sử giao dịch</a></li>
+                                    <li><a href="#">Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cts-menu-sm">
+                    <i class="fa-solid fa-bars" id="btnToggleMenuMobile"></i>
+                </div>
+            </div>
+            <div class="goPlay-header-mobile">
+                <div class="goPlay-header-mobile-container">
+                    <div class="goPlay-auth">
+                        <a href="" class="btn-auth">Đăng nhập</a>
+
+                        <div class="userInfo">
+                            <div class="userInfo--avatar">
+                                <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png" alt="User Avatar">
+                            </div>
+                            <div class="userInfo--name">Username</div>
+                            <div class="userInfo--show">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="userInforDetail">
+                            <div class="userInforDetail--wrapper">
+                                <div class="account-wrapper">
+                                    <div class="account-avt">
+                                        <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png"
+                                            alt="User Avatar">
+                                    </div>
+                                    <div class="account-info">
+                                        <h5>UserName</h5>
+                                        <p>ID: <span>
+                                                231231312312
+                                            </span></p>
+                                    </div>
+                                </div>
+                                <div class="go-coin">
+                                    <p>Số dư GO: </p>
+                                    <div class="total-coin"><span>000 </span>
+                                        <img src="./assets/images/ic_coin.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="account-action">
+                                    <ul>
+                                        <li><a href="#">Thông tin tài khoản</a></li>
+                                        <li><a href="#">Lịch sử giao dịch</a></li>
+                                        <li><a href="#">Đăng xuất</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goPlay-menu">
+                        <ul>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Game</a></li>
+                            <li><a href="#">Sự kiện</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+    </header>
+
+    <section class="cts-section news-section">
+        <div class="cts-container">
+            <div class="page-breadcrumb">
+                <a href=""><i class="fa-solid fa-chevron-left"></i>Quay lại</a>
+            </div>
+            <article class="article-wrap">
+                <div class="article-content">
+                    <h3 class="article-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
+                        aspernatur
+                        beatae iusto harum autem repellat mollitia praesentium fugiat cumque, ratione reiciendis,
+                        magni
+                        quae minus excepturi delectus perspiciatis fuga dolorem pariatur.</h3>
+                    <div class="article-meta">
+                        <div class="flex-row">
+                            <p class="article-date"><i class="fa-regular fa-clock"></i> 25.25.2025</p>
+                            <p class="article-author">Đăng bởi: <span>LinhTQ</span></p>
+                        </div>
+                        <p class="article-view"><i class="fa-regular fa-eye"></i> 3,480</p>
+                    </div>
+                    <div class="">
+
+                        <p class="mt-5">
+                        </p>
+                        <div>
+                            <span style="font-size:18px;"><strong><span
+                                        style="font-family:arial,helvetica,sans-serif;">RA MẮT HỆ THỐNG VŨ KHÍ CẤP
+                                        TIẾN M4A1-S ASCENSION DRAGON</span></strong></span>
+                        </div>
+                        <div>
+                            <span style="font-size:18px;"><strong><span
+                                        style="font-family:arial,helvetica,sans-serif;">CHẾ ĐỘ CHƠI MỚI SKY BLOCK,
+                                        MYSTERY SHOP</span></strong></span>
+                        </div>
+                        <div>
+                            <span style="font-size:18px;"><strong><span
+                                        style="font-family:arial,helvetica,sans-serif;">NÂNG CẤP HỆ THỐNG PHẦN
+                                        THƯỞNG VÀ QUYỀN LỢI ĐỘC QUYỀN DÀNH CHO CỰU BINH</span></strong></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Big
+                                    Update tháng 9 Đột Kích chính thức ra mắt với hệ thống Vũ Khí Cấp Tiến M4A1-S
+                                    Ascension Dragon, chế độ chơi mới Sky Block, Mystery Shop cùng loạt phần thưởng
+                                    Cựu Binh độc quyền.</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div style="text-align: center;">
+                            <a href="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_12.jpg"
+                                target="_self"><img alt=""
+                                    src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_12.jpg"
+                                    style="width: 100%; height: auto;"></a>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <strong><span style="font-size:16px;"><span
+                                        style="font-family:arial,helvetica,sans-serif;">1. HỆ THỐNG VŨ KHÍ CẤP TIẾN
+                                        M4A1-S ASCENSION DRAGON</span></span></strong>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Hệ
+                                    thống vũ khí cấp tiến lần đầu tiên xuất hiện tại Đột Kích, cho phép người chơi
+                                    nâng cấp súng qua 7 cấp độ bằng Đá Cấp Tiến Aether. Mỗi lần nâng cấp, vũ khí
+                                    không chỉ biến đổi ngoại hình mà còn mở khóa thêm hàng loạt tính năng VIP độc
+                                    quyền, hiệu ứng chiến đấu mạnh mẽ cùng nhiều vật phẩm trang trí giá
+                                    trị.</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div style="text-align: center;">
+                            <a href="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_08.jpg"
+                                target="_self"><img alt=""
+                                    src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_08.jpg"
+                                    style="width: 100%; height: auto;"></a>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">M4A1-S
+                                    Ascension Dragon sẽ là vũ
+                                    khí cấp tiến đầu tiên được đưa vào hệ thống. Ở Level tối đa, khẩu súng không chỉ
+                                    sở hữu loạt tính năng độc quyền tối ưu cho cả AI lẫn Zombie, mà còn cho phép mở
+                                    khóa âm thanh độc quyền, búp bê cùng 5 skin huyền thoại:&nbsp;</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    M4A1-S Ascension Dragon Red</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    M4A1-S Ascension Dragon Green</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    M4A1-S Ascension Dragon Purple</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    M4A1-S Ascension Dragon White</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    M4A1-S Ascension Dragon Gold</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <strong><span style="font-size:16px;"><span
+                                        style="font-family:arial,helvetica,sans-serif;">2. CHẾ ĐỘ CHƠI MỚI SKY
+                                        BLOCK&nbsp;</span></span></strong>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Sky
+                                    Block đưa game thủ vào một đấu trường PvP 4 phe hoàn toàn mới gồm: Thanh Long ,
+                                    Bạch Hổ, Huyền Vũ, Chu Tước, nơi mỗi đội vừa phải thu thập tài nguyên, xây dựng
+                                    Block mở rộng địa hình, vừa bảo vệ Tháp Căn Cứ của mình trước kẻ
+                                    thù.&nbsp;</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div style="text-align: center;">
+                            <a href="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_11.jpg"
+                                target="_self"><img alt=""
+                                    src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_11.jpg"
+                                    style="width: 100%; height: auto;"></a>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Bản
+                                    đồ dành riêng cho chế độ Sky Block: Guardians Garden</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    Crystal Generator&nbsp; là nơi khai thác tinh thể, đồng thời hồi máu và lá chắn
+                                    cho người chơi khi ở gần.&nbsp;</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    Crystal Island xuất hiện rải rác khắp bản đồ, là kho tài nguyên khổng lồ. Các
+                                    phe phải xây đường bằng khối để chiếm tinh thể và mở rộng block nhanh
+                                    chóng.</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    Trận chiến thêm phần kịch tính với sự xuất hiện định kỳ của Thánh Tích ở giữa
+                                    bản đồ, chỉ có thể phá bằng cận chiến để nhận các buff và vật phẩm hỗ trợ ngẫu
+                                    nhiên.</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Đặc
+                                    biệt, khi trận đấu bước vào giai đoạn cuối, Vùng Từ Trường (Magnetic Field) sẽ
+                                    thu hẹp dần, buộc các phe phải tiến vào vòng bo để sinh tồn và phân định thắng
+                                    thua. Sky Block hỗ trợ các chế độ Solo, Duo và Squad với tối đa 16 người chơi,
+                                    và chỉ phe lại cuối cùng mới có thể giành chiến thắng.&nbsp;</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Phần
+                                    thưởng độc quyền của chế độ chơi: Cận chiến Golem Skyblock.</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <strong><span style="font-size:16px;"><span
+                                        style="font-family:arial,helvetica,sans-serif;">3. MYSTERY
+                                        SHOP</span></span></strong>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Cùng
+                                    với chế độ mới, Mystery Shop cũng sẽ quay trở lại. Người chơi có thể dùng Gocoin
+                                    để mua Amethyst, 1 Gocoin tương ứng 1 Amethyst. Sử dụng Amethyst để mua các vật
+                                    phẩm trong Mystery Shop. Có 3 loại vật phẩm tương ứng với 3 chế độ chơi: PVP,
+                                    PVE và Nano.</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div style="text-align: center;">
+                            <a href="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_10.jpg"
+                                target="_self"><img alt=""
+                                    src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_10.jpg"
+                                    style="width: 100%; height: auto;"></a>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Đối
+                                    với người chơi truy cập Mystery Shop lần đầu sẽ được giảm 20%, khi mua các vật
+                                    phẩm theo thứ tự bắt buộc: Scarlight-S Pegasus, Seraph Kar98K-Satellite và
+                                    Cheytac&nbsp;</span></span><span
+                                style="font-family: arial, helvetica, sans-serif; font-size: 16px;">M200 Dominator
+                                Infinity,&nbsp;</span><span style="font-size:16px;"><span
+                                    style="font-family:arial,helvetica,sans-serif;">tiêu tích lũy 1000 Amethyst giảm
+                                    40%, 1500 Amethyst giảm 60%.</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <strong><span style="font-size:16px;"><span
+                                        style="font-family:arial,helvetica,sans-serif;">4. NÂNG CẤP HỆ THỐNG PHẦN
+                                        THƯỞNG VÀ QUYỀN LỢI ĐỘC QUYỀN</span></span></strong>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Nhằm
+                                    khuyến khích người chơi lâu năm quay trở lại chiến trường và tiếp tục hòa mình
+                                    vào những trận đấu rực lửa, Sở Chỉ Huy chính thức nâng cấp hệ thống phần thưởng
+                                    dành cho các tài khoản Cựu Binh. Trong mỗi bản đồ và chế độ chơi, Cựu Binh sẽ có
+                                    cơ hội trải nghiệm kho vũ khí cùng nhân vật VIP cực chất, đồng thời nhận về hàng
+                                    loạt vật phẩm vĩnh viễn khi hoàn thành nhiệm vụ như: M82A1-Iron Shark-NoMark,
+                                    AWM-Red Frame Hawk-NoMark, M4A1-Silencer-Prism Beast-NoMark, M82A1-Born Beast
+                                    Anime Girl, AK-47 Anime Girl.</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Không
+                                    chỉ vậy, các tài khoản Cựu
+                                    Binh còn được hưởng chế độ ghép trận độc quyền, ưu tiên bắt cặp với những người
+                                    chơi đã lâu không trở lại. Song song đó, hệ thống sẽ hiển thị cửa sổ hướng dẫn
+                                    trực quan, giúp người chơi nhanh chóng làm quen và tái xuất chiến trường một
+                                    cách dễ dàng, hấp dẫn hơn.</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <strong><span style="font-size:16px;"><span
+                                        style="font-family:arial,helvetica,sans-serif;">5. QCMM TUỲ CHỌN GP
+                                        CLASSIC&nbsp;</span></span></strong>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Người
+                                    chơi có thể tùy chọn 3 vật
+                                    phẩm ngẫu nhiên trong danh sách để tạo QCMM cho riêng mình:</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">- FN
+                                    Ballista</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    Mateba-Gold Black Dragon</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    1858 New Army-Zebra</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    AWM-Rusty</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    AWM-Ultimate Silversmith</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    Mauser Gold</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    M37 Stakeout Hellfire</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    DSR-1 RUSTY</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    Scar Light - Ultimate Silver</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div style="text-align: center;">
+                            <a href="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_09.jpg"
+                                target="_self"><img alt=""
+                                    src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_09.jpg"
+                                    style="width: 100%; height: auto;"></a>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <strong><span style="font-size:16px;"><span
+                                        style="font-family:arial,helvetica,sans-serif;">6. CÁC CẬP NHẬT
+                                        KHÁC</span></span></strong>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">- Hệ
+                                    thống lưu nhân vật tự động&nbsp;</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">- Hệ
+                                    thống bản đồ chiến thuật mới trong chế độ Đặt Bom, cho phép ping vị trí và
+                                    highlight đồng đội, tối ưu giao tiếp chiến thuật qua minimap. Có thể tùy chỉnh
+                                    cài đặt màu sắc hiển thị thông tin đồng đội.</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    Cải tiến hệ thống tùy chọn âm thanh mới trong cài đặt</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">- Hệ
+                                    thống mã Social: Mỗi người chơi sẽ có một mã Social cá nhân, giúp tìm và kết bạn
+                                    nhanh chóng hơn.</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    Cập nhập VIP ingame</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    Trao thưởng sự kiện “Đua Top Tiêu Go”</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">-
+                                    Trao thưởng sự kiện Bingo.</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Thời
+                                    gian bảo trì dự kiến: 0h00 - 04h00 ngày 9/9 (Có thể mở sớm nếu ổn
+                                    định)</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Lưu
+                                    ý: Server sẽ đóng trước thời gian bảo trì là 5 phút. Vui lòng đăng xuất trước
+                                    thời gian trên.</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Bản
+                                    cập nhật tháng 9 đã sẵn sàng!&nbsp;</span></span>
+                        </div>
+                        <div>
+                            <span style="font-size:16px;"><span style="font-family:arial,helvetica,sans-serif;">Chuẩn bị
+                                    bước vào chiến trường,
+                                    tự mình khám phá vô vàn nội dung sắp ra mắt ngay nhé!&nbsp;</span></span>
+                        </div>
+                        <div>
+                            &nbsp;</div>
+
+                        <p></p>
+                    </div>
+                </div>
+                <div class="article-related">
+            <div class="goPlay-news-card">
+                <div class="goPlay-news-card__img">
+                    <img src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_09.jpg"
+                        alt="">
+                </div>
+                <div class="goPlay-news-card__contents">
+                    <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum saepe ipsa
+                        nam
+                        cum hic
+                        ab? Deserunt voluptatibus atque itaque eos cum modi, quidem odio error,
+                        ullam
+                        expedita
+                        accusantium numquam nobis?</h5>
+                    <p>
+                        <span><i class="fa-regular fa-clock"></i> 25/05/3035</span>
+                        <span><i class="fa-regular fa-eye"></i> 3456</span>
+                    </p>
+                </div>
+            </div>
+            <div class="goPlay-news-card">
+                <div class="goPlay-news-card__img">
+                    <img src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_09.jpg"
+                        alt="">
+                </div>
+                <div class="goPlay-news-card__contents">
+                    <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum saepe ipsa
+                        nam
+                        cum hic
+                        ab? Deserunt voluptatibus atque itaque eos cum modi, quidem odio error,
+                        ullam
+                        expedita
+                        accusantium numquam nobis?</h5>
+                    <p>
+                        <span><i class="fa-regular fa-clock"></i> 25/05/3035</span>
+                        <span><i class="fa-regular fa-eye"></i> 3456</span>
+                    </p>
+                </div>
+            </div>
+            <div class="goPlay-news-card">
+                <div class="goPlay-news-card__img">
+                    <img src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/0-0000112024/0909_09.jpg"
+                        alt="">
+                </div>
+                <div class="goPlay-news-card__contents">
+                    <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum saepe ipsa
+                        nam
+                        cum hic
+                        ab? Deserunt voluptatibus atque itaque eos cum modi, quidem odio error,
+                        ullam
+                        expedita
+                        accusantium numquam nobis?</h5>
+                    <p>
+                        <span><i class="fa-regular fa-clock"></i> 25/05/3035</span>
+                        <span><i class="fa-regular fa-eye"></i> 3456</span>
+                    </p>
+                </div>
+            </div>
+            </article>
+        </div>
+            </article>
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="goPlay-footer">
+            <div class="footer-container">
+                <div class="footer-col company-info">
+                    <a href="#">
+                        <img src="./assets/images/logo_goplay.png" alt="">
+                    </a>
+                    <p>Tầng 12, tòa nhà VTC Online, số 18 đường Tam Trinh, Phường Tương Mai, Thành phố Hà Nội, Việt Nam
+                    </p>
+                    <p>goPlay © 2025. All Rights Reserved.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Về chúng tôi</h4>
+                    <ul>
+                        <li><a href="#">Về goPlay</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Hợp tác</a></li>
+                        <li><a href="#">Điều khoản sử dụng tài khoản GoPlay</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Thông tin liên hệ</h4>
+                    <ul>
+                        <li><a href="#">Tổng đài: <b>1900 636 876 </b></a></li>
+                        <li><a href="#">Website hỗ trợ</a></li>
+                        <li><a href="#">Fanpage</a></li>
+                    </ul>
+                </div>
+                <div class="scroll-to-top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>

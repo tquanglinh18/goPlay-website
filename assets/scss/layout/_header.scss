@@ -188,6 +188,12 @@ header {
       span {
         @include txt-font-bold;
       }
+      img {
+      width: 24px;
+      aspect-ratio: 1/1;
+        object-fit: contain;
+
+      }
     }
     .account-action {
       ul {

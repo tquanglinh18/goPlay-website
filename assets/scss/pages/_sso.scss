@@ -241,6 +241,7 @@
     );
     @include res-responsive(lg) {
       @include display-flex-column;
+      gap: 0;
     }
   }
 
@@ -250,8 +251,9 @@
     margin: 8vh 0;
     @include res-responsive(lg) {
       width: 100%;
+      max-width: 90%;
       @include display-flex-layout(row, nowrap, start, center, 0);
-      margin: $vars-spacing-xl 0 $vars-spacing-normal;
+      margin: $vars-spacing-sm auto;
     }
     .goPlay-nav-link {
       width: 100%;
@@ -271,6 +273,10 @@
       }
     }
   }
+
+       .cts-section {
+        margin: 0;
+      }
 
   .goPlay-tabContent {
     width: 80vw;
@@ -306,7 +312,10 @@
       border: none;
       background-color: transparent;
       padding: 0;
-      @include display-grid-cols(4, $vars-spacing-sm);
+     @include display-flex-layout(row, wrap, start, stretch, $vars-spacing-normal);
+      @include res-responsive(sm) {
+        grid-template-columns: repeat(2,1fr);
+      }
     }
   }
   &-header {
@@ -436,7 +445,7 @@
 
     .game-played-card {
       width: fit-content;
-      min-width: 134px;
+      min-width: 140px;
       @include mixins-box-normal;
       padding: $vars-spacing-normal;
       @include display-flex-layout(
@@ -477,6 +486,18 @@
   }
   .box-text {
     flex: 1;
+    h3 {
+      margin-bottom: $vars-spacing-lg;
+      @include res-responsive(md) {
+      margin-bottom: $vars-spacing-normal;
+      }
+    }
+    p {
+      margin-bottom: $vars-spacing-lg;
+      @include res-responsive(md) {
+      margin-bottom: $vars-spacing-normal;
+      }
+    }
   }
   .box-img {
     width: 150px;
