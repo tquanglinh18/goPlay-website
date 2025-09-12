@@ -1,0 +1,359 @@
+@use "../global" as *;
+
+.goPlay-game-banner {
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1920/460;
+    object-fit: cover;
+      @include res-responsive(md) {
+     aspect-ratio: 2/1;
+  }
+  }
+}
+
+.section-overview {
+  margin-top: 0;
+  margin: 0 0 1% 0;
+  @include res-responsive(md) {
+    margin: 0;
+  }
+}
+.game-overview {
+  width: 100%;
+  @include display-flex-layout(row, nowrap, start, start, $vars-spacing-normal);
+  padding-left: 18%;
+  position: relative;
+  @include res-responsive(lg) {
+    padding: 0;
+    @include display-align-center;
+  }
+  &__thumbnail {
+    width: 100%;
+    max-width: 16%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 215/276;
+      border-radius: $vars-spacing-normal;
+      object-fit: cover;
+    }
+    @include res-responsive(lg) {
+      position: relative;
+      max-width: 20%;
+    }
+
+    @include res-responsive(md) {
+      position: relative;
+      max-width: 30%;
+    }
+  }
+  &__content {
+    flex: 1;
+    @include display-flex-layout(
+      row,
+      nowrap,
+      space-between,
+      start,
+      $vars-spacing-normal
+    );
+    @include res-responsive(md) {
+      flex-direction: column;
+      gap: $vars-spacing-sm;
+    }
+    .game-title {
+      font-size: $txt-text-xl;
+      margin-bottom: $vars-spacing-sm;
+      @include res-responsive(xl) {
+        font-size: $txt-text-lg;
+      }
+      @include res-responsive(md) {
+        font-size: $txt-text-normal;
+      }
+    }
+    .game-genre,
+    .game-publisher {
+      color: $vars-grey-600;
+      span {
+        @include txt-font-bold;
+      }
+      @include res-responsive(lg) {
+        font-size: 14px;
+      }
+      @include res-responsive(md) {
+        font-size: 12px;
+      }
+    }
+
+    .game-socials {
+      margin-top: $vars-spacing-normal;
+      a {
+        &:last-child {
+          i {
+            margin-right: 0;
+          }
+        }
+      }
+      i {
+        font-size: 20px;
+        color: $vars-black-color;
+        margin-right: $vars-spacing-xs;
+        @include res-responsive(md) {
+          font-size: 16px;
+        }
+      }
+      @include res-responsive(md) {
+        margin-top: $vars-spacing-sm;
+      }
+    }
+  }
+  &__actions {
+    width: 25vw;
+    max-width: 333px;
+    @include display-flex-layout(
+      column,
+      nowrap,
+      start,
+      start,
+      $vars-spacing-normal
+    );
+    @include mixins-box-normal;
+    padding: $vars-spacing-normal;
+    @include res-responsive(md) {
+      flex-direction: row;
+      width: 100%;
+      max-width: unset;
+      padding: $vars-spacing-xs;
+    }
+    .goPlay-btn {
+      max-width: unset;
+      @include res-responsive(sm) {
+        font-size: 10px;
+        padding: $vars-spacing-xs;
+      }
+    }
+  }
+}
+
+.goPlay-pin-tabs {
+  width: 100%;
+  border-bottom: 1px solid $vars-grey-200;
+  background-color: $vars-grey-50;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  position: sticky;
+  top: 74px;
+  z-index: 999;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  ul {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 480px;
+    margin: 0 auto;
+    list-style: none;
+    @include display-flex-layout(row, nowrap, start, center, $vars-spacing-xs);
+    @include res-responsive(sm) {
+      justify-content: space-between;
+    }
+    li {
+      height: 100%;
+      &.cts-nav {
+        padding: $vars-spacing-sm $vars-spacing-md;
+        border-bottom: 3px solid transparent;
+        a {
+          color: $vars-grey-600;
+          @include res-responsive(sm) {
+            font-size: 14px;
+          }
+        }
+        &.active {
+          border-bottom: 3px solid $vars-error-600;
+          background-color: $vars-error-100;
+          @include txt-font-bold;
+          a {
+            color: $vars-grey-1000;
+          }
+        }
+      }
+    }
+  }
+}
+
+.game-library {
+  .gallery-item {
+    padding: $vars-spacing-xs;
+    @include display-flex-layout(
+      column,
+      nowrap,
+      center,
+      center,
+      $vars-spacing-normal
+    );
+    &.item-merge {
+      img {
+        aspect-ratio: 686/416;
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 333/198;
+      object-fit: cover;
+      border-radius: $vars-spacing-normal;
+    }
+  }
+
+  .section-actions {
+    button {
+      font-size: 20px;
+      margin-right: $vars-spacing-sm;
+      &:last-child {
+        margin-right: 0;
+      }
+      cursor: pointer;
+    }
+  }
+}
+
+.game-play {
+  .cts-section--body {
+    color: $vars-grey-600;
+    @include res-responsive(md) {
+        font-size: 14px;
+    }
+  }
+}
+
+.table-configuration {
+  @include mixins-box-normal;
+  padding: 1.5rem 2.5rem;
+  @include res-responsive(sm) {
+    padding: $vars-spacing-sm;
+  }
+  table {
+    width: 100%;
+
+    thead {
+      width: 100%;
+      th {
+        width: 33.33%;
+        @include txt-font-bold;
+        padding: 0 $vars-spacing-xs $vars-spacing-md;
+        i {
+          font-size: 12px;
+          color: $vars-warning-500;
+          @include res-responsive(sm) {
+            display: none;
+          }
+        }
+        @include res-responsive(sm) {
+          padding: 0 2px 12px;
+          width: 37.5%;
+          &:first-child {
+            width: 25%;
+          }
+        }
+      }
+    }
+    tbody {
+      td {
+        padding: $vars-spacing-sm;
+        text-align: center;
+        border-top: 2px solid $vars-grey-100;
+        &:first-child {
+          text-align: start;
+          @include res-responsive(sm) {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    tbody td,
+    thead th {
+      @include res-responsive(sm) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.game-giftcode {
+  text-align: center;
+  .giftcode-box {
+    margin-bottom: 2%;
+    @include display-flex-layout(column, nowrap, center, center, 0);
+    color: $vars-white-color;
+    width: 100%;
+    background-color: $vars-grey-1000;
+    // background-image: url("../images/bg_frame_giftcode.png");
+    padding: 3%;
+    border-radius: $vars-spacing-normal;
+    @include res-responsive(md) {
+      padding: 6%;
+    }
+    @include res-responsive(sm) {
+      padding: 9% 6%;
+    }
+    &--title {
+      color: $vars-white-color;
+      @include txt-font-semibold;
+      margin-bottom: $vars-spacing-sm;
+    }
+    .group-input {
+      width: 100%;
+      @include display-flex-layout(row, wrap, center, center, $vars-spacing-sm);
+      margin-bottom: $vars-spacing-xl;
+      .goPlay-btn {
+        max-width: 148px;
+        min-height: 64px;
+        @include res-responsive(md) {
+          padding: $vars-spacing-sm;
+          min-height: unset;
+        }
+      }
+      @include res-responsive(md) {
+        margin-bottom: $vars-spacing-lg;
+      }
+    }
+    input {
+      border: 1px solid $vars-grey-600;
+      border-radius: $vars-spacing-sm;
+      padding: $vars-spacing-sm $vars-spacing-md;
+      min-height: 64px;
+      background-color: $vars-grey-800;
+      text-align: center;
+      color: $vars-white-color;
+      font-size: 20px;
+      min-width: 320px;
+      @include res-responsive(md) {
+        min-height: 48px;
+      }
+    }
+  }
+  .note-box {
+    color: $vars-grey-400;
+    border-top: 1px solid $vars-grey-600;
+    padding-top: $vars-spacing-xl;
+    font-size: 14px;
+    @include res-responsive(sm) {
+      font-size: 12px;
+      padding-top: $vars-spacing-normal;
+    }
+    p {
+      span {
+        color: $vars-error-600;
+      }
+      b {
+        @include txt-font-bold;
+      }
+    }
+  }
+}

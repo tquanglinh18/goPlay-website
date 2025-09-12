@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>goPlay Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./assets/css/styles-site.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="goPlay-header">
+            <div class="header-container">
+                <div class="goPlay-links">
+                    <div class="goPlay-logo">
+                        <img src="./assets/images/logo_goplay_dark.png" alt="">
+                    </div>
+
+                    <div class="goPlay-menu">
+                        <ul>
+                            <li><a href="./index.html">Trang chủ</a></li>
+                            <li><a href="./game-detail.html">Game</a></li>
+                            <li><a href="./news.html">Sự kiện</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="goPlay-auth">
+                    <a href="" class="btn-auth">Đăng nhập</a>
+
+                    <div class="userInfo">
+                        <div class="userInfo--avatar">
+                            <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png" alt="User Avatar">
+                        </div>
+                        <div class="userInfo--name">Username</div>
+                        <div class="userInfo--show">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+                    <div class="userInforDetail">
+                        <div class="userInforDetail--wrapper">
+                            <div class="account-wrapper">
+                                <div class="account-avt">
+                                    <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png" alt="User Avatar">
+                                </div>
+                                <div class="account-info">
+                                    <h5>UserName</h5>
+                                    <p>ID: <span>
+                                            231231312312
+                                        </span></p>
+                                </div>
+                            </div>
+                            <div class="go-coin">
+                                <p>Số dư GO: </p>
+                                <div class="total-coin"><span>000 </span>
+                                    <img src="./assets/images/ic_coin.png" alt="">
+                                </div>
+                            </div>
+                            <div class="account-action">
+                                <ul>
+                                    <li><a href="#">Thông tin tài khoản</a></li>
+                                    <li><a href="#">Lịch sử giao dịch</a></li>
+                                    <li><a href="#">Đăng xuất</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cts-menu-sm">
+                    <i class="fa-solid fa-bars" id="btnToggleMenuMobile"></i>
+                </div>
+            </div>
+            <div class="goPlay-header-mobile">
+                <div class="goPlay-header-mobile-container">
+                    <div class="goPlay-auth">
+                        <a href="" class="btn-auth">Đăng nhập</a>
+
+                        <div class="userInfo">
+                            <div class="userInfo--avatar">
+                                <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png" alt="User Avatar">
+                            </div>
+                            <div class="userInfo--name">Username</div>
+                            <div class="userInfo--show">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="userInforDetail">
+                            <div class="userInforDetail--wrapper">
+                                <div class="account-wrapper">
+                                    <div class="account-avt">
+                                        <img src="https://dreamycafe.goplay.vn/images/icon-header-mb.png"
+                                            alt="User Avatar">
+                                    </div>
+                                    <div class="account-info">
+                                        <h5>UserName</h5>
+                                        <p>ID: <span>
+                                                231231312312
+                                            </span></p>
+                                    </div>
+                                </div>
+                                <div class="go-coin">
+                                    <p>Số dư GO: </p>
+                                    <div class="total-coin"><span>000 </span>
+                                        <img src="./assets/images/ic_coin.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="account-action">
+                                    <ul>
+                                        <li><a href="#">Thông tin tài khoản</a></li>
+                                        <li><a href="#">Lịch sử giao dịch</a></li>
+                                        <li><a href="#">Đăng xuất</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goPlay-menu">
+                        <ul>
+                            <li><a href="#">Trang chủ</a></li>
+                            <li><a href="#">Game</a></li>
+                            <li><a href="#">Sự kiện</a></li>
+                            <li><a href="#">Hỗ trợ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+    </header>
+
+    <section class="goPlay-game-banner">
+        <img src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/Momo/cf%20party.jpg" alt="">
+    </section>
+
+    <section class="cts-section section-overview">
+        <div class="cts-container">
+            <!-- <div class="cts-section--header">
+                <h2 class="section-title">hehe</h2>
+            </div> -->
+            <div class="cts-section--body">
+                <section class="game-overview">
+                    <div class="game-overview__thumbnail">
+                        <img src="https://didongviet.vn/dchannel/wp-content/uploads/2023/03/1-cf-la-gi-didongviet.jpg"
+                            alt="Vua Pháp Thuật">
+                    </div>
+
+                    <div class="game-overview__content">
+                        <div class="game-overview__info">
+                            <h1 class="game-title">Đột kích</h1>
+                            <p class="game-genre">Thể loại: <span>FPS</span></p>
+                            <p class="game-publisher">Nhà phát triển: <span>VTC Online</span></p>
+
+                            <div class="game-socials">
+                                <a href="">
+                                    <i class="fa-solid fa-house"></i>
+                                </a>
+
+                                <a href="">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+
+                                <a href="">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+
+                                <a href="">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="game-overview__actions">
+                            <div class="goPlay-btn goPlay-btn--black">
+                                <i class="fa-solid fa-download"></i> Tải về
+                            </div>
+                            <div class="goPlay-btn goPlay-btn--red">
+                                <img src="./assets/images/ic_coin.png" alt=""> Nạp game
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="goPlay-pin-tabs">
+        <ul>
+            <li class="cts-nav active">
+                <a href="#game-library">Thư viện</a>
+            </li>
+            <li class="cts-nav">
+                <a href="#game-play">Game Play</a>
+            </li>
+            <li class="cts-nav">
+                <a href="#game-configuration">Yêu cầu cấu hình</a>
+            </li>
+            <li class="cts-nav">
+                <a href="#game-giftcode">Giftcode</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="cts-section smMargin game-library" id="game-library">
+        <div class="cts-container">
+            <div class="cts-section--header">
+                <h2 class="section-title">Thư viện</h2>
+                <div class="section-actions">
+                    <button type="button" id="gallery-prev">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button type="button" id="gallery-next">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="cts-section--body">
+                <div class="owl-carousel game-gallery">
+
+                    <div class="gallery-item item-merge" data-merge="2">
+                        <img src="https://tomko.com.vn/wp-content/uploads/2023/06/vai-net-ve-game-dot-kich-cf.jpg" alt="Big">
+                    </div>
+
+                    <div class="gallery-item" data-merge="1">
+                        <img src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/Momo/VVIP-Hawks.jpg" alt="Small1">
+                        <img src="https://cdn2.fptshop.com.vn/unsafe/Uploads/images/tin-tuc/187822/Originals/CF-Mobile-1.jpg" alt="Small2">
+                    </div>
+
+                    <div class="gallery-item" data-merge="1">
+                        <img src="https://photoservice.goplay.vn///Resources/Upload/Images/News/32/8e2302ab-007e-4907-9cec-6c54c342c466.jpg" alt="Small3">
+                        <img src="https://gamek.mediacdn.vn/133514250583805952/2024/3/27/photo-1711528958444-17115289587481064495946.png" alt="Small4">
+                    </div>
+
+                    <div class="gallery-item" data-merge="1">
+                        <img src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/Momo/VVIP-Hawks.jpg" alt="Small1">
+                        <img src="https://cdn2.fptshop.com.vn/unsafe/Uploads/images/tin-tuc/187822/Originals/CF-Mobile-1.jpg" alt="Small2">
+                    </div>
+
+                    <div class="gallery-item" data-merge="1">
+                        <img src="https://photoservice.goplay.vn///Resources/Upload/Images/News/32/8e2302ab-007e-4907-9cec-6c54c342c466.jpg" alt="Small3">
+                        <img src="https://gamek.mediacdn.vn/133514250583805952/2024/3/27/photo-1711528958444-17115289587481064495946.png" alt="Small4">
+                    </div>
+
+                    <div class="gallery-item" data-merge="1">
+                        <img src="https://photoservice.goplay.vn/Resources/Upload/Images/Editor/Momo/VVIP-Hawks.jpg" alt="Small1">
+                        <img src="https://cdn2.fptshop.com.vn/unsafe/Uploads/images/tin-tuc/187822/Originals/CF-Mobile-1.jpg" alt="Small2">
+                    </div>
+
+                    <div class="gallery-item" data-merge="1">
+                        <img src="https://photoservice.goplay.vn///Resources/Upload/Images/News/32/8e2302ab-007e-4907-9cec-6c54c342c466.jpg" alt="Small3">
+                        <img src="https://gamek.mediacdn.vn/133514250583805952/2024/3/27/photo-1711528958444-17115289587481064495946.png" alt="Small4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cts-section smMargin game-play" id="game-play">
+        <div class="cts-container">
+            <div class="cts-section--header">
+                <h2 class="section-title">Game Play</h2>
+            </div>
+
+            <div class="cts-section--body">
+                <p>Đột Kích là game bắn súng góc nhìn thứ nhất (FPS) hấp dẫn, nơi người chơi tham gia các trận chiến
+                    kịch tính với đồ họa chân thực, âm thanh sống động. Nhiều chế độ chơi đa dạng như đấu đội, đặt bom,
+                    zombie… giúp bạn thỏa sức so tài cùng bạn bè và cộng đồng game thủ.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cts-section smMargin game-configuration" id="game-configuration">
+        <div class="cts-container">
+            <div class="cts-section--header">
+                <h2 class="section-title">Yêu cầu cấu hình</h2>
+            </div>
+            <div class="cts-section--body">
+                <div class="table-configuration isTrans">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Cấu hình tối thiểu</th>
+                                <th>Cấu hình đề nghị <i class="fa-solid fa-star"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hệ điều hành</td>
+                                <td>Windows 7</td>
+                                <td>Windows 7</td>
+                            </tr>
+                            <tr>
+                                <td>CPU</td>
+                                <td>Inter core i5</td>
+                                <td>Inter core i5</td>
+                            </tr>
+                            <tr>
+                                <td>Bộ nhớ trong</td>
+                                <td>8GB RAM</td>
+                                <td>8GB RAM</td>
+                            </tr>
+                            <tr>
+                                <td>Card đồ họa</td>
+                                <td>88000</td>
+                                <td>88000</td>
+                            </tr>
+                            <tr>
+                                <td>Dung lượng lưu trữ</td>
+                                <td>10GB</td>
+                                <td>10GB</td>
+                            </tr>
+                            <tr>
+                                <td>Mạng internet</td>
+                                <td>internet</td>
+                                <td>internet</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cts-section smMargin game-giftcode" id="game-giftcode">
+        <div class="cts-container">
+            <div class="cts-section--header">
+                <h2 class="section-title">Giftcode</h2>
+            </div>
+            <div class="cts-section--body">
+                <div class="giftcode-box">
+                    <p class="giftcode-box--title">Xin mời nhập Giftcode tại đây!</p>
+                    <form class="group-input">
+                        <input type="text">
+                        <button type="button" class="goPlay-btn">Xác nhận</button>
+                    </form>
+                    <div class="note-box">
+                        <p><span>*</span>Giftcode nhận được từ các sự kiện trên các kênh chính thức của Game như Trang
+                            chủ,
+                            Fanpage, Group...</p>
+                        <p>Mỗi Giftcode chỉ có thể <b>sử dụng 1 lần trên 1 tài khoản.</b></p>
+                    </div>
+                </div>
+
+                <div class="giftcode-box">
+                    <p class="giftcode-box--title">Bạn cần đăng nhập để sử dụng tính năng này!</p>
+                    <button type="button" class="goPlay-btn">Đăng nhập </button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="goPlay-footer">
+            <div class="footer-container">
+                <div class="footer-col company-info">
+                    <a href="#">
+                        <img src="./assets/images/logo_goplay.png" alt="">
+                    </a>
+                    <p>Tầng 12, tòa nhà VTC Online, số 18 đường Tam Trinh, Phường Tương Mai, Thành phố Hà Nội, Việt Nam
+                    </p>
+                    <p>goPlay © 2025. All Rights Reserved.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Về chúng tôi</h4>
+                    <ul>
+                        <li><a href="#">Về goPlay</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Hợp tác</a></li>
+                        <li><a href="#">Điều khoản sử dụng tài khoản GoPlay</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Thông tin liên hệ</h4>
+                    <ul>
+                        <li><a href="#">Tổng đài: <b>1900 636 876 </b></a></li>
+                        <li><a href="#">Website hỗ trợ</a></li>
+                        <li><a href="#">Fanpage</a></li>
+                    </ul>
+                </div>
+                <div class="scroll-to-top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>

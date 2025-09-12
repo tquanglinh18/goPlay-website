@@ -214,4 +214,76 @@ $(function () {
             autoplayHoverPause: false,
         }
     );
+
+    $(".game-gallery").owlCarousel({
+        items: 4,
+        merge: true,
+        loop: false,
+        nav: false,
+        dots: false,
+        slideBy: 1,
+        responsive: {
+      0: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      1024: {
+        items: 4
+      }
+    }
+    });
+
+    var $owlGameGallery = $(".game-gallery");
+    $("#gallery-prev").click(function () {
+        $owlGameGallery.trigger("prev.owl.carousel");
+    });
+    $("#gallery-next").click(function () {
+        $owlGameGallery.trigger("next.owl.carousel");
+    });
 });
+
+const sections = document.querySelectorAll('#game-library, #game-play, #game-configuration, #game-giftcode');
+const navItems = document.querySelectorAll('.goPlay-pin-tabs .cts-nav');
+
+function onScrollSpy() {
+    let scrollPos = window.scrollY + window.innerHeight * 0.3;
+
+    sections.forEach((section, index) => {
+        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+            navItems.forEach(li => li.classList.remove('active'));
+            navItems[index].classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', onScrollSpy);
+
+document.querySelectorAll('.goPlay-pin-tabs .cts-nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offset = window.innerHeight * 0.2;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+            // scroll mượt
+            window.scrollTo({
+                top: top,
+                behavior: 'smooth'
+            });
+
+            // xử lý active class
+            document.querySelectorAll('.goPlay-pin-tabs .cts-nav').forEach(li => {
+                li.classList.remove('active');
+            });
+            this.parentElement.classList.add('active');
+        }
+    });
+
+});
+
+
+

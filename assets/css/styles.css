@@ -191,7 +191,7 @@
 }
 
 .btn-comming-soon {
-  border: 1px solid #676E76;
+  border: 1px solid #676e76;
   border-radius: 16px;
   padding: 8px 24px;
   color: #ffffff;
@@ -303,6 +303,14 @@
 }
 .cts-section:last-child {
   margin-bottom: 0;
+}
+.cts-section.smMargin {
+  margin: 1% 0;
+}
+@media (max-width: 768px) {
+  .cts-section.smMargin {
+    margin: 4% 0;
+  }
 }
 .cts-section .cts-container {
   width: 100%;
@@ -920,7 +928,7 @@
   font-family: "Inter-SemiBold";
   font-weight: 600;
   font-size: 16px;
-  color: #676E76;
+  color: #676e76;
 }
 @media (max-width: 768px) {
   .goPlay-news-tabs .nav-link {
@@ -1201,6 +1209,434 @@
   }
 }
 
+.goPlay-game-banner {
+  width: 100%;
+}
+.goPlay-game-banner img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1920/460;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .goPlay-game-banner img {
+    aspect-ratio: 2/1;
+  }
+}
+
+.section-overview {
+  margin-top: 0;
+  margin: 0 0 1% 0;
+}
+@media (max-width: 768px) {
+  .section-overview {
+    margin: 0;
+  }
+}
+
+.game-overview {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 16px;
+  padding-left: 18%;
+  position: relative;
+}
+@media (max-width: 992px) {
+  .game-overview {
+    padding: 0;
+    align-items: center;
+  }
+}
+.game-overview__thumbnail {
+  width: 100%;
+  max-width: 16%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.game-overview__thumbnail img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 215/276;
+  border-radius: 16px;
+  object-fit: cover;
+}
+@media (max-width: 992px) {
+  .game-overview__thumbnail {
+    position: relative;
+    max-width: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .game-overview__thumbnail {
+    position: relative;
+    max-width: 30%;
+  }
+}
+.game-overview__content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .game-overview__content {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+.game-overview__content .game-title {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+@media (max-width: 1200px) {
+  .game-overview__content .game-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .game-overview__content .game-title {
+    font-size: 16px;
+  }
+}
+.game-overview__content .game-genre,
+.game-overview__content .game-publisher {
+  color: #596066;
+}
+.game-overview__content .game-genre span,
+.game-overview__content .game-publisher span {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+@media (max-width: 992px) {
+  .game-overview__content .game-genre,
+  .game-overview__content .game-publisher {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .game-overview__content .game-genre,
+  .game-overview__content .game-publisher {
+    font-size: 12px;
+  }
+}
+.game-overview__content .game-socials {
+  margin-top: 16px;
+}
+.game-overview__content .game-socials a:last-child i {
+  margin-right: 0;
+}
+.game-overview__content .game-socials i {
+  font-size: 20px;
+  color: #000000;
+  margin-right: 8px;
+}
+@media (max-width: 768px) {
+  .game-overview__content .game-socials i {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .game-overview__content .game-socials {
+    margin-top: 12px;
+  }
+}
+.game-overview__actions {
+  width: 25vw;
+  max-width: 333px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 16px;
+  border: 1px solid #e5e7ea;
+  border-radius: 12px;
+  padding: 16px 24px;
+  background-color: #fafafa;
+  padding: 16px;
+}
+.game-overview__actions.isTrans {
+  background-color: transparent;
+}
+@media (max-width: 768px) {
+  .game-overview__actions {
+    flex-direction: row;
+    width: 100%;
+    max-width: unset;
+    padding: 8px;
+  }
+}
+.game-overview__actions .goPlay-btn {
+  max-width: unset;
+}
+@media (max-width: 576px) {
+  .game-overview__actions .goPlay-btn {
+    font-size: 10px;
+    padding: 8px;
+  }
+}
+
+.goPlay-pin-tabs {
+  width: 100%;
+  border-bottom: 1px solid #e5e7ea;
+  background-color: #fafafa;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  position: sticky;
+  top: 74px;
+  z-index: 999;
+}
+.goPlay-pin-tabs::-webkit-scrollbar {
+  display: none;
+}
+.goPlay-pin-tabs ul {
+  width: 100%;
+  max-width: 1440px;
+  min-width: 480px;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 576px) {
+  .goPlay-pin-tabs ul {
+    justify-content: space-between;
+  }
+}
+.goPlay-pin-tabs ul li {
+  height: 100%;
+}
+.goPlay-pin-tabs ul li.cts-nav {
+  padding: 12px 20px;
+  border-bottom: 3px solid transparent;
+}
+.goPlay-pin-tabs ul li.cts-nav a {
+  color: #596066;
+}
+@media (max-width: 576px) {
+  .goPlay-pin-tabs ul li.cts-nav a {
+    font-size: 14px;
+  }
+}
+.goPlay-pin-tabs ul li.cts-nav.active {
+  border-bottom: 3px solid #f34141;
+  background-color: #fef2f2;
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+.goPlay-pin-tabs ul li.cts-nav.active a {
+  color: #1a1d1f;
+}
+
+.game-library .gallery-item {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.game-library .gallery-item.item-merge img {
+  aspect-ratio: 686/416;
+}
+.game-library .gallery-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 333/198;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.game-library .section-actions button {
+  font-size: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.game-library .section-actions button:last-child {
+  margin-right: 0;
+}
+
+.game-play .cts-section--body {
+  color: #596066;
+}
+@media (max-width: 768px) {
+  .game-play .cts-section--body {
+    font-size: 14px;
+  }
+}
+
+.table-configuration {
+  border: 1px solid #e5e7ea;
+  border-radius: 12px;
+  padding: 16px 24px;
+  background-color: #fafafa;
+  padding: 1.5rem 2.5rem;
+}
+.table-configuration.isTrans {
+  background-color: transparent;
+}
+@media (max-width: 576px) {
+  .table-configuration {
+    padding: 12px;
+  }
+}
+.table-configuration table {
+  width: 100%;
+}
+.table-configuration table thead {
+  width: 100%;
+}
+.table-configuration table thead th {
+  width: 33.33%;
+  font-family: "Inter-Bold";
+  font-weight: bold;
+  padding: 0 8px 20px;
+}
+.table-configuration table thead th i {
+  font-size: 12px;
+  color: #fbbc55;
+}
+@media (max-width: 576px) {
+  .table-configuration table thead th i {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .table-configuration table thead th {
+    padding: 0 2px 12px;
+    width: 37.5%;
+  }
+  .table-configuration table thead th:first-child {
+    width: 25%;
+  }
+}
+.table-configuration table tbody td {
+  padding: 12px;
+  text-align: center;
+  border-top: 2px solid #f6f7f9;
+}
+.table-configuration table tbody td:first-child {
+  text-align: start;
+}
+@media (max-width: 576px) {
+  .table-configuration table tbody td:first-child {
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .table-configuration table tbody td,
+  .table-configuration table thead th {
+    font-size: 12px;
+  }
+}
+
+.game-giftcode {
+  text-align: center;
+}
+.game-giftcode .giftcode-box {
+  margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  color: #ffffff;
+  width: 100%;
+  background-color: #1a1d1f;
+  padding: 3%;
+  border-radius: 16px;
+}
+@media (max-width: 768px) {
+  .game-giftcode .giftcode-box {
+    padding: 6%;
+  }
+}
+@media (max-width: 576px) {
+  .game-giftcode .giftcode-box {
+    padding: 9% 6%;
+  }
+}
+.game-giftcode .giftcode-box--title {
+  color: #ffffff;
+  font-family: "Inter-SemiBold";
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.game-giftcode .giftcode-box .group-input {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.game-giftcode .giftcode-box .group-input .goPlay-btn {
+  max-width: 148px;
+  min-height: 64px;
+}
+@media (max-width: 768px) {
+  .game-giftcode .giftcode-box .group-input .goPlay-btn {
+    padding: 12px;
+    min-height: unset;
+  }
+}
+@media (max-width: 768px) {
+  .game-giftcode .giftcode-box .group-input {
+    margin-bottom: 24px;
+  }
+}
+.game-giftcode .giftcode-box input {
+  border: 1px solid #596066;
+  border-radius: 12px;
+  padding: 12px 20px;
+  min-height: 64px;
+  background-color: #383f45;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  min-width: 320px;
+}
+@media (max-width: 768px) {
+  .game-giftcode .giftcode-box input {
+    min-height: 48px;
+  }
+}
+.game-giftcode .note-box {
+  color: #9ea5ad;
+  border-top: 1px solid #596066;
+  padding-top: 32px;
+  font-size: 14px;
+}
+@media (max-width: 576px) {
+  .game-giftcode .note-box {
+    font-size: 12px;
+    padding-top: 16px;
+  }
+}
+.game-giftcode .note-box p span {
+  color: #f34141;
+}
+.game-giftcode .note-box p b {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+
 .ssoPages {
   width: 100%;
   min-height: 100vh;
@@ -1314,6 +1750,9 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+}
+.ssoPage-content .login-option.isTrans {
+  background-color: transparent;
 }
 .ssoPage-content .login-option.isFitContent {
   width: fit-content;
@@ -1525,7 +1964,7 @@
   }
 }
 .goPlay-tabs .goPlay-nav .goPlay-nav-link.active {
-  background-color: #FDE9E9;
+  background-color: #fde9e9;
 }
 .goPlay-tabs .cts-section {
   margin: 0;
@@ -1602,6 +2041,9 @@
   border-radius: 12px;
   padding: 16px 24px;
   background-color: #fafafa;
+}
+.goPlay-info-content.isTrans {
+  background-color: transparent;
 }
 .goPlay-info-content .info-item {
   width: 100%;
@@ -1716,6 +2158,9 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
+}
+.goPlay-info-content .game-played-card.isTrans {
+  background-color: transparent;
 }
 .goPlay-info-content .game-played-card img {
   width: 100%;
@@ -1842,7 +2287,7 @@
   margin-bottom: 0;
 }
 .goPlay-footer .footer-col ul li a {
-  color: #CED2D6;
+  color: #ced2d6;
   transition: color 0.3s ease-in-out;
 }
 .goPlay-footer .footer-col ul li a:hover {
@@ -2079,7 +2524,7 @@ header {
   align-items: center;
   gap: 8px;
   border-radius: 16px;
-  background-color: #FEF2F2;
+  background-color: #fef2f2;
   padding: 20px 16px;
 }
 .goPlay-header .userInforDetail .total-coin {

@@ -13,4 +13,7 @@
   border-radius: $spacing-sm;
   padding: $spacing-normal $spacing-lg;
   background-color: $grey-50;
+  &.isTrans {
+    background-color: transparent;
+  }
 }

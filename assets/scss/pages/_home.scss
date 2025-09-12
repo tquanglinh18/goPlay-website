@@ -102,6 +102,12 @@
   &:last-child {
     margin-bottom: 0;
   }
+  &.smMargin {
+    margin: 1% 0;
+    @include res-responsive(md) {
+      margin: 4% 0;
+    }
+  }
   .cts-container {
     width: 100%;
     max-width: 1440px;
