@@ -793,7 +793,7 @@
 }
 
 .page-breadcrumb {
-  margin-bottom: $vars-spacing-normal;
+width: 100%;
   a {
     color: $vars-grey-1000;
     @include display-flex-layout(row, nowrap, start, center, $vars-spacing-sm);

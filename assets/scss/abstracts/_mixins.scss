@@ -17,3 +17,40 @@
     background-color: transparent;
   }
 }
+
+@mixin box-unborder {
+  border-radius: $spacing-sm;
+  padding: $spacing-normal $spacing-lg;
+  background-color: $grey-50;
+  &.isTrans {
+    background-color: transparent;
+  }
+}
+
+@mixin box-shadow {
+  border: 1px solid $grey-100;
+  border-radius: $spacing-sm;
+  padding: $spacing-normal $spacing-lg;
+  box-shadow: 0px 15px 35px 0px #676e7614;
+  box-shadow: 0px 5px 15px 0px #0000001f;
+}
+
+.box-normal {
+  @include box-normal;
+}
+
+.box-lg {
+  @include box-lg;
+}
+
+.box-unborder {
+  @include box-unborder;
+}
+
+.box-shadow {
+  @include box-shadow;
+}
+
+.noPadding {
+  padding: 0 !important;
+}

@@ -162,3 +162,39 @@
     color: $vars-grey-1000;
   }
 }
+
+.btn-buy-package {
+  width: 100%;
+  position: relative;
+  border: 1px solid $vars-warning-500;
+  border-radius: $vars-spacing-sm;
+  background-image: linear-gradient(to left, #eeac46, #ffeda6);
+  padding: $vars-spacing-sm;
+  color: $vars-warning-1000;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  @include txt-font-semibold;
+  &:hover {
+    &::after {
+      max-width: 100%;
+      opacity: 1;
+    }
+  }
+
+  span {
+    z-index: 1;
+    position: relative;
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    border-radius: $vars-spacing-sm;
+    opacity: 0;
+    max-width: 0;
+    transition: all 0.3s ease;
+    background-image: linear-gradient(to right, #eeac46, #ffeda6);
+  }
+}

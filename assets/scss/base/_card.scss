@@ -1,1 +1,76 @@
 // _card.scss
+
+@use "../global" as *;
+
+.goPlay-package {
+    width: 100%;
+  @include display-flex-layout(
+    column,
+    nowrap,
+    center,
+    center,
+    $vars-spacing-normal
+  );
+  background-color: $vars-warning-100;
+  padding: $vars-spacing-normal;
+  border-radius: $vars-spacing-sm;
+  border: 1px solid $vars-warning-300;
+  .package-header {
+        width: 100%;
+    @include display-flex-layout(
+      column,
+      nowrap,
+      center,
+      center,
+      $vars-spacing-normal
+    );
+  }
+
+  .package-body {
+        width: 100%;
+    @include display-flex-layout(
+      column,
+      nowrap,
+      center,
+      center,
+      $vars-spacing-normal
+    );
+    .package-img {
+      width: auto;
+      height: 72px;
+          @include display-flex-layout(
+      column,
+      nowrap,
+      center,
+      center,
+      $vars-spacing-normal
+    );
+      img {
+        min-height: 40px;
+        object-fit: contain;
+      }
+    }
+
+    .package-title {
+      font-size: 18px;
+      @include txt-font-bold;
+      @include res-responsive(md) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .package-footer {
+        width: 100%;
+    @include display-flex-layout(
+      column,
+      nowrap,
+      center,
+      center,
+      $vars-spacing-normal
+    );
+  }
+
+  .package-over {
+  }
+}

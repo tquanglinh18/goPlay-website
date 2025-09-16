@@ -1,0 +1,193 @@
+@use "../global" as *;
+
+.box-child {
+  width: 100%;
+  margin-bottom: 4%;
+  @include display-flex-layout(
+    column,
+    nowrap,
+    center,
+    center,
+    $vars-spacing-sm
+  );
+    @include res-responsive(lg) {
+    margin-bottom: 6%;
+  }
+
+  @include res-responsive(md) {
+    margin-bottom: 8%;
+  }
+  a {
+    border: none;
+    background-color: transparent;
+    color: $vars-blue-700;
+  }
+  &-header {
+    width: 100%;
+    h3 {
+      font-size: 18px;
+      @include txt-font-bold;
+      margin-bottom: 0;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+    span {
+      color: $vars-error-600;
+      font-size: 14px;
+    }
+  }
+  &-content {
+    width: 100%;
+    padding: $vars-spacing-normal $vars-spacing-lg;
+  }
+}
+
+.ic-small {
+  width: 16px;
+}
+
+.character-info {
+  .info-group {
+    margin-bottom: 0.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    p {
+      flex: 0 0 12vw;
+      @include res-responsive(lg) {
+        flex: 0 0 25vw;
+      }
+      @include res-responsive(sm) {
+        flex: 0 0 38vw;
+      }
+    }
+    b {
+      @include txt-font-bold;
+    }
+    img {
+      height: 20px;
+    }
+    .total-coin {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
+}
+
+.sel-package {
+  .flex-between {
+    @include res-responsive(md) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  .lst-package-wrapper {
+    width: 100%;
+    @include display-grid-cols(3, $vars-spacing-normal);
+    justify-items: center;
+    @include res-responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .box-child-content {
+    padding:0;
+  }
+}
+
+.input-gocoin {
+  .box-child-content {
+    padding: 0;
+  }
+  .goPlay-btn {
+    padding: $vars-spacing-xs;
+    max-width: 168px;
+  }
+  .input-gocoin-wrapper {
+    @include display-flex-center;
+    padding: $vars-spacing-normal;
+    gap: $vars-spacing-normal;
+    @include res-responsive(sm) {
+flex-wrap: wrap;
+    }
+  }
+}
+
+.cts-input {
+  width: 100%;
+  position: relative;
+
+  .fixed-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: $vars-spacing-sm;
+    transform: translateY(-50%);
+  }
+  input {
+    width: 100%;
+    border-radius: $vars-spacing-xs;
+    border: 1px solid $vars-grey-200;
+    padding: $vars-spacing-sm;
+    color: $vars-grey-1000;
+    font-size: $txt-text-normal;
+    &:active,
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $vars-grey-400;
+      font-size: 14px;
+    }
+    &.isError {
+      border-color: $vars-error-600;
+      box-shadow: none;
+    }
+    &:disabled {
+      background-color: $vars-grey-100;
+    }
+    &[data-name="bill-total"] {
+      @include txt-font-bold;
+      text-align: end;
+    }
+  }
+    &--icon {
+    input {
+      padding: $vars-spacing-sm $vars-spacing-xl $vars-spacing-sm
+        $vars-spacing-xs;
+    }
+  }
+}
+
+.section-billing {
+    .cts-section--body {
+        @include display-flex-layout(row, nowrap, space-between, start, $vars-spacing-normal);
+                @include res-responsive(lg) {
+            flex-direction: column;
+        }
+    }
+
+    .select-option{
+        width: 60%;
+        max-width: 840px;
+        @include res-responsive(lg) {
+            width: 100%;
+        }
+    }
+
+    .order-info {
+        width: 35%;
+        max-width: 450px;
+                @include res-responsive(lg) {
+            width: 100%;
+            max-width: unset;
+        }
+    }
+}

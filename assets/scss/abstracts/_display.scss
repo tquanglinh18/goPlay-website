@@ -131,10 +131,14 @@
 }
 
 .flex-between {
-@include flex-between;
+  @include flex-between;
 }
 
 .flex-row {
   @include flex;
   gap: 16px;
+}
+
+.flex-center {
+  @include flex-center;
 }
