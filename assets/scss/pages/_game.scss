@@ -7,9 +7,9 @@
     height: auto;
     aspect-ratio: 1920/460;
     object-fit: cover;
-      @include res-responsive(md) {
-     aspect-ratio: 2/1;
-  }
+    @include res-responsive(md) {
+      aspect-ratio: 2/1;
+    }
   }
 }
 
@@ -226,7 +226,7 @@
   .cts-section--body {
     color: $vars-grey-600;
     @include res-responsive(md) {
-        font-size: 14px;
+      font-size: 14px;
     }
   }
 }

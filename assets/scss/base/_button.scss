@@ -37,6 +37,7 @@
 .goPlay-btn {
   width: 100%;
   max-width: 245px;
+  min-height: 52px;
   padding: $vars-spacing-normal;
   border-radius: $vars-spacing-xs;
   background-color: $vars-grey-50;
@@ -51,12 +52,19 @@
   @include txt-font-semibold;
   @include res-responsive(md) {
     font-size: 14px;
+    padding: $vars-spacing-sm;
+      min-height: 48px;
   }
   &--red {
     background-color: $vars-error-700;
     color: $vars-white-color;
     &:hover {
       background-color: $vars-error-700-opacity-75 !important;
+    }
+
+    &:disabled {
+      background-color: $vars-error-700-opacity-50;
+      cursor: not-allowed;
     }
     img {
       width: 18px;
@@ -95,6 +103,7 @@
   @include res-responsive(md) {
     font-size: 14px;
   }
+
   &--red {
     background-color: $vars-error-700;
     color: $vars-white-color;
