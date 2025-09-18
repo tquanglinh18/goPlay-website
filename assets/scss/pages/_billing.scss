@@ -369,11 +369,12 @@
   @include res-responsive(md) {
     font-size: 14px;
   }
-  &.total-amount {
-    color: $vars-error-700;
-    @include txt-font-bold;
-    font-size: $txt-text-lg;
-  }
+}
+
+.total-amount {
+  color: $vars-error-700;
+  @include txt-font-bold;
+  font-size: $txt-text-lg;
 }
 
 .scan-qr-code {
@@ -413,14 +414,25 @@
   );
 
   .modal-title {
+    width: 100%;
     text-align: center;
+      @include display-flex-layout(
+    column,
+    nowrap,
+    center,
+    center,
+    $vars-spacing-xs
+  );
     @include res-responsive(md) {
       font-size: 16px;
     }
   }
   .modal-content {
+    width: 100%;
     border-bottom: 1px dotted $vars-grey-300;
+    // border-top: 1px dotted $vars-grey-300;
     padding: $vars-spacing-normal 0;
+    text-align: center;
     @include display-flex-layout(
       column,
       nowrap,
@@ -429,6 +441,18 @@
       $vars-spacing-normal
     );
   }
+
+  .modal-extra {
+    width: 100%;
+    @include display-flex-layout(
+      column,
+      nowrap,
+      center,
+      center,
+      $vars-spacing-xs
+    );
+  }
+
   .box-warning {
     width: 100%;
     border-radius: $vars-spacing-normal;
@@ -457,6 +481,31 @@
           font-size: 14px;
           margin-bottom: $vars-spacing-xs;
         }
+      }
+    }
+  }
+
+  .title-base {
+    @include txt-font-semibold;
+    line-height: 1.5;
+    word-spacing: 1px;
+    font-size: 16px;
+  }
+
+  .bill-detail {
+    width: 100%;
+    padding: $vars-spacing-normal 0 0;
+    border-top: 1px dotted $vars-grey-400;
+    color: $vars-grey-600;
+    font-size: 12px;
+    span {
+      color: $vars-grey-1000;
+      @include txt-font-medium;
+    }
+    .flex-between {
+      margin-bottom: 0.5rem;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
@@ -494,10 +543,6 @@
         }
       }
     }
-  }
-
-  .modal-extra {
-    width: 100%;
   }
 
   .modal-content {

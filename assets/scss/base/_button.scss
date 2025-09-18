@@ -37,8 +37,9 @@
 .goPlay-btn {
   width: 100%;
   max-width: 245px;
+  margin: 0 auto;
   min-height: 52px;
-  padding: $vars-spacing-normal;
+  padding: $vars-spacing-sm;
   border-radius: $vars-spacing-xs;
   background-color: $vars-grey-50;
   color: $vars-grey-1000;

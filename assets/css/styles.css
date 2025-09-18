@@ -113,8 +113,9 @@ b {
 .goPlay-btn, .btn-auth {
   width: 100%;
   max-width: 245px;
+  margin: 0 auto;
   min-height: 52px;
-  padding: 16px;
+  padding: 12px;
   border-radius: 8px;
   background-color: #fafafa;
   color: #1a1d1f;
@@ -1784,7 +1785,8 @@ b {
     font-size: 14px;
   }
 }
-.prod-value.total-amount {
+
+.total-amount {
   color: #cd3636;
   font-family: "Inter-Bold";
   font-weight: bold;
@@ -1830,7 +1832,14 @@ b {
   gap: 16px;
 }
 .payment-modal .modal-title {
+  width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 @media (max-width: 768px) {
   .payment-modal .modal-title {
@@ -1838,14 +1847,25 @@ b {
   }
 }
 .payment-modal .modal-content {
+  width: 100%;
   border-bottom: 1px dotted #ced2d6;
   padding: 16px 0;
+  text-align: center;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   gap: 16px;
+}
+.payment-modal .modal-extra {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 .payment-modal .box-warning {
   width: 100%;
@@ -1878,6 +1898,31 @@ b {
     font-size: 14px;
     margin-bottom: 8px;
   }
+}
+.payment-modal .title-base {
+  font-family: "Inter-SemiBold";
+  font-weight: 600;
+  line-height: 1.5;
+  word-spacing: 1px;
+  font-size: 16px;
+}
+.payment-modal .bill-detail {
+  width: 100%;
+  padding: 16px 0 0;
+  border-top: 1px dotted #9ea5ad;
+  color: #596066;
+  font-size: 12px;
+}
+.payment-modal .bill-detail span {
+  color: #1a1d1f;
+  font-family: "Inter-Medium";
+  font-weight: 500;
+}
+.payment-modal .bill-detail .flex-between {
+  margin-bottom: 0.5rem;
+}
+.payment-modal .bill-detail .flex-between:last-child {
+  margin-bottom: 0;
 }
 
 .banking-instructions {
@@ -1914,9 +1959,6 @@ b {
   .banking-instructions .banking-nav .nav .nav-item .payment-item .payment-name {
     font-size: 12px;
   }
-}
-.banking-instructions .modal-extra {
-  width: 100%;
 }
 .banking-instructions .modal-content {
   padding: 0;
