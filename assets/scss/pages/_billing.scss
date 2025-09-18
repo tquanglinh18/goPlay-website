@@ -245,32 +245,12 @@
     }
   }
 
-  .prod-label {
-    @include txt-font-semibold;
-    @include res-responsive(md) {
-      font-size: 14px;
-    }
-  }
-
   .order-product {
     .flex-between {
       margin-bottom: $vars-spacing-normal;
       &:last-child {
         margin-bottom: 0;
       }
-    }
-  }
-
-  .prod-value {
-    @include display-flex-center;
-    gap: 4px;
-    @include res-responsive(md) {
-      font-size: 14px;
-    }
-    &.total-amount {
-      color: $vars-error-700;
-      @include txt-font-bold;
-      font-size: $txt-text-lg;
     }
   }
 
@@ -286,35 +266,38 @@
     }
   }
 
-  .payment-item {
-    border: 1px solid $vars-grey-300;
-    border-radius: $vars-spacing-xs;
-    padding: $vars-spacing-xs;
-    @include display-flex-layout(row, nowrap, start, center, 4px);
-    cursor: pointer;
-    .payment-icon {
-      img {
-        height: 24px;
-        width: auto;
-        max-width: 48px;
-        object-fit: contain;
-      }
-    }
-
-    .payment-name {
-      @include txt-font-medium;
-    }
-
-    &.selected {
-      border-color: $vars-grey-1000;
-    }
-  }
-
   .order-actions {
     margin-top: $vars-spacing-normal;
     .goPlay-btn {
       max-width: unset;
     }
+  }
+}
+
+.payment-item {
+  border: 1px solid $vars-grey-300;
+  border-radius: $vars-spacing-xs;
+  padding: $vars-spacing-xs;
+  @include display-flex-layout(row, nowrap, start, center, 4px);
+  cursor: pointer;
+  .payment-icon {
+    img {
+      height: 20px;
+      width: auto;
+      max-width: 48px;
+      object-fit: contain;
+    }
+  }
+
+  .payment-name {
+    @include txt-font-medium;
+    color: $vars-grey-1000;
+  }
+
+  &.selected,
+  &.active {
+    border-color: $vars-grey-1000;
+    background-color: $vars-white-color !important;
   }
 }
 
@@ -373,27 +356,31 @@
   }
 }
 
-.banking-instructions {
-  padding: $vars-spacing-xl $vars-spacing-lg;
-  @include display-flex-layout(
-    column,
-    nowrap,
-    center,
-    center,
-    $vars-spacing-lg
-  );
-  h5 {
-    text-align: center;
-    font-size: 16px;
-    @include txt-font-bold;
-    line-height: 1.5;
+.prod-label {
+  @include txt-font-semibold;
+  @include res-responsive(md) {
+    font-size: 14px;
   }
+}
+
+.prod-value {
+  @include display-flex-center;
+  gap: 4px;
+  @include res-responsive(md) {
+    font-size: 14px;
+  }
+  &.total-amount {
+    color: $vars-error-700;
+    @include txt-font-bold;
+    font-size: $txt-text-lg;
+  }
+}
+
+.scan-qr-code {
   .qr-code {
     width: 100%;
     @include display-flex-center;
     flex-direction: column;
-    padding: 0 0 $vars-spacing-lg 0;
-    border-bottom: 1px dotted $vars-grey-300;
     &--img {
       border: 1px solid $vars-grey-1000;
       border-radius: $vars-spacing-normal;
@@ -413,7 +400,35 @@
       border: none;
     }
   }
+}
 
+.payment-modal {
+  padding: $vars-spacing-xl $vars-spacing-lg;
+  @include display-flex-layout(
+    column,
+    nowrap,
+    center,
+    center,
+    $vars-spacing-normal
+  );
+
+  .modal-title {
+    text-align: center;
+    @include res-responsive(md) {
+      font-size: 16px;
+    }
+  }
+  .modal-content {
+    border-bottom: 1px dotted $vars-grey-300;
+    padding: $vars-spacing-normal 0;
+    @include display-flex-layout(
+      column,
+      nowrap,
+      center,
+      center,
+      $vars-spacing-normal
+    );
+  }
   .box-warning {
     width: 100%;
     border-radius: $vars-spacing-normal;
@@ -437,6 +452,205 @@
         &:last-child {
           margin: 0;
         }
+
+        @include res-responsive(md) {
+          font-size: 14px;
+          margin-bottom: $vars-spacing-xs;
+        }
+      }
+    }
+  }
+}
+
+.banking-instructions {
+  width: 100%;
+  gap: 0;
+
+  .banking-nav {
+    width: 100%;
+    border-bottom: 1px dotted #ced2d6;
+    padding: $vars-spacing-normal 0;
+    .nav {
+      border: none;
+      justify-content: space-between;
+      margin-top: $vars-spacing-xs;
+      flex-wrap: nowrap;
+      gap: $vars-spacing-xs;
+      .nav-item {
+        width: 100%;
+        .payment-item {
+          width: 100%;
+          transition: all 0.3s ease;
+          background-color: $vars-grey-100;
+          justify-content: center;
+          .payment-name {
+            @include res-responsive(md) {
+              font-size: 14px;
+            }
+            @include res-responsive(sm) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-extra {
+    width: 100%;
+  }
+
+  .modal-content {
+    padding: 0;
+    gap: 0;
+    border-bottom: 0;
+  }
+
+  .banking-total {
+    padding: $vars-spacing-normal 0;
+  }
+
+  .banking-content {
+    width: 100%;
+    border-bottom: 1px dotted #ced2d6;
+    padding: $vars-spacing-normal 0;
+    .tab-content {
+      text-align: center;
+      .tab-pane {
+        margin: $vars-spacing-sm 0;
+      }
+      .text-note {
+        @include res-responsive(md) {
+          font-size: 14px;
+        }
+
+        @include res-responsive(sm) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.bank-card {
+  border: 1px solid black;
+  box-shadow: 0px 4px 0px 0px black;
+  border-radius: 28px;
+  background-color: $vars-black-opacity-30;
+  width: 100%;
+  max-width: 420px;
+  min-height: 212px;
+  margin: 0 auto;
+  padding: $vars-spacing-normal;
+  color: $vars-grey-100;
+  position: relative;
+  overflow: hidden;
+  word-spacing: 0.5px;
+  &::after {
+    width: 75%;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $vars-white-color;
+    border-radius: 28%;
+    transform: translate(90%, -70%);
+  }
+
+  &::before {
+    width: 100%;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $vars-black-color;
+    border-radius: 50%;
+    opacity: 0.1;
+    transform: translate(-35%, 50%);
+  }
+
+  &.style-1 {
+    background: linear-gradient(167.6deg, #4e2ce4 -9.78%, #c46cff 107.04%);
+    border: 1px solid #7b45da;
+    box-shadow: 0px 4px 0px 0px #7b45da;
+  }
+
+  &.style-2 {
+    background: linear-gradient(167.6deg, #2314ad -9.78%, #4c7fff 107.04%);
+    border: 1px solid #2820b6;
+    box-shadow: 0px 4px 0px 0px #2820b6;
+  }
+
+  &.style-3 {
+    background: linear-gradient(167.6deg, #0a2b57 -9.78%, #32bdf0 107.04%);
+    border: 1px solid #18618f;
+    box-shadow: 0px 4px 0px 0px #18618f;
+  }
+
+  .bank-info {
+    font-size: 12px;
+    border-radius: 12px;
+    background: #0000003d;
+    padding: 6px 12px;
+    margin-bottom: 0.5rem;
+    @include display-flex-between;
+    flex-wrap: wrap;
+    text-align: start;
+    gap: 0.5rem;
+    line-height: 2;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      width: 100%;
+      font-size: 12px;
+      @include txt-font-bold;
+      letter-spacing: 1px;
+      &.account-number {
+        font-size: 18px;
+        @include res-responsive(md) {
+          font-size: 14px;
+        }
+      }
+    }
+    p {
+      width: 100%;
+      opacity: 0.7;
+    }
+  }
+
+  .bank-card-wrap {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .account-name {
+    width: 100%;
+    @include display-flex-between;
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: $vars-spacing-normal;
+    text-align: start;
+    font-size: 12px;
+    padding-left: 12px;
+    h3 {
+      width: 100%;
+      font-size: 12px;
+      @include txt-font-medium;
+    }
+    p {
+      width: 100%;
+      line-height: 2;
+      opacity: 0.7;
+    }
+    .bank-img {
+      width: 30%;
+      max-width: 86px;
+      min-width: 64px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     }
   }

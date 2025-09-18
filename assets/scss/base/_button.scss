@@ -53,7 +53,7 @@
   @include res-responsive(md) {
     font-size: 14px;
     padding: $vars-spacing-sm;
-      min-height: 48px;
+    min-height: 48px;
   }
   &--red {
     background-color: $vars-error-700;
@@ -205,5 +205,21 @@
     max-width: 0;
     transition: all 0.3s ease;
     background-image: linear-gradient(to right, #eeac46, #ffeda6);
+  }
+}
+
+.btn-copy {
+  width: fit-content;
+  border: 1px solid $vars-white-color;
+  padding: 0 8px;
+  border-radius: 28px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 12px;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: white;
+    color: black;
   }
 }

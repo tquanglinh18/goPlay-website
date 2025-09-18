@@ -223,24 +223,35 @@ $(function () {
         dots: false,
         slideBy: 1,
         responsive: {
-      0: {
-        items: 2
-      },
-      768: {
-        items: 3
-      },
-      1024: {
-        items: 4
-      }
-    }
+            0: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            1024: {
+                items: 4
+            }
+        }
     });
 
     var $owlGameGallery = $(".game-gallery");
     $("#gallery-prev").click(function () {
         $owlGameGallery.trigger("prev.owl.carousel");
     });
+    
     $("#gallery-next").click(function () {
         $owlGameGallery.trigger("next.owl.carousel");
+    });
+
+    $(".goPlay-package").on("click", function () {
+        $(".goPlay-package").not(this).removeClass("selected");
+        $(this).addClass("selected");
+    });
+
+    $(".payment-item").on("click", function () {
+        $(".payment-item").not(this).removeClass("selected");
+        $(this).addClass("selected");
     });
 });
 

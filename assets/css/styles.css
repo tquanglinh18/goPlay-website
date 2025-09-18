@@ -72,6 +72,11 @@
   color: #f34141;
 }
 
+b {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+}
+
 .cts-sso-btn {
   width: 100%;
   padding: 16px;
@@ -285,6 +290,22 @@
   max-width: 0;
   transition: all 0.3s ease;
   background-image: linear-gradient(to right, #eeac46, #ffeda6);
+}
+
+.btn-copy {
+  width: fit-content;
+  border: 1px solid #ffffff;
+  padding: 0 8px;
+  border-radius: 28px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 12px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.btn-copy:hover {
+  background-color: white;
+  color: black;
 }
 
 .goPlay-package {
@@ -1620,37 +1641,11 @@
   font-family: "Inter-Medium";
   font-weight: 500;
 }
-.order-item .prod-label {
-  font-family: "Inter-SemiBold";
-  font-weight: 600;
-}
-@media (max-width: 768px) {
-  .order-item .prod-label {
-    font-size: 14px;
-  }
-}
 .order-item .order-product .flex-between {
   margin-bottom: 16px;
 }
 .order-item .order-product .flex-between:last-child {
   margin-bottom: 0;
-}
-.order-item .prod-value {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-}
-@media (max-width: 768px) {
-  .order-item .prod-value {
-    font-size: 14px;
-  }
-}
-.order-item .prod-value.total-amount {
-  color: #cd3636;
-  font-family: "Inter-Bold";
-  font-weight: bold;
-  font-size: 24px;
 }
 .order-item .payment-method {
   width: 100%;
@@ -1669,7 +1664,14 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.order-item .payment-item {
+.order-item .order-actions {
+  margin-top: 16px;
+}
+.order-item .order-actions .goPlay-btn {
+  max-width: unset;
+}
+
+.payment-item {
   border: 1px solid #ced2d6;
   border-radius: 8px;
   padding: 8px;
@@ -1681,24 +1683,20 @@
   gap: 4px;
   cursor: pointer;
 }
-.order-item .payment-item .payment-icon img {
-  height: 24px;
+.payment-item .payment-icon img {
+  height: 20px;
   width: auto;
   max-width: 48px;
   object-fit: contain;
 }
-.order-item .payment-item .payment-name {
+.payment-item .payment-name {
   font-family: "Inter-Medium";
   font-weight: 500;
+  color: #1a1d1f;
 }
-.order-item .payment-item.selected {
+.payment-item.selected, .payment-item.active {
   border-color: #1a1d1f;
-}
-.order-item .order-actions {
-  margin-top: 16px;
-}
-.order-item .order-actions .goPlay-btn {
-  max-width: unset;
+  background-color: #ffffff !important;
 }
 
 .billing-banner {
@@ -1765,44 +1763,54 @@
   }
 }
 
-.banking-instructions {
-  padding: 32px 24px;
+.prod-label {
+  font-family: "Inter-SemiBold";
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .prod-label {
+    font-size: 14px;
+  }
+}
+
+.prod-value {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 4px;
 }
-.banking-instructions h5 {
-  text-align: center;
-  font-size: 16px;
+@media (max-width: 768px) {
+  .prod-value {
+    font-size: 14px;
+  }
+}
+.prod-value.total-amount {
+  color: #cd3636;
   font-family: "Inter-Bold";
   font-weight: bold;
-  line-height: 1.5;
+  font-size: 24px;
 }
-.banking-instructions .qr-code {
+
+.scan-qr-code .qr-code {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 0 24px 0;
-  border-bottom: 1px dotted #ced2d6;
 }
-.banking-instructions .qr-code--img {
+.scan-qr-code .qr-code--img {
   border: 1px solid #1a1d1f;
   border-radius: 16px;
   padding: 4px;
   margin-bottom: 16px;
 }
-.banking-instructions .qr-code--img img {
+.scan-qr-code .qr-code--img img {
   width: 100%;
   height: auto;
   aspect-ratio: 1/1;
   border-radius: 16px;
 }
-.banking-instructions .qr-code .save-qr-code {
+.scan-qr-code .qr-code .save-qr-code {
   width: fit-content;
   font-family: "Inter-SemiBold";
   font-weight: 600;
@@ -1811,22 +1819,50 @@
   align-items: center;
   border: none;
 }
-.banking-instructions .box-warning {
+
+.payment-modal {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.payment-modal .modal-title {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .payment-modal .modal-title {
+    font-size: 16px;
+  }
+}
+.payment-modal .modal-content {
+  border-bottom: 1px dotted #ced2d6;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.payment-modal .box-warning {
   width: 100%;
   border-radius: 16px;
   border: 1px dashed #ced2d6;
   padding: 16px;
   color: #676e76;
 }
-.banking-instructions .box-warning ul {
+.payment-modal .box-warning ul {
   list-style: none;
 }
-.banking-instructions .box-warning ul li {
+.payment-modal .box-warning ul li {
   margin-bottom: 16px;
   padding-left: 16px;
   position: relative;
 }
-.banking-instructions .box-warning ul li::before {
+.payment-modal .box-warning ul li::before {
   content: "▶";
   position: absolute;
   top: 10%;
@@ -1834,8 +1870,206 @@
   font-size: 10px;
   color: #1a1d1f;
 }
-.banking-instructions .box-warning ul li:last-child {
+.payment-modal .box-warning ul li:last-child {
   margin: 0;
+}
+@media (max-width: 768px) {
+  .payment-modal .box-warning ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+}
+
+.banking-instructions {
+  width: 100%;
+  gap: 0;
+}
+.banking-instructions .banking-nav {
+  width: 100%;
+  border-bottom: 1px dotted #ced2d6;
+  padding: 16px 0;
+}
+.banking-instructions .banking-nav .nav {
+  border: none;
+  justify-content: space-between;
+  margin-top: 8px;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+.banking-instructions .banking-nav .nav .nav-item {
+  width: 100%;
+}
+.banking-instructions .banking-nav .nav .nav-item .payment-item {
+  width: 100%;
+  transition: all 0.3s ease;
+  background-color: #f6f7f9;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .banking-instructions .banking-nav .nav .nav-item .payment-item .payment-name {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .banking-instructions .banking-nav .nav .nav-item .payment-item .payment-name {
+    font-size: 12px;
+  }
+}
+.banking-instructions .modal-extra {
+  width: 100%;
+}
+.banking-instructions .modal-content {
+  padding: 0;
+  gap: 0;
+  border-bottom: 0;
+}
+.banking-instructions .banking-total {
+  padding: 16px 0;
+}
+.banking-instructions .banking-content {
+  width: 100%;
+  border-bottom: 1px dotted #ced2d6;
+  padding: 16px 0;
+}
+.banking-instructions .banking-content .tab-content {
+  text-align: center;
+}
+.banking-instructions .banking-content .tab-content .tab-pane {
+  margin: 12px 0;
+}
+@media (max-width: 768px) {
+  .banking-instructions .banking-content .tab-content .text-note {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .banking-instructions .banking-content .tab-content .text-note {
+    font-size: 12px;
+  }
+}
+
+.bank-card {
+  border: 1px solid black;
+  box-shadow: 0px 4px 0px 0px black;
+  border-radius: 28px;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 420px;
+  min-height: 212px;
+  margin: 0 auto;
+  padding: 16px;
+  color: #f6f7f9;
+  position: relative;
+  overflow: hidden;
+  word-spacing: 0.5px;
+}
+.bank-card::after {
+  width: 75%;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  border-radius: 28%;
+  transform: translate(90%, -70%);
+}
+.bank-card::before {
+  width: 100%;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000000;
+  border-radius: 50%;
+  opacity: 0.1;
+  transform: translate(-35%, 50%);
+}
+.bank-card.style-1 {
+  background: linear-gradient(167.6deg, #4e2ce4 -9.78%, #c46cff 107.04%);
+  border: 1px solid #7b45da;
+  box-shadow: 0px 4px 0px 0px #7b45da;
+}
+.bank-card.style-2 {
+  background: linear-gradient(167.6deg, #2314ad -9.78%, #4c7fff 107.04%);
+  border: 1px solid #2820b6;
+  box-shadow: 0px 4px 0px 0px #2820b6;
+}
+.bank-card.style-3 {
+  background: linear-gradient(167.6deg, #0a2b57 -9.78%, #32bdf0 107.04%);
+  border: 1px solid #18618f;
+  box-shadow: 0px 4px 0px 0px #18618f;
+}
+.bank-card .bank-info {
+  font-size: 12px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2392156863);
+  padding: 6px 12px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: start;
+  gap: 0.5rem;
+  line-height: 2;
+}
+.bank-card .bank-info:last-child {
+  margin-bottom: 0;
+}
+.bank-card .bank-info h3 {
+  width: 100%;
+  font-size: 12px;
+  font-family: "Inter-Bold";
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.bank-card .bank-info h3.account-number {
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .bank-card .bank-info h3.account-number {
+    font-size: 14px;
+  }
+}
+.bank-card .bank-info p {
+  width: 100%;
+  opacity: 0.7;
+}
+.bank-card .bank-card-wrap {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.bank-card .account-name {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 16px;
+  text-align: start;
+  font-size: 12px;
+  padding-left: 12px;
+}
+.bank-card .account-name h3 {
+  width: 100%;
+  font-size: 12px;
+  font-family: "Inter-Medium";
+  font-weight: 500;
+}
+.bank-card .account-name p {
+  width: 100%;
+  line-height: 2;
+  opacity: 0.7;
+}
+.bank-card .account-name .bank-img {
+  width: 30%;
+  max-width: 86px;
+  min-width: 64px;
+}
+.bank-card .account-name .bank-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .goPlay-footer {

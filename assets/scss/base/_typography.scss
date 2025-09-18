@@ -50,3 +50,7 @@ $text-xl: 32px;
   font-size: 14px;
   color: $error-600;
 }
+
+b {
+  @include font-bold;
+}
