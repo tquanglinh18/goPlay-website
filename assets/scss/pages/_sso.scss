@@ -339,6 +339,41 @@
     padding: $vars-spacing-normal $vars-spacing-lg;
     @include mixins-box-normal;
 
+    .game-played-card {
+      width: fit-content;
+      min-width: 140px;
+      @include mixins-box-normal;
+      padding: $vars-spacing-normal;
+      @include display-flex-layout(
+        column,
+        nowrap,
+        center,
+        center,
+        $vars-spacing-sm
+      );
+      img {
+        width: 100%;
+        max-width: 90px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-footer {
+    width: 100%;
+    @include display-flex-layout(
+      row,
+      nowrap,
+      end,
+      center,
+      $vars-spacing-normal
+    );
+  }
+}
+
     .info-item {
       width: 100%;
       border-bottom: 1px solid $vars-grey-200;
@@ -442,41 +477,6 @@
         }
       }
     }
-
-    .game-played-card {
-      width: fit-content;
-      min-width: 140px;
-      @include mixins-box-normal;
-      padding: $vars-spacing-normal;
-      @include display-flex-layout(
-        column,
-        nowrap,
-        center,
-        center,
-        $vars-spacing-sm
-      );
-      img {
-        width: 100%;
-        max-width: 90px;
-        aspect-ratio: 1/1;
-        object-fit: contain;
-      }
-      p {
-        margin-bottom: 0;
-      }
-    }
-  }
-  &-footer {
-    width: 100%;
-    @include display-flex-layout(
-      row,
-      nowrap,
-      end,
-      center,
-      $vars-spacing-normal
-    );
-  }
-}
 
 .box-container {
   padding: 8px 0;

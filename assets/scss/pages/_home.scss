@@ -233,6 +233,12 @@
       }
     }
   }
+
+  &--footer {
+    width: 100%;
+    border-top: 1px dotted $vars-grey-300;
+    padding-top: $vars-spacing-normal;
+  }
 }
 
 .news-card {

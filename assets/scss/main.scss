@@ -4,8 +4,8 @@
 @use "./base/_card";
 
 @use "pages/_home";
-// @use "pages/_game";
-// @use "pages/_sso";
+@use "pages/_game";
+@use "pages/_sso";
 @use "pages/_billing";
 
 @use "layout/_footer";

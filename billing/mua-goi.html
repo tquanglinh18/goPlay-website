@@ -173,7 +173,45 @@
 
                         <div class="box-child-content box-unborder">
                             <div class="info-group">
-                                <p>Tài khoản</p> <b>mattone</b>
+                                <div class="goPlay-input">
+                                    <label for="server">Máy chủ</label>
+                                    <select name="server" id="server">
+                                        <option value="1">S1 - Huyền Thoại</option>
+                                        <option value="2">S2 - Thần Thoại</option>
+                                        <option value="3">S3 - Bất Bại</option>
+                                    </select>
+                                </div>
+                                <div class="goPlay-input">
+                                    <label for="character">Nhân vật</label>
+                                    <select name="character" id="character">
+                                        <option value="1">S1 - Huyền Thoại</option>
+                                        <option value="2">S2 - Thần Thoại</option>
+                                        <option value="3">S3 - Bất Bại</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="info-group">
+                                <p>Số dư GO</p> <span class="total-coin"><b>1000</b> <img
+                                        src="../assets/images/ic_coin.png" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-child character-info">
+                        <div class="box-child-header">
+                            <h3>Thông tin nhân vật</h3>
+                        </div>
+
+                        <div class="box-child-content box-unborder">
+                            <div class="info-group flex-between" style="display: flex;">
+                                <div class="goPlay-input">
+                                    <label for="userId">Nhập ID ingame</label>
+                                    <input type="text" id="userId" name="userId" placeholder="Nhập User ID">
+
+                                    <button type="button" class="gpBtnSm gpBtnSm--black">Tra cứu</button>
+                                </div><a href="">
+                                    Hướng dẫn lấy ID ingame?
+                                </a>
                             </div>
                             <div class="info-group">
                                 <p>Số dư GO</p> <span class="total-coin"><b>1000</b> <img
@@ -186,111 +224,83 @@
                         <div class="box-child-header">
                             <div class="flex-between">
                                 <h3>Chọn gói</h3>
-                                <p><i><span>*</span>Gói quy đổi ra GO dùng để thanh toán ingame 1 <img
-                                            src="../assets/images/ic_coin.png" alt="" class="ic-small"> = 1000đ</i></p>
                             </div>
                         </div>
 
                         <div class="box-child-content">
-                            <div class="lst-package-wrapper">
-                                <div class="goPlay-package">
-                                    <div class="package-body">
-                                        <div class="package-img">
-                                            <img src="../assets/images/ic_coin.png" alt="">
-                                        </div>
-                                        <h3 class="package-title">Gói 20 GO</h3>
-                                    </div>
-
-                                    <div class="package-footer">
-                                        <div class="btn-buy-package">
-                                            <span>
-                                                20.000đ
-                                            </span>
-                                        </div>
-                                    </div>
+                            <div class="store-package">
+                                <div class="store-sidebar">
+                                    <img src="../assets/images/ic_multi_star.png" alt="">
+                                    <h3 class="sidebar-title">Gói đề xuất</h3>
                                 </div>
 
-                                <div class="goPlay-package">
-                                    <div class="package-body">
-                                        <div class="package-img">
-                                            <img src="../assets/images/ic_coin.png" alt="">
-                                        </div>
-                                        <h3 class="package-title">Gói 20 GO</h3>
-                                    </div>
+                                <div class="store-content">
+                                    <div class="lst-package-wrapper">
+                                        <div class="goPlay-package goPlay-package-style2">
+                                            <div class="package-header">
+                                                Thưởng Nạp lần đầu +1200
+                                            </div>
+                                            <div class="package-body">
+                                                <h3 class="package-title">Gói 20 GO</h3>
 
-                                    <div class="package-footer">
-                                        <div class="btn-buy-package">
-                                            <span>
-                                                20.000đ
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+                                                <div class="package-img">
+                                                    <img src="../assets/images/ic_coin.png" alt="">
+                                                </div>
+                                            </div>
 
-                                <div class="goPlay-package">
-                                    <div class="package-body">
-                                        <div class="package-img">
-                                            <img src="../assets/images/ic_coin.png" alt="">
+                                            <div class="package-footer">
+                                                <div class="btn-buy-package">
+                                                    <span>
+                                                        20.000.000đ
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <h3 class="package-title">Gói 20 GO</h3>
-                                    </div>
 
-                                    <div class="package-footer">
-                                        <div class="btn-buy-package">
-                                            <span>
-                                                20.000đ
-                                            </span>
+                                        <div class="goPlay-package goPlay-package-style2">
+                                            <div class="package-header">
+                                                Thưởng Nạp lần đầu +1200
+                                            </div>
+                                            <div class="package-body">
+                                                <h3 class="package-title">Gói 20 GO</h3>
+
+                                                <div class="package-img">
+                                                    <img src="../assets/images/ic_coin.png" alt="">
+                                                </div>
+                                            </div>
+
+                                            <div class="package-footer">
+                                                <div class="btn-buy-package">
+                                                    <span>
+                                                        20.000đ
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                            <div class="package-over">
+                                                <img src="../assets/images/ic_star.png" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <div class="goPlay-package">
-                                    <div class="package-body">
-                                        <div class="package-img">
-                                            <img src="../assets/images/ic_coin.png" alt="">
-                                        </div>
-                                        <h3 class="package-title">Gói 20 GO</h3>
-                                    </div>
+                                        <div class="goPlay-package goPlay-package-style2">
+                                            <div class="package-header">
+                                                Thưởng Nạp lần đầu +1200
+                                            </div>
+                                            <div class="package-body">
+                                                <h3 class="package-title">Gói 20 GO</h3>
 
-                                    <div class="package-footer">
-                                        <div class="btn-buy-package">
-                                            <span>
-                                                20.000đ
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+                                                <div class="package-img">
+                                                    <img src="../assets/images/ic_coin.png" alt="">
+                                                </div>
+                                            </div>
 
-                                <div class="goPlay-package">
-                                    <div class="package-body">
-                                        <div class="package-img">
-                                            <img src="../assets/images/ic_coin.png" alt="">
-                                        </div>
-                                        <h3 class="package-title">Gói 20 GO</h3>
-                                    </div>
-
-                                    <div class="package-footer">
-                                        <div class="btn-buy-package">
-                                            <span>
-                                                20.000đ
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="goPlay-package">
-                                    <div class="package-body">
-                                        <div class="package-img">
-                                            <img src="../assets/images/ic_coin.png" alt="">
-                                        </div>
-                                        <h3 class="package-title">Gói 20 GO</h3>
-                                    </div>
-
-                                    <div class="package-footer">
-                                        <div class="btn-buy-package">
-                                            <span>
-                                                20.000đ
-                                            </span>
+                                            <div class="package-footer">
+                                                <div class="btn-buy-package">
+                                                    <span>
+                                                        20.000đ
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -298,34 +308,330 @@
                         </div>
                     </div>
 
-                    <div class="box-child input-gocoin">
+                    <div class="box-child sel-package">
                         <div class="box-child-header">
-                            <h3>Hoặc nhập số lượng GO</h3>
+                            <div class="flex-between">
+                                <h3>Chọn gói</h3>
+                            </div>
                         </div>
 
                         <div class="box-child-content">
-                            <div class="box-normal isTrans input-gocoin-wrapper">
-                                <div class="cts-input cts-input--icon">
-                                    <input type="number" placeholder="Nhập số GO muốn nạp">
-                                    <div class="fixed-icon">
-                                        <img src="../assets/images/ic_coin.png" alt="">
+                            <div class="store-package style-2">
+                                <div class="store-sidebar">
+                                    <div class="sidebar-wrapper">
+                                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="pills-home-tab"
+                                                    data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+                                                    role="tab" aria-controls="pills-home" aria-selected="true">Thưởng
+                                                    Nạp lần đầu
+                                                    +1200</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                                    aria-controls="pills-profile" aria-selected="false">Thưởng Nạp lần
+                                                    đầu
+                                                    +1200</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-contact" type="button" role="tab"
+                                                    aria-controls="pills-contact" aria-selected="false">Thưởng Nạp lần
+                                                    đầu
+                                                    +1200</button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
 
-                                <div class="cts-input">
-                                    <input data-name="bill-total" type="text" name="" id="bill-total" disabled
-                                        value="0đ">
-                                </div>
+                                <div class="store-content">
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                            aria-labelledby="pills-home-tab">
+                                            <div class="lst-package-wrapper">
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
 
-                                <button type="button" id="addToCart" class="goPlay-btn goPlay-btn--black">Thêm vào giỏ
-                                    hàng</button>
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
+
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-over">
+                                                        <img src="../assets/images/ic_star.png" alt="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
+
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                            aria-labelledby="pills-profile-tab">
+                                            <div class="lst-package-wrapper">
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
+
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
+
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-over">
+                                                        <img src="../assets/images/ic_star.png" alt="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
+
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                            aria-labelledby="pills-contact-tab">
+                                            <div class="lst-package-wrapper">
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
+
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
+
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
+
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
+
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
+
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-over">
+                                                        <img src="../assets/images/ic_star.png" alt="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="goPlay-package goPlay-package-style2">
+                                                    <div class="package-header">
+                                                        Thưởng Nạp lần đầu +1200
+                                                    </div>
+                                                    <div class="package-body">
+                                                        <h3 class="package-title">Gói 20 GO</h3>
+
+                                                        <div class="package-img">
+                                                            <img src="../assets/images/ic_coin.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="package-footer">
+                                                        <div class="btn-buy-package">
+                                                            <span>
+                                                                20.000đ
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="order-info">
-                    <div class="box-child ">
+                    <div class="box-child">
                         <div class="box-child-header">
                             <h3>Thông tin thanh toán</h3>
                         </div>
@@ -423,7 +729,7 @@
                         </div>
                     </div>
 
-                    <div class="box-child ">
+                    <div class="box-child">
                         <div class="box-child-header">
                             <h3>Thanh toán quét QR</h3>
                         </div>
@@ -648,10 +954,7 @@
                         </div>
                     </div>
 
-                    <div class="box-child ">
-                        <div class="box-child-header">
-                        </div>
-
+                    <div class="box-child">
                         <div class="box-child-content noPadding">
                             <div class="payment-modal box-shadow">
                                 <div class="modal-title">
@@ -674,10 +977,30 @@
                         </div>
                     </div>
 
-                    <div class="box-child ">
-                        <div class="box-child-header">
-                        </div>
+                    <div class="box-child">
+                        <div class="box-child-content noPadding">
+                            <div class="payment-modal box-shadow">
+                                <div class="modal-title">
+                                    <img src="../assets/images/ic_warning.png" alt="">
 
+                                </div>
+                                <div class="modal-content">
+                                    <p>Bạn chưa có tài khoản của game này. Vui lòng đăng nhập tài khoản đã chơi này.
+                                        Chọn game khác hoặc tạo tài khoản mới theo hướng dẫn.</p>
+                                </div>
+                                <div class="modal-extra">
+                                    <button type="button" class="goPlay-btn goPlay-btn--black">
+                                        Tạo tài khoản game
+                                    </button>
+                                    <button type="button" class="goPlay-btn">
+                                        Đăng xuất
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-child">
                         <div class="box-child-content noPadding">
                             <div class="payment-modal box-shadow">
                                 <div class="modal-title">
@@ -722,13 +1045,84 @@
                             </div>
                         </div>
                     </div>
+                    <div class="box-child">
+                        <div class="box-child-content noPadding">
+                            <div class="payment-modal box-shadow">
+                                <div class="modal-title">
+                                    <img src="../assets/images/logo_goplay_dark.png" alt="">
+                                    <img src="../assets/images/ic_error.png" alt="">
+                                </div>
+                                <div class="modal-content">
+                                    <h3 class="title-base">THANH TOÁN THẤT BẠI</h3>
+                                    <p>Số tiền nạp chưa đủ</p>
 
+                                    <div class="bill-detail">
+                                        <p class="flex-between">
+                                            Đã thanh toán <span>10.000đ</span>
+                                        </p>
+                                        <p class="flex-between">
+                                            Còn thiếu <span class="total-amount">90.000đ</span>
+                                        </p>
+                                        <h6><b>Vui lòng thanh toán bổ sung để hoàn thành đơn hàng</b></h6>
+                                    </div>
+                                </div>
+                                <div class="modal-extra">
+                                    <button type="button" class="goPlay-btn goPlay-btn--black">
+                                        Nạp tiếp
+                                    </button>
+                                    <button type="button" class="goPlay-btn">
+                                        Về Trang chủ
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-child package-detail">
+                        <div class="box-child-content noPadding">
+                            <div class="payment-modal box-shadow">
+                                <div class="modal-title">
+                                    <h3 class="title-base">Gói đổi hiệu ứng trang phục</h3>
+                                    <p>Mua nguyên liệu để đổi hiệu ứng khi mặc trang phục nè</p>
+                                </div>
+                                <div class="modal-content">
+                                    <div class="package-detail-wrapper">
+                                        <div class="package-detail-item">
+                                            <img src="../assets/images/ic_apple.png" alt="">
+                                            <p>10</p>
+                                        </div>
+
+                                        <div class="package-detail-item">
+                                            <img src="../assets/images/ic_apple.png" alt="">
+                                            <p>10</p>
+                                        </div>
+
+                                        <div class="package-detail-item">
+                                            <img src="../assets/images/ic_apple.png" alt="">
+                                            <p>10</p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-extra">
+                                        <div class="btn-buy-package">
+                                            <span>
+                                                20.000đ
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
             <div class="cts-section--footer">
-                <p><span>*</span>Nếu bạn cần hỗ trợ về giao dịch vui lòng liên hệ tạo phiếu hỗ trợ <a href=""
-                        target="_blank">Tại đây</a> hoặc liên hệ tổng đài <b>1900 636 876</b> (1000 đồng/phút).</p>
+                <p><span class="text-lighterror">*</span>Với những giao dịch ít hơn số tiền cần thanh toán, thanh toán
+                    sẽ thất bại số tiền bạn
+                    đã thanh toán sẽ chuyển thành GO.1 GO = 1000đ, số GO dùng để thanh toán mua gói lần sau.</p>
+                <p><span class="text-lighterror">*</span>Nếu bạn cần hỗ trợ về giao dịch vui lòng liên hệ tạo phiếu hỗ
+                    trợ <a href="" target="_blank">Tại đây</a> hoặc liên hệ tổng đài <b>1900 636 876</b> (1000
+                    đồng/phút).</p>
             </div>
         </div>
     </section>
