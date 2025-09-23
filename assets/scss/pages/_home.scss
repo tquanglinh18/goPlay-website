@@ -549,62 +549,61 @@
       inset: 0;
       background-color: rgba(0, 0, 0, 0.5);
     }
-    .game-detail {
+  }
+}
+
+.game-detail {
+  width: 100%;
+  max-width: 460px;
+  margin-right: auto;
+  @include display-flex-layout(column, nowrap, start, start, $vars-spacing-lg);
+  @include res-responsive(lg) {
+    gap: $vars-spacing-sm;
+    .goPlay-btn {
+      padding: $vars-spacing-xs;
+    }
+  }
+  &--logo {
+    width: 50%;
+    max-width: 248px;
+    img {
       width: 100%;
-      max-width: 460px;
-      margin-right: auto;
-      @include display-flex-layout(
-        column,
-        nowrap,
-        start,
-        start,
-        $vars-spacing-lg
-      );
-      @include res-responsive(lg) {
-        gap: $vars-spacing-sm;
-        .goPlay-btn {
-          padding: $vars-spacing-xs;
-        }
+      img {
+        max-height: 110px;
+        object-fit: contain;
       }
-      &--logo {
-        width: 50%;
-        max-width: 248px;
-        img {
-          width: 100%;
-        }
-      }
-      &--title {
-        font-size: $vars-spacing-lg;
-        @include txt-font-bold;
-        @include res-responsive(md) {
-          font-size: $vars-spacing-normal;
-        }
-      }
-      &--desc {
-        font-size: 18px;
-        @include txt-font-semibold;
-        @include txt-max-line(5);
-        line-height: 1.5;
-        @include res-responsive(md) {
-          font-size: 14px;
-          @include txt-max-line(3);
-        }
-      }
-      &--actions {
-        width: 100%;
-        @include display-flex-layout(
-          row,
-          nowrap,
-          start,
-          center,
-          $vars-spacing-normal
-        );
-        @include res-responsive(md) {
-          .goPlay-btn {
-            max-width: fit-content;
-            min-width: 120px;
-          }
-        }
+    }
+  }
+  &--title {
+    font-size: $vars-spacing-lg;
+    @include txt-font-bold;
+    @include res-responsive(md) {
+      font-size: $vars-spacing-normal;
+    }
+  }
+  &--desc {
+    font-size: 18px;
+    @include txt-font-semibold;
+    @include txt-max-line(5);
+    line-height: 1.5;
+    @include res-responsive(md) {
+      font-size: 14px;
+      @include txt-max-line(3);
+    }
+  }
+  &--actions {
+    width: 100%;
+    @include display-flex-layout(
+      row,
+      nowrap,
+      start,
+      center,
+      $vars-spacing-normal
+    );
+    @include res-responsive(md) {
+      .goPlay-btn {
+        max-width: fit-content;
+        min-width: 120px;
       }
     }
   }
@@ -622,6 +621,59 @@
 
 .goPlay-news-tabs {
   .goPlay-news-navs {
+    width: 100%;
+    min-width: 100%;
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      width: 0 !important;
+      display: none;
+    }
+    margin-bottom: 1%;
+  }
+  .nav {
+    min-width: 520px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+  }
+  .nav-link {
+    color: $vars-grey-1000;
+    padding: 0;
+    margin-right: $vars-spacing-sm;
+    transition: all 0.3s ease-in-out;
+    @include txt-font-semibold;
+    font-size: 16px;
+    color: $vars-grey-500;
+    @include res-responsive(md) {
+      font-size: 14px;
+      margin-right: $vars-spacing-xs;
+    }
+
+    &::before {
+      content: "gP";
+      font-size: 16px;
+      color: transparent;
+      transition: all 0.3s ease-in;
+    }
+    &.active {
+      background-color: transparent;
+      color: $vars-grey-1000;
+      &::before {
+        content: "gP";
+        font-size: 16px;
+        color: transparent;
+        background-image: url("../images/ic_tabs_active.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.goPlay-tabs {
+  .goPlay-navs {
     width: 100%;
     min-width: 100%;
     overflow: auto;
@@ -799,7 +851,7 @@
 }
 
 .page-breadcrumb {
-width: 100%;
+  width: 100%;
   a {
     color: $vars-grey-1000;
     @include display-flex-layout(row, nowrap, start, center, $vars-spacing-sm);

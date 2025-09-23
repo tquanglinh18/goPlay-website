@@ -357,3 +357,124 @@
     }
   }
 }
+
+.game-banner-hero {
+  width: 100%;
+  position: relative;
+  @include res-responsive(sm) {
+    min-height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner-image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 15%;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include res-responsive(md) {
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: #0f0f0f;
+      opacity: 0.5;
+    }
+    @include res-responsive(md) {
+      bottom: 0;
+    }
+  }
+  .slider-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 1;
+    padding: 2%;
+  }
+  .game-detail {
+    width: 40%;
+    margin: 0;
+    padding-bottom: 6%;
+    gap: 1rem;
+    color: white;
+    @include res-responsive(md) {
+      width: 100%;
+      margin: 0 auto;
+      padding: 4% 2%;
+    }
+    @include res-responsive(lg) {
+      .goPlay-btn {
+        min-height: unset;
+      }
+    }
+
+    &--logo {
+      max-width: 124px;
+    }
+
+    &--desc {
+      font-size: 16px;
+      @include res-responsive(lg) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .game-image {
+    width: 55vw;
+    max-width: 800px;
+    img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 804/600;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    @include res-responsive(md) {
+      display: none;
+    }
+  }
+}
+
+.lst-game-section {
+  margin-top: 0;
+  @include res-responsive(md) {
+    margin-top: 4%;
+  }
+  .lst-game-container {
+    grid-template-columns: 1fr 1fr;
+    gap: $vars-spacing-xl $vars-spacing-lg;
+    @include res-responsive(md) {
+      grid-template-columns: 1fr;
+    }
+    .game-card {
+      max-width: unset;
+      @include res-responsive(md) {
+        max-width: 480px;
+      }
+      .game-card-front {
+        .game-thumb {
+          img {
+            aspect-ratio: 686/410;
+          }
+        }
+      }
+    }
+  }
+}
