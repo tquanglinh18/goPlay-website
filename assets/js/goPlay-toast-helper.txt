@@ -1,0 +1,49 @@
+1. Các hàm chính:
+    - showToastNotify(type, title, message, options) 
+    - hideToastNotify()
+
+2. Biến và phần tử HTML sử dụng
+    -   #goPlay-toast: Container chính của Toast.
+    -   #toast-title: Hiển thị tiêu đề thông báo.
+    -   #toast-message: Nội dung chi tiết của thông báo.
+    -   #closeBtn: Nút đóng (X).
+    -   #btnConfirm: Nút hành động chính (Xác nhận).
+    -   #btnCancel: Nút hành động phụ (Huỷ bỏ).
+
+3. Hàm showToastNotify
+
+    showToastNotify(type, title, message, options)
+
+    Tham số: 
+    - type: (string) Loại thông báo. Giá trị: "error", "warning", hoặc bỏ trống để mặc định. 
+    - title: (string) Tiêu đề thông báo. Ví dụ: "Thành công", "Có lỗi xảy ra". 
+    - message: (string) Nội dung chi tiết hiển thị. 
+    - options: (object) Các tùy chọn mở rộng: 
+        - anchor: Vị trí hiển thị. "top" hoặc "bottom". Mặc định: "bottom". 
+        - time: (number) Thời gian hiển thị (ms). Mặc định: 3000.
+        - titleConfirm: (string) Nội dung nút Xác nhận. Mặc định: "Xác nhận". 
+        - onConfirm: (function) Callback khi nhấn nút Xác nhận. 
+        - showCancel: (boolean) Có hiển thị nút Hủy không. Mặc định: false. 
+        - titleCancel: (string) Nội dung nút Hủy. Mặc định: "Huỷ bỏ". 
+        - onCancel: (function) Callback khi nhấn nút Hủy.
+
+    Ví dụ sử dụng:
+        showToastNotify("error", "Lỗi hệ thống", "Không thể kết nối máy chủ!", {
+            anchor: "top",
+            time: 5000,
+            titleConfirm: "Thử lại",
+            onConfirm: () => console.log("Người dùng chọn thử lại"),
+            showCancel: true,
+            titleCancel: "Đóng",
+            onCancel: () => console.log("Người dùng đóng thông báo")
+        });
+
+4. Hàm hideToastNotify
+
+    hideToastNotify()
+
+    Mô tả: Ẩn Toast Notify hiện tại. Hàm trả về Promise nên có thể await để
+    chắc chắn đã ẩn xong.
+
+    Ví dụ:
+        await hideToastNotify();

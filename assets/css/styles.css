@@ -2056,6 +2056,136 @@ b {
   aspect-ratio: 686/410;
 }
 
+.toast-modal {
+  display: none;
+  width: 100%;
+  max-width: 420px;
+  position: fixed;
+  z-index: 999;
+  background-color: white;
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  border-left: 8px solid #2bc128;
+  box-shadow: 0px 10px 30px 3px rgba(5, 16, 55, 0.1490196078);
+}
+.toast-modal.anchor-top {
+  top: 10%;
+  right: 1rem;
+}
+.toast-modal.anchor-bottom {
+  bottom: 5%;
+  right: 1rem;
+}
+.toast-modal.toast-show {
+  display: block;
+  animation: fadeIn 0.5s ease forwards;
+}
+.toast-modal.toast-hide {
+  display: block;
+  animation: fadeOut 0.5s ease forwards;
+}
+.toast-modal.toast-error {
+  border-color: #e43338;
+}
+.toast-modal.toast-error .toast-icon {
+  background-image: url("../images/ic_error.png") !important;
+}
+.toast-modal.toast-warning {
+  border-color: #ffd16a;
+}
+.toast-modal.toast-warning .toast-icon {
+  background-image: url("../images/ic_warning.png") !important;
+}
+.toast-modal .toast-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 16px;
+  color: #1a1d1f;
+}
+.toast-modal .toast-content .toast-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.toast-modal .toast-content .toast-header .toast-title {
+  font-family: "Inter-Bold";
+  font-weight: bold;
+  font-size: 18px;
+}
+.toast-modal .toast-content .toast-header .close-btn {
+  font-size: 24px;
+}
+.toast-modal .toast-content .toast-body {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.toast-modal .toast-content .toast-body .toast-message {
+  width: 75%;
+}
+.toast-modal .toast-content .toast-body .toast-icon {
+  width: 15%;
+  aspect-ratio: 1/1;
+  background-image: url("../images/ic_success.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.toast-modal .toast-content .toast-body .toast-icon img {
+  width: 100%;
+}
+.toast-modal .toast-content .toast-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+.toast-modal .toast-content .toast-footer button {
+  font-size: 14px;
+  font-family: "Inter-SemiBold";
+  font-weight: 600;
+}
+.toast-modal .toast-content .toast-footer button::after {
+  content: "→";
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+}
 .ssoPages {
   width: 100%;
   min-height: 100vh;

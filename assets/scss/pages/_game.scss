@@ -478,3 +478,121 @@
     }
   }
 }
+
+.toast-modal {
+  display: none;
+  width: 100%;
+  max-width: 420px;
+  position: fixed;
+  z-index: 999;
+  background-color: white;
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  border-left: 8px solid #2bc128;
+  box-shadow: 0px 10px 30px 3px #05103726;
+  &.anchor-top {
+    top: 10%;
+    right: 1rem;
+  }
+
+  &.anchor-bottom {
+    bottom: 5%;
+    right: 1rem;
+  }
+
+  &.toast-show {
+    display: block;
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  &.toast-hide {
+    display: block;
+    animation: fadeOut 0.5s ease forwards;
+  }
+
+  &.toast-error {
+    border-color: #e43338;
+    .toast-icon {
+      background-image: url("../images/ic_error.png") !important;
+    }
+  }
+
+  &.toast-warning {
+    border-color: #ffd16a;
+    .toast-icon {
+      background-image: url("../images/ic_warning.png") !important;
+    }
+  }
+
+  .toast-content {
+    width: 100%;
+    @include display-flex-layout(column, nowrap, start, start, 16px);
+    color: #1a1d1f;
+    .toast-header {
+      width: 100%;
+      @include display-flex-layout(row, wrap, space-between, center, 16px);
+      .toast-title {
+        @include txt-font-bold;
+        font-size: 18px;
+      }
+      .close-btn {
+        font-size: 24px;
+      }
+    }
+
+    .toast-body {
+      width: 100%;
+      @include display-flex-layout(row, wrap, space-between, center, 16px);
+      .toast-message {
+        width: 75%;
+      }
+      .toast-icon {
+        width: 15%;
+        aspect-ratio: 1/1;
+        background-image: url("../images/ic_success.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .toast-footer {
+      width: 100%;
+      @include display-flex-layout(row, wrap, start, center, 16px);
+      button {
+        font-size: 14px;
+        @include txt-font-semibold;
+        &::after {
+          content: "→";
+          font-size: 16px;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(120%);
+  }
+}

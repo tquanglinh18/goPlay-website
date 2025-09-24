@@ -138,6 +138,43 @@
             </div>
 
     </header>
+    <div id="goPlay-toast-container"></div>
+
+    <button type="button" onclick='showToastNotify();'>
+        Show Toast
+    </button>
+
+    <button type="button" onclick='showToastNotify("error", "Hehe", "his his", {
+            anchor: "top",
+            showCancel: false,
+            time: 2000,
+            titleConfirm: "Okela",
+            titleCancel: "No Okela",
+            onConfirm: function () {
+                console.log("onConfirm click");
+            },
+            onCancel: () => {
+                console.log("onCancel click");
+            },
+        });'>
+        Show Toast
+    </button>
+
+    <button type="button" onclick='showToastNotify("notyfi", "Hehe", "his his", {
+            anchor: "bottom",
+            showCancel: false,
+            time: 2000,
+            titleConfirm: "Okela",
+            titleCancel: "No Okela",
+            onConfirm: function () {
+                console.log("onConfirm click");
+            },
+            onCancel: () => {
+                console.log("onCancel click");
+            },
+        });'>
+        Show Toast
+    </button>
 
     <section class="game-banner-hero">
         <div class="banner-image">
@@ -563,6 +600,26 @@
         </div>
     </section>
 
+    <div id="goPlay-toast" class="toast-modal">
+        <div class="toast-content">
+            <div class="toast-header">
+                <h3 id="toast-title" class="toast-title"></h3>
+                <div id="closeBtn" class="close-btn"></div>
+            </div>
+            <div class="toast-body">
+                <div id="toast-message" class="toast-message">
+                </div>
+
+                <div id="toast-icon" class="toast-icon">
+                </div>
+            </div>
+            <div class="toast-footer">
+                <button type="button" class="toast-action" id="btnConfirm"></button>
+                <button type="button" class="toast-action" id="btnCancel"></button>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="goPlay-footer">
             <div class="footer-container">
@@ -603,6 +660,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/goPlay-toast-helper.js"></script>
 
 </body>
 
