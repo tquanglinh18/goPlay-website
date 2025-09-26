@@ -169,6 +169,7 @@
       .news-featured {
         grid-column: span 3;
         grid-row: span 2;
+        aspect-ratio: 857/472;
       }
 
       .news-related {
@@ -252,12 +253,30 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  position: relative;
   &:hover {
     transform: translateY(-5px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 1;
   }
   .news-card-inner {
     width: 100%;
     @include display-flex-layout(row, nowrap, center, end, 0);
+    position: relative;
+    z-index: 2;
     .news-card-image {
       img {
         width: 100%;
@@ -278,11 +297,8 @@
       padding: $vars-spacing-lg $vars-spacing-normal;
       font-size: 18px;
       .news-title {
-        @include txt-max-line(2);
+        font-size: 18px;
         @include txt-font-bold;
-        @include res-responsive(md) {
-          font-size: $vars-spacing-normal;
-        }
       }
       .news-posted {
         @include res-responsive(md) {
@@ -429,7 +445,7 @@
     left: 50%;
     transform: translateX(-50%);
     padding: 2% $vars-spacing-normal;
-    @include res-responsive(md) {
+    @include res-responsive(lg) {
       display: none;
     }
     & .owl-item {
